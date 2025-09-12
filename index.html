@@ -1,28 +1,99 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Santensor - En Construcción</title>
-  <style>
-    body {
-      background: #111;
-      color: #f2f2f2;
-      font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      text-align: center;
-    }
-    h1 { font-size: 2.5em; margin-bottom: 0.3em; }
-    p { font-size: 1.2em; }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Edwin Santiago Paz Bedoya — Portafolio</title>
+  <meta name="description" content="Portafolio de Edwin Santiago Paz Bedoya. Proyectos, experiencia y contacto." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/avatar.jpg" />
+  <meta property="og:title" content="Portafolio — Edwin S. Paz Bedoya" />
+  <meta property="og:description" content="Proyectos, experiencia y contacto." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://santensor.com" />
 </head>
 <body>
-  <h1>Santensor.com</h1>
-  <p>Sitio en construcción 🚧</p>
-  <p>Propietario: Edwin Santiago Paz Bedoya</p>
+  <header class="site-header">
+    <a href="#" class="brand">santensor<span>.com</span></a>
+    <nav class="nav">
+      <a href="#inicio">Inicio</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#experiencia">Experiencia</a>
+      <a href="#contacto">Contacto</a>
+      <button id="themeToggle" aria-label="Cambiar tema">🌓</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+      <div class="hero-text">
+        <h1>Hola, soy <span>Edwin Santiago</span> 👋</h1>
+        <p>Arquitecto/Desarrollador en Power Platform, Dynamics 365 y soluciones de datos.  
+           Aquí comparto proyectos seleccionados, artículos y formas de contactarme.</p>
+        <div class="cta">
+          <a class="btn primary" href="#proyectos">Ver proyectos</a>
+          <a class="btn" href="mailto:contacto@santensor.com">Escríbeme</a>
+        </div>
+      </div>
+      <img class="hero-avatar" src="assets/avatar.jpg" alt="Foto de Edwin" />
+    </section>
+
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="wrap">
+      <h2>Proyectos destacados</h2>
+      <div class="grid">
+        <!-- Card 1 -->
+        <article class="card">
+          <img src="assets/project-1.jpg" alt="Proyecto 1" />
+          <div class="card-body">
+            <h3>Caracterización Territorial</h3>
+            <p>Power Pages + Dataverse + JavaScript: formularios multistep, reglas de negocio y Web API.</p>
+            <div class="tags">
+              <span>Power Pages</span><span>Dataverse</span><span>JS</span>
+            </div>
+            <div class="actions">
+              <a href="#" class="link">Demo</a>
+              <a href="#" class="link">Código</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Duplica/edita más cards… -->
+      </div>
+    </section>
+
+    <!-- EXPERIENCIA -->
+    <section id="experiencia" class="wrap">
+      <h2>Experiencia</h2>
+      <ul class="timeline">
+        <li>
+          <span class="time">2023–2025</span>
+          <div>
+            <h3>ANDJE — Líder técnico Power Platform</h3>
+            <p>Diseño e implementación de soluciones en Dynamics 365, Dataverse y Power Pages.</p>
+          </div>
+        </li>
+        <!-- Agrega más elementos -->
+      </ul>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="wrap contacto">
+      <h2>Contacto</h2>
+      <p>¿Colaboremos? Escríbeme a <a href="mailto:contacto@santensor.com">contacto@santensor.com</a> o en mis redes:</p>
+      <div class="social">
+        <a href="https://github.com/santensor" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <!-- Agrega más -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    © <span id="year"></span> Edwin Santiago Paz Bedoya — Santensor
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
