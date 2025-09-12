@@ -20,3 +20,22 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'}); }
   });
 });
+
+// Botones: Expandir / Contraer todo en Experiencia
+const expandAllBtn = document.getElementById('expandAll');
+const collapseAllBtn = document.getElementById('collapseAll');
+if (expandAllBtn && collapseAllBtn) {
+  const allDetails = () => Array.from(document.querySelectorAll('#experiencia details'));
+  expandAllBtn.addEventListener('click', () => allDetails().forEach(d => d.open = true));
+  collapseAllBtn.addEventListener('click', () => allDetails().forEach(d => d.open = false));
+}
+
+// Acordeón opcional: si pones data-accordion en el contenedor, solo permite un <details> abierto
+document.querySelectorAll('[data-accordion]').forEach(section => {
+  const items = section.querySelectorAll('details');
+  items.forEach(d => {
+    d.addEventListener('toggle', () => {
+      if (d.open) items.forEach(o => { if (o !== d) o.removeAttribute('open'); });
+    });
+  });
+});
