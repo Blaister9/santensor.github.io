@@ -1,1 +1,42 @@
+@import url('./variables.css');
 
+/* Reset Básico */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: var(--font-main); color: var(--color-text); background-color: var(--color-bg); line-height: 1.6; }
+a { text-decoration: none; color: inherit; }
+
+/* Utilidades */
+.container { max-width: var(--container-width); margin: 0 auto; padding: 0 var(--spacing-sm); }
+.section { padding: var(--spacing-lg) 0; }
+.btn { display: inline-block; padding: 0.75rem 1.5rem; border-radius: var(--radius); font-weight: 600; cursor: pointer; transition: opacity 0.3s; }
+.btn-primary { background-color: var(--color-accent); color: var(--color-white); border: none; }
+.btn-primary:hover { opacity: 0.9; }
+
+/* Grid Layouts Generales */
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-md); }
+
+/* --- Estilos de Componentes Específicos --- */
+
+/* Hero */
+.hero { background-color: var(--color-primary); color: var(--color-white); padding: 6rem 0; text-align: center; }
+.hero h1 { font-size: 3.5rem; margin-bottom: var(--spacing-sm); letter-spacing: -1px; }
+.hero p { font-size: 1.25rem; color: #94a3b8; max-width: 600px; margin: 0 auto var(--spacing-md); }
+
+/* Services Card */
+.card { background: var(--color-white); padding: var(--spacing-md); border-radius: var(--radius); box-shadow: var(--shadow); transition: transform 0.2s; }
+.card:hover { transform: translateY(-5px); }
+.card h3 { margin-bottom: var(--spacing-sm); color: var(--color-primary); }
+
+/* Process */
+.process-step { display: flex; align-items: center; gap: var(--spacing-md); margin-bottom: var(--spacing-md); }
+.step-number { font-size: 2rem; font-weight: bold; color: var(--color-accent); min-width: 50px; }
+
+/* Contact Form */
+.form-group { margin-bottom: var(--spacing-sm); }
+.form-input { width: 100%; padding: 0.8rem; border: 1px solid #cbd5e1; border-radius: var(--radius); font-family: inherit; }
+.form-input:focus { outline: 2px solid var(--color-accent); border-color: transparent; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+}
