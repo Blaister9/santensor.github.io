@@ -1,225 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Edwin Santiago Paz Bedoya — Portafolio</title>
-  <meta name="description" content="Portafolio de Edwin Santiago Paz Bedoya. Proyectos, experiencia y contacto (Power Platform, Dynamics 365, Dataverse, JS, RPA)." />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="assets/avatar.jpg" />
-  <meta property="og:title" content="Portafolio — Edwin S. Paz Bedoya" />
-  <meta property="og:description" content="Proyectos, experiencia y contacto." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://santensor.com" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empresa de Desarrollo de Software</title>
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <header class="site-header">
-    <a href="#" class="brand">santensor<span>.com</span></a>
+  <header class="hero">
     <nav class="nav">
-      <a href="#inicio">Inicio</a>
-      <a href="#proyectos">Proyectos</a>
-      <a href="#experiencia">Experiencia</a>
-      <a href="#contacto">Contacto</a>
-      <button id="themeToggle" aria-label="Cambiar tema">🌓</button>
+      <span class="logo">TUEMPRESA</span>
+      <a href="#contacto" class="cta">Contacto</a>
     </nav>
+    <section class="hero-content">
+      <h1>Desarrollo de software a medida para procesos reales</h1>
+      <p>Aplicaciones, sistemas e implementación de procesos orientados a resultados.</p>
+      <a href="#contacto" class="cta">Hablar ahora</a>
+    </section>
   </header>
 
   <main>
-    <!-- HERO -->
-    <section id="inicio" class="hero">
-      <div class="hero-text">
-        <h1>Hola, soy <span>Edwin Santiago</span> 👋</h1>
-        <p>Desarrollador/Arquitecto enfocado en <b>Power Platform</b> (Power Apps, Power Pages, Dataverse, Power Automate),
-           <b>Dynamics 365</b>, <b>JavaScript</b> y automatización (RPA, bots). Construyo formularios web complejos,
-           reglas de negocio y flujos de integración con enfoque en gobierno de datos y despliegues limpios.</p>
-        <div class="cta">
-          <a class="btn primary" href="#proyectos">Ver proyectos</a>
-          <a class="btn" href="mailto:santiagopazbedoya@gmail.com">Escríbeme</a>
-        </div>
-      </div>
-      <img class="hero-avatar" src="assets/avatar.jpg" alt="Foto de Edwin" />
+    <section class="services">
+      <h2>Servicios</h2>
+      <div class="service-card">Desarrollo de software</div>
+      <div class="service-card">Aplicaciones web y móviles</div>
+      <div class="service-card">Implementación de procesos</div>
     </section>
 
-    <!-- PROYECTOS -->
-    <section id="proyectos" class="wrap">
-      <h2>Proyectos destacados</h2>
-      <div class="grid">
-        <!-- Power Platform / ANDJE -->
-        <article class="card">
-          <img src="assets/project-andje.jpg" alt="Caracterización Territorial" />
-          <div class="card-body">
-            <h3>Caracterización Territorial (ANDJE)</h3>
-            <p>Power Pages + Dataverse + JavaScript. Formularios multistep, visibilidad condicional, validaciones dinámicas y Web API.</p>
-            <div class="tags"><span>Power Pages</span><span>Dataverse</span><span>JS</span></div>
-            <div class="actions">
-              <a href="#" class="link">Resumen</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="assets/project-ekogui.jpg" alt="eKOGUI" />
-          <div class="card-body">
-            <h3>e-KOGUI — Automatizaciones</h3>
-            <p>Flujos en Power Automate (aprobaciones Teams/Outlook, notificaciones, KPIs) y reglas de negocio en D365.</p>
-            <div class="tags"><span>Power Automate</span><span>Teams</span><span>Dynamics 365</span></div>
-            <div class="actions"><a href="#" class="link">Resumen</a></div>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="assets/project-journeys.jpg" alt="Journeys/Marketing" />
-          <div class="card-body">
-            <h3>Customer Insights — Journeys</h3>
-            <p>Segmentos, consentimiento, emailings masivos y reporte de métricas (aperturas, clics, entregas únicas).</p>
-            <div class="tags"><span>CI Journeys</span><span>Consent</span><span>KPIs</span></div>
-            <div class="actions"><a href="#" class="link">Resumen</a></div>
-          </div>
-        </article>
-
-        <!-- RPA / Bots -->
-        <article class="card">
-          <img src="assets/project-rocketbot.jpg" alt="Rocketbot RPA" />
-          <div class="card-body">
-            <h3>Rocketbot RPA — Grupo Lagos</h3>
-            <p>Automatización contable end-to-end (recepción→cotejo de documentos). Reducción de tiempos y errores.</p>
-            <div class="tags"><span>Python</span><span>Rocketbot</span><span>RPA</span></div>
-            <div class="actions"><a href="#" class="link">Resumen</a></div>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="assets/project-wa-bot.jpg" alt="WhatsApp Bot" />
-          <div class="card-body">
-            <h3>Chatbot WhatsApp — Parque Arauco</h3>
-            <p>Bot por reglas de negocio para atención y flujos automatizados.</p>
-            <div class="tags"><span>Node.js</span><span>Bot-WhatsApp</span></div>
-            <div class="actions"><a href="#" class="link">Resumen</a></div>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="assets/project-uipath.jpg" alt="UiPath Document Understanding" />
-          <div class="card-body">
-            <h3>OCR cédula colombiana</h3>
-            <p>Pipeline de extracción con UiPath (C#) + Document Understanding e IA.</p>
-            <div class="tags"><span>UiPath</span><span>OCR</span><span>IA</span></div>
-            <div class="actions"><a href="#" class="link">Resumen</a></div>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="assets/project-lala.jpg" alt="LALA Interfaces" />
-          <div class="card-body">
-            <h3>Interfaces — LALA (México)</h3>
-            <p>UI para búsqueda y marcado de facturas bancarias.</p>
-            <div class="tags"><span>Python</span></div>
-            <div class="actions"><a href="#" class="link">Resumen</a></div>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="assets/project-ivr.jpg" alt="IVR Teams" />
-          <div class="card-body">
-            <h3>IVR y KPIs con Teams</h3>
-            <p>Arquitectura para migrar IVR/DTMF hacia Microsoft Teams y analítica de llamadas.</p>
-            <div class="tags"><span>Teams</span><span>Voz</span></div>
-            <div class="actions"><a href="#" class="link">Resumen</a></div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- EXPERIENCIA -->
-    <section id="experiencia" class="wrap">
-      <h2>Experiencia</h2>
-
-      <div class="xp-actions">
-        <button class="btn" id="expandAll">Expandir todo</button>
-        <button class="btn" id="collapseAll">Contraer todo</button>
-      </div>
-
-      <!-- ANDJE -->
-      <details class="xp" open>
-        <summary>
-          <strong>Agencia Nacional de Defensa Jurídica del Estado (ANDJE)</strong> — Consultor / Gestor OASTI
-          <span class="pill">Contratos 141-2024 y 056-2025</span>
-        </summary>
-        <div class="xp-body">
-          <p><b>Contrato 141 de 2024</b> — 01/oct/2024 → 20/dic/2024. Estado: Ejecutado. Valor: <i>$XX.000.000</i>.</p>
-          <ul>
-            <li>Apoyo a proyectos del <b>PETI</b>, seguimiento, gestión de riesgos y mantenimiento evolutivo/correctivo de SI OASTI.</li>
-            <li>Diseño y desarrollo de capacidades nuevas; conceptos técnicos y recomendaciones operativas.</li>
-            <li>Participación en comités técnicos y reuniones de avance.</li>
-          </ul>
-          <p><b>Contrato 056 de 2025</b> — 29/ene/2025 → 28/sep/2025. Estado: En ejecución. Valor inicial: <i>$XX.000.000</i>.</p>
-          <ul>
-            <li>Apoyo integral al PETI; seguimiento y mitigación de riesgos.</li>
-            <li>Pruebas y reportes mensuales para <b>e-KOGUI</b> (controles de cambio y nuevas funcionalidades).</li>
-            <li>Mantenimiento evolutivo/correctivo, conceptos técnicos y participación en comités.</li>
-          </ul>
-          <p class="muted">*Los contratos se ejecutan con autonomía técnica y administrativa, sin relación laboral con la Agencia.</p>
-          <h4>Logros/Entregables Clave</h4>
-          <ul class="bullets">
-            <li>Formularios complejos en <b>Power Pages + Dataverse</b> (caracterización territorial, subformularios, validaciones y Web API).</li>
-            <li>Flujos de aprobación y notificación en <b>Power Automate</b> integrados con <b>Teams/Outlook</b>.</li>
-            <li>Implementación de <b>Customer Insights – Journeys</b>, consentimiento y reportes de KPIs.</li>
-          </ul>
-        </div>
-      </details>
-
-      <!-- SOFTTEK -->
-      <details class="xp">
-        <summary>
-          <strong>Softtek Renovation SAS</strong> — Support Member
-          <span class="pill">nov/2022 – sep/2024</span>
-        </summary>
-        <div class="xp-body">
-          <p><em>Proyectos destacados</em></p>
-          <ol>
-            <li><b>Rocketbot RPA — Grupo Lagos (Chile)</b> · Python/Rocketbot · Automatización contable E2E (recepción→cotejo).</li>
-            <li><b>Chatbot WhatsApp — Parque Arauco (Chile)</b> · Node.js/Bot-WhatsApp · Flujos por reglas de negocio.</li>
-            <li><b>Extracción de datos de cédula</b> · UiPath (C#), Document Understanding, IA.</li>
-            <li><b>Automatización PMO y ARH</b> · UiPath + Jira (roles, tickets, tareas administrativas).</li>
-            <li><b>Chatbot IA interno</b> · Azure + RAG para consultas corporativas.</li>
-            <li><b>Interfaces — LALA (México)</b> · Python para búsqueda/marcado de facturas.</li>
-            <li><b>Proyecto Teletrabajo — ARH</b> · UiPath, Microsoft Forms, PowerApps, Excel.</li>
-            <li><b>Mantenimiento y mejoras de robots</b> · UiPath; confiabilidad y ajustes evolutivos.</li>
-          </ol>
-        </div>
-      </details>
-
-      <!-- LÍDER MANTENIMIENTO -->
-      <details class="xp">
-        <summary>
-          <strong>Líder de Mantenimiento</strong> — abr/2018 – sep/2024
-        </summary>
-        <div class="xp-body">
-          <p>Gestión integral de mantenimiento con <b>Mantum</b>: planeación preventiva/predictiva, programación de turnos, auditorías,
-             inventario de repuestos críticos, activos fijos, indicadores, seguridad operativa y mejora continua.</p>
-          <ul>
-            <li>Programación/cierre de OT y control de cumplimiento.</li>
-            <li>Planes de acción por análisis de causa raíz.</li>
-            <li>Actualización técnica de equipos y planes de mantenimiento.</li>
-          </ul>
-        </div>
-      </details>
-    </section>
-
-    <!-- CONTACTO -->
-    <section id="contacto" class="wrap contacto">
-      <h2>Contacto</h2>
-      <p>¿Colaboramos? Escríbeme a <a href="mailto:santiagopazbedoya@gmail.com">ESPB</a> o en mis redes:</p>
-      <div class="social">
-        <a href="https://github.com/Blaister9" target="_blank" rel="noreferrer">GitHub</a>
-      </div>
+    <section class="process">
+      <h2>Cómo trabajamos</h2>
+      <p>Análisis, diseño, desarrollo, implementación y soporte.</p>
     </section>
   </main>
 
-  <footer class="site-footer">
-    © <span id="year"></span> Edwin Santiago Paz Bedoya — Santensor
+  <footer id="contacto">
+    <h2>Contacto</h2>
+    <form>
+      <input type="text" placeholder="Nombre">
+      <input type="email" placeholder="Email">
+      <button type="submit">Enviar</button>
+    </form>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
