@@ -1,1 +1,21 @@
-
+:root {
+    /* Paleta B2B Tech */
+    --color-primary: #0f172a; /* Azul noche profundo */
+    --color-accent: #3b82f6;  /* Azul eléctrico para CTAs */
+    --color-text: #334155;    /* Gris oscuro para lectura */
+    --color-bg: #f8fafc;      /* Blanco humo */
+    --color-white: #ffffff;
+    
+    /* Espaciado */
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    
+    /* Tipografía */
+    --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+    
+    /* UI */
+    --radius: 8px;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --container-width: 1200px;
+}
