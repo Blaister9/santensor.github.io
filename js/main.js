@@ -1,7 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Cargador de Componentes (Component Loader)
     const components = [
+        { id: 'navbar-placeholder', url: './components/navbar.html' },
         { id: 'hero-placeholder', url: './components/hero.html' },
+        { id: 'about-placeholder', url: './components/about.html' },
         { id: 'services-placeholder', url: './components/services.html' },
         { id: 'process-placeholder', url: './components/process.html' },
         { id: 'contact-placeholder', url: './components/contact.html' }
@@ -31,6 +33,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 2. Lógica de Interacciones
     const initInteractions = () => {
+        // --- LOGICA DEL MENÚ HAMBURGUESA ---
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        if (hamburger && navMenu) {
+            // Toggle menú al clickear hamburguesa
+            hamburger.addEventListener("click", () => {
+                hamburger.classList.toggle("active");
+                navMenu.classList.toggle("active");
+            });
+
+            // Cerrar menú al clickear un link (UX importante)
+            navLinks.forEach(n => n.addEventListener("click", () => {
+                hamburger.classList.remove("active");
+                navMenu.classList.remove("active");
+            }));
+        }
         // Scroll Suave para anclas
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
