@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         // Inicializar lógica que depende del DOM cargado
+        // (Esto se ejecuta SOLO cuando todo el HTML ya existe en la página)
         initInteractions();
     };
 
@@ -51,6 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 navMenu.classList.remove("active");
             }));
         }
+
         // Scroll Suave para anclas
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -72,14 +74,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 form.reset();
             });
         }
-    };
 
-    // === AGREGAR ESTO: INICIAR CARRUSEL ===
-    // Verificamos si la función existe (por si acaso no cargó el script)
-    if (typeof initServicesCarousel === 'function') {
-        initServicesCarousel(); 
-        console.log("Carrusel iniciado");
-    }
+        // --- INICIAR CARRUSEL (Aquí es el lugar correcto) ---
+        // Como initInteractions se llama al final de loadComponents,
+        // garantizamos que el HTML de services.html ya existe.
+        console.log("Intentando iniciar carrusel...");
+        
+        if (typeof initServicesCarousel === 'function') {
+            initServicesCarousel();
+            console.log("Carrusel iniciado con éxito.");
+        } else {
+            console.error("No se encontró la función initServicesCarousel. Revisa si carousel.js está cargado en index.html");
+        }
+    };
 
     // Ejecutar carga
     loadComponents();
