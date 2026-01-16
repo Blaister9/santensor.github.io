@@ -1,144 +1,39 @@
 <section id="services" class="section services">
-  <div class="container">
-    <header class="services-header">
+  <div class="container relative-container"> <header class="services-header">
       <h2>Nuestros Servicios</h2>
       <p class="services-lead">
-        FRADA CORP S.A.S. ofrece soluciones tecnológicas integrales orientadas a la transformación digital,
-        la eficiencia operativa y la gestión segura de la información.
+        FRADA CORP S.A.S. ofrece soluciones tecnológicas integrales orientadas a la transformación digital.
       </p>
     </header>
 
-    <div class="services-stage">
-      <!-- Fades laterales -->
-      <span class="services-fade services-fade-left" aria-hidden="true"></span>
-      <span class="services-fade services-fade-right" aria-hidden="true"></span>
+    <div class="desktop-wheel-container">
+        <div class="wheel-text-content">
+            <span class="wheel-number" id="w-number">01</span>
+            <h3 id="w-title">Desarrollo de Software</h3>
+            <p id="w-desc">Descripción breve...</p>
+            
+            <div class="wheel-list-container">
+                <h4 style="margin-bottom: 10px; opacity: 0.8;">Qué hacemos:</h4>
+                <ul id="w-list">
+                    </ul>
+            </div>
 
-      <!-- Carrusel -->
-      <div class="services-carousel" aria-label="Carrusel de servicios">
-        <article id="svc-1" class="service-card" tabindex="0">
-          <div class="service-top">
-            <span class="service-chip">01</span>
-            <span class="service-icon" aria-hidden="true">💻</span>
-          </div>
-          <h3>Desarrollo de Software y Soluciones Web</h3>
-          <p>Aplicaciones modernas, seguras y escalables, alineadas con los objetivos del negocio.</p>
+            <div class="wheel-nav">
+                <button id="w-prev" class="nav-btn ghost">←</button>
+                <button id="w-next" class="nav-btn">→</button>
+            </div>
+        </div>
 
-          <h4>Qué hacemos</h4>
-          <ul>
-            <li>Desarrollo de software a la medida.</li>
-            <li>Apps web rápidas, responsivas y SEO-friendly.</li>
-            <li>Integración con sistemas existentes y APIs.</li>
-            <li>Automatización de procesos empresariales.</li>
-            <li>Mantenimiento, evolución y soporte.</li>
-          </ul>
-
-          <div class="service-nav">
-            <a class="nav-btn ghost" href="#svc-5" aria-label="Anterior">←</a>
-            <a class="nav-btn" href="#svc-2" aria-label="Siguiente">→</a>
-          </div>
-        </article>
-
-        <article id="svc-2" class="service-card" tabindex="0">
-          <div class="service-top">
-            <span class="service-chip">02</span>
-            <span class="service-icon" aria-hidden="true">☁️</span>
-          </div>
-          <h3>Arquitectura Cloud e Infraestructura Tecnológica</h3>
-          <p>Infraestructura y entornos cloud seguros, eficientes y escalables con buenas prácticas del sector.</p>
-
-          <h4>Qué hacemos</h4>
-          <ul>
-            <li>Arquitectura y despliegue en AWS y Azure.</li>
-            <li>Alta disponibilidad, escalabilidad y seguridad.</li>
-            <li>Migración on-premise a la nube.</li>
-            <li>Optimización de costos y rendimiento.</li>
-            <li>Seguridad, respaldo y continuidad operativa.</li>
-          </ul>
-
-          <div class="service-nav">
-            <a class="nav-btn ghost" href="#svc-1" aria-label="Anterior">←</a>
-            <a class="nav-btn" href="#svc-3" aria-label="Siguiente">→</a>
-          </div>
-        </article>
-
-        <article id="svc-3" class="service-card" tabindex="0">
-          <div class="service-top">
-            <span class="service-chip">03</span>
-            <span class="service-icon" aria-hidden="true">🧭</span>
-          </div>
-          <h3>Consultoría IT y Transformación Digital</h3>
-          <p>Consultoría especializada para decisiones tecnológicas, desempeño, seguridad y control.</p>
-
-          <h4>Qué hacemos</h4>
-          <ul>
-            <li>Diagnóstico y evaluación de infraestructura y sistemas.</li>
-            <li>Auditoría de código y arquitectura.</li>
-            <li>Optimización de rendimiento y seguridad.</li>
-            <li>Hojas de ruta de transformación digital.</li>
-            <li>Acompañamiento técnico en proyectos estratégicos.</li>
-          </ul>
-
-          <div class="service-nav">
-            <a class="nav-btn ghost" href="#svc-2" aria-label="Anterior">←</a>
-            <a class="nav-btn" href="#svc-4" aria-label="Siguiente">→</a>
-          </div>
-        </article>
-
-        <article id="svc-4" class="service-card" tabindex="0">
-          <div class="service-top">
-            <span class="service-chip">04</span>
-            <span class="service-icon" aria-hidden="true">📂</span>
-          </div>
-          <h3>Implementación de SGDEA (Gestión Documental Electrónica)</h3>
-          <p>SGDEA para control, trazabilidad y eficiencia documental, con adopción guiada.</p>
-
-          <h4>Qué hacemos</h4>
-          <ul>
-            <li>Diseño e implementación de SGDEA.</li>
-            <li>Digitalización y organización documental.</li>
-            <li>Automatización de flujos documentales.</li>
-            <li>Integración con plataformas institucionales.</li>
-            <li>Acompañamiento y mejora continua.</li>
-          </ul>
-
-          <div class="service-nav">
-            <a class="nav-btn ghost" href="#svc-3" aria-label="Anterior">←</a>
-            <a class="nav-btn" href="#svc-5" aria-label="Siguiente">→</a>
-          </div>
-        </article>
-
-        <article id="svc-5" class="service-card" tabindex="0">
-          <div class="service-top">
-            <span class="service-chip">05</span>
-            <span class="service-icon" aria-hidden="true">🤖</span>
-          </div>
-          <h3>Inteligencia Artificial y Automatización</h3>
-          <p>IA para convertir datos en valor y automatizar procesos críticos en software y gestión documental.</p>
-
-          <h4>Qué hacemos</h4>
-          <ul>
-            <li>Automatización inteligente de procesos.</li>
-            <li>Análisis de datos para toma de decisiones.</li>
-            <li>Clasificación/búsqueda y procesamiento inteligente de documentos.</li>
-            <li>Integración de IA en software y SGDEA.</li>
-            <li>Optimización operativa basada en datos.</li>
-          </ul>
-
-          <div class="service-nav">
-            <a class="nav-btn ghost" href="#svc-4" aria-label="Anterior">←</a>
-            <a class="nav-btn" href="#svc-1" aria-label="Siguiente">→</a>
-          </div>
-        </article>
-      </div>
+        <div class="wheel-wrapper">
+            <div class="active-ring"></div> <div class="main-wheel" id="main-wheel">
+                </div>
+        </div>
     </div>
 
-    <!-- Dots (opcional, se ve pro y ayuda en mobile) -->
-    <nav class="services-dots" aria-label="Navegación por servicios">
-      <a href="#svc-1" aria-label="Ir a servicio 1"></a>
-      <a href="#svc-2" aria-label="Ir a servicio 2"></a>
-      <a href="#svc-3" aria-label="Ir a servicio 3"></a>
-      <a href="#svc-4" aria-label="Ir a servicio 4"></a>
-      <a href="#svc-5" aria-label="Ir a servicio 5"></a>
-    </nav>
+    <div class="mobile-fallback-msg">
+       </div>
+
   </div>
 </section>
+
+<script src="js/carousel.js"></script>
