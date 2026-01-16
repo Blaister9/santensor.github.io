@@ -74,6 +74,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    // === AGREGAR ESTO: INICIAR CARRUSEL ===
+    // Verificamos si la función existe (por si acaso no cargó el script)
+    if (typeof initServicesCarousel === 'function') {
+        initServicesCarousel(); 
+        console.log("Carrusel iniciado");
+    }
+
     // Ejecutar carga
     loadComponents();
 });
