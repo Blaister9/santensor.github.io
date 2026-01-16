@@ -23,26 +23,58 @@ a { text-decoration: none; color: inherit; }
 .hero p { font-size: 1.25rem; color: #94a3b8; max-width: 600px; margin: 0 auto var(--spacing-md); }
 
 /* Services Card */
-/* ===== Services (FRADA) ===== */
-.services .services-header{
+/* ===== Services (FRADA) – Pro Carousel (CSS puro) ===== */
+.services{
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.services-header{
   text-align: center;
   margin-bottom: 1.25rem;
 }
 
-.services .services-header h2{
+.services-header h2{
   margin: 0 0 .75rem 0;
+  color: var(--color-primary);
 }
 
-.services .services-lead{
+.services-lead{
   margin: 0 auto;
-  max-width: 920px;
-  line-height: 1.6;
-  opacity: .85;
+  max-width: 980px;
+  line-height: 1.7;
+  color: var(--color-text);
+  opacity: .92;
 }
 
-/* Carrusel (CSS puro) */
-.services-carousel{
+/* Contenedor del carrusel (para fades laterales) */
+.services-stage{
+  position: relative;
   margin-top: 1.25rem;
+}
+
+/* Fades laterales */
+.services-fade{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 70px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.services-fade-left{
+  left: 0;
+  background: linear-gradient(to right, var(--color-bg), rgba(248,250,252,0));
+}
+
+.services-fade-right{
+  right: 0;
+  background: linear-gradient(to left, var(--color-bg), rgba(248,250,252,0));
+}
+
+/* Carrusel */
+.services-carousel{
   display: flex;
   gap: 1rem;
   overflow-x: auto;
@@ -50,105 +82,135 @@ a { text-decoration: none; color: inherit; }
   scroll-behavior: smooth;
   padding: .5rem .25rem 1rem;
   -webkit-overflow-scrolling: touch;
-}
 
-/* “Peek” a los lados */
-.services-carousel::before,
-.services-carousel::after{
-  content: "";
-  flex: 0 0 10px;
-}
+  /* “espacio” para que se note el fade */
+  padding-left: 10px;
+  padding-right: 10px;
 
-/* Ocultar scrollbar (sin romper scroll) */
-.services-carousel{
-  scrollbar-width: none;           /* Firefox */
+  /* esconder scrollbar sin romper scroll */
+  scrollbar-width: none;
 }
-.services-carousel::-webkit-scrollbar{
-  display: none;                   /* Chrome/Safari */
-}
+.services-carousel::-webkit-scrollbar{ display: none; }
 
-/* Card */
+/* Tarjeta */
 .service-card{
   scroll-snap-align: center;
-  flex: 0 0 min(520px, 86vw);
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 18px;
-  padding: 1.25rem 1.25rem 1rem;
-  box-shadow: 0 14px 34px rgba(0,0,0,0.18);
-  backdrop-filter: blur(8px);
+  flex: 0 0 min(560px, 86vw);
+  background: var(--color-white);
+  border: 1px solid rgba(15,23,42,0.08);
+  border-radius: calc(var(--radius) + 8px);
+  box-shadow: 0 14px 30px rgba(15,23,42,0.08);
+  padding: 1.35rem 1.35rem 1.1rem;
   position: relative;
 
-  /* Si tu web es clara, cambia estos 2 */
-  color: #f2f5ff;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, opacity .18s ease;
+  outline: none;
+
+  /* “no centrada” un poco más suave */
+  opacity: .88;
 }
 
-/* Para que el anchor no suba toda la página de golpe */
-.service-card{
-  scroll-margin-top: 90px;
+/* Hover elevación */
+.service-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 18px 44px rgba(15,23,42,0.14);
+  border-color: rgba(59,130,246,0.25);
+  opacity: 1;
 }
+
+/* Efecto enfoque: si se navega con teclado o se hace click (focus) */
+.service-card:focus,
+.service-card:focus-within{
+  transform: translateY(-4px);
+  box-shadow: 0 20px 52px rgba(15,23,42,0.16);
+  border-color: rgba(59,130,246,0.35);
+  opacity: 1;
+}
+
+/* “Tarjeta centrada más grande” (sin JS) usando :target */
+.service-card:target{
+  transform: scale(1.03);
+  box-shadow: 0 24px 62px rgba(15,23,42,0.18);
+  border-color: rgba(59,130,246,0.45);
+  opacity: 1;
+}
+
+/* Detalle pro: borde superior sutil */
+.service-card::before{
+  content: "";
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  top: 12px;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(59,130,246,0.0), rgba(59,130,246,0.6), rgba(59,130,246,0.0));
+  opacity: .55;
+}
+
+/* Ajuste para que el :target no tape con header fijo */
+.service-card{ scroll-margin-top: 90px; }
 
 .service-top{
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: .75rem;
-  margin-bottom: .75rem;
+  margin-bottom: .8rem;
 }
 
 .service-chip{
-  font-weight: 700;
-  font-size: .95rem;
-  letter-spacing: .08em;
-  opacity: .75;
+  font-weight: 800;
+  font-size: .92rem;
+  letter-spacing: .10em;
+  color: rgba(51,65,85,0.85);
 }
 
 .service-icon{
-  width: 44px;
-  height: 44px;
+  width: 46px;
+  height: 46px;
   display: grid;
   place-items: center;
   border-radius: 14px;
-  border: 1px solid rgba(255,255,255,0.12);
-  background: rgba(255,255,255,0.08);
+  background: rgba(59,130,246,0.10);
+  border: 1px solid rgba(59,130,246,0.18);
   font-size: 20px;
 }
 
 .service-card h3{
-  margin: 0 0 .5rem 0;
+  margin: 0 0 .55rem 0;
+  color: var(--color-primary);
   letter-spacing: -0.01em;
   line-height: 1.25;
 }
 
 .service-card p{
-  margin: 0 0 .85rem 0;
-  line-height: 1.6;
-  opacity: .88;
+  margin: 0 0 .9rem 0;
+  line-height: 1.7;
+  color: var(--color-text);
+  opacity: .92;
 }
 
 .service-card h4{
-  margin: .75rem 0 .5rem 0;
+  margin: .85rem 0 .5rem 0;
   font-size: .95rem;
-  opacity: .95;
+  color: var(--color-primary);
 }
 
 .service-card ul{
   margin: 0;
   padding-left: 1.1rem;
-  line-height: 1.6;
-  opacity: .9;
+  line-height: 1.7;
+  color: var(--color-text);
 }
+.service-card li{ margin: .35rem 0; }
 
-.service-card li{
-  margin: .35rem 0;
-}
-
-/* Nav flechas dentro de cada card */
+/* Flechas */
 .service-nav{
   display: flex;
-  gap: .6rem;
+  gap: .65rem;
   justify-content: flex-end;
-  margin-top: 1rem;
+  margin-top: 1.05rem;
 }
 
 .nav-btn{
@@ -158,47 +220,72 @@ a { text-decoration: none; color: inherit; }
   place-items: center;
   border-radius: 14px;
   text-decoration: none;
-  border: 1px solid rgba(255,255,255,0.16);
-  background: rgba(59,130,246,0.95);
-  color: #fff;
-  font-weight: 800;
-  transition: transform .15s ease, background .15s ease, border-color .15s ease;
+  border: 1px solid rgba(59,130,246,0.22);
+  background: var(--color-accent);
+  color: var(--color-white);
+  font-weight: 900;
+  transition: transform .15s ease, filter .15s ease, background .15s ease, border-color .15s ease;
 }
 
 .nav-btn:hover{
   transform: translateY(-1px);
-  background: rgba(59,130,246,1);
-  border-color: rgba(255,255,255,0.22);
+  filter: brightness(0.98);
+  border-color: rgba(59,130,246,0.35);
 }
 
 .nav-btn.ghost{
-  background: rgba(255,255,255,0.08);
-  color: #f2f5ff;
+  background: rgba(15,23,42,0.04);
+  border-color: rgba(15,23,42,0.10);
+  color: var(--color-primary);
 }
 
 .nav-btn.ghost:hover{
-  background: rgba(255,255,255,0.12);
+  background: rgba(15,23,42,0.06);
 }
 
-.services-hint{
-  margin-top: .75rem;
-  text-align: center;
-  font-size: .95rem;
-  opacity: .75;
+/* Dots nav */
+.services-dots{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: .85rem;
 }
 
-/* Responsive ajustes */
+.services-dots a{
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(15,23,42,0.18);
+  border: 1px solid rgba(15,23,42,0.08);
+  display: inline-block;
+  transition: transform .15s ease, background .15s ease;
+}
+
+.services-dots a:hover{
+  transform: scale(1.15);
+  background: rgba(59,130,246,0.55);
+}
+
+/* Resalta dot cuando hay :target (sin JS) */
+#svc-1:target ~ .services-dots a[href="#svc-1"],
+#svc-2:target ~ .services-dots a[href="#svc-2"],
+#svc-3:target ~ .services-dots a[href="#svc-3"],
+#svc-4:target ~ .services-dots a[href="#svc-4"],
+#svc-5:target ~ .services-dots a[href="#svc-5"]{
+  background: rgba(59,130,246,0.85);
+  transform: scale(1.25);
+}
+
+/* Responsive */
 @media (max-width: 520px){
-  .service-card{
-    padding: 1.1rem 1.05rem .95rem;
-  }
+  .services-fade{ width: 44px; }
+  .service-card{ padding: 1.2rem 1.1rem 1rem; }
 }
 
-/* Accesibilidad: menos movimiento */
+/* Reduce motion */
 @media (prefers-reduced-motion: reduce){
   .services-carousel{ scroll-behavior: auto; }
-  .nav-btn{ transition: none; }
-  .nav-btn:hover{ transform: none; }
+  .service-card, .nav-btn, .services-dots a{ transition: none; }
 }
 
 
