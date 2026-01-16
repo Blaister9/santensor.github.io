@@ -28,7 +28,7 @@ a { text-decoration: none; color: inherit; }
 .card h3 { margin-bottom: var(--spacing-sm); color: var(--color-primary); }
 
 /* Process */
-/* ===== FRADA | Metodología ===== */
+/* ===== FRADA | Metodología "process" ===== */
 .frada-section{
   padding: clamp(56px, 6vw, 96px) 0;
   background: #0b1220; /* puedes cambiarlo */
