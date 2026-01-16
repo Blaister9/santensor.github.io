@@ -23,9 +23,184 @@ a { text-decoration: none; color: inherit; }
 .hero p { font-size: 1.25rem; color: #94a3b8; max-width: 600px; margin: 0 auto var(--spacing-md); }
 
 /* Services Card */
-.card { background: var(--color-white); padding: var(--spacing-md); border-radius: var(--radius); box-shadow: var(--shadow); transition: transform 0.2s; }
-.card:hover { transform: translateY(-5px); }
-.card h3 { margin-bottom: var(--spacing-sm); color: var(--color-primary); }
+/* ===== Services (FRADA) ===== */
+.services .services-header{
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.services .services-header h2{
+  margin: 0 0 .75rem 0;
+}
+
+.services .services-lead{
+  margin: 0 auto;
+  max-width: 920px;
+  line-height: 1.6;
+  opacity: .85;
+}
+
+/* Carrusel (CSS puro) */
+.services-carousel{
+  margin-top: 1.25rem;
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: .5rem .25rem 1rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* “Peek” a los lados */
+.services-carousel::before,
+.services-carousel::after{
+  content: "";
+  flex: 0 0 10px;
+}
+
+/* Ocultar scrollbar (sin romper scroll) */
+.services-carousel{
+  scrollbar-width: none;           /* Firefox */
+}
+.services-carousel::-webkit-scrollbar{
+  display: none;                   /* Chrome/Safari */
+}
+
+/* Card */
+.service-card{
+  scroll-snap-align: center;
+  flex: 0 0 min(520px, 86vw);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 18px;
+  padding: 1.25rem 1.25rem 1rem;
+  box-shadow: 0 14px 34px rgba(0,0,0,0.18);
+  backdrop-filter: blur(8px);
+  position: relative;
+
+  /* Si tu web es clara, cambia estos 2 */
+  color: #f2f5ff;
+}
+
+/* Para que el anchor no suba toda la página de golpe */
+.service-card{
+  scroll-margin-top: 90px;
+}
+
+.service-top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  margin-bottom: .75rem;
+}
+
+.service-chip{
+  font-weight: 700;
+  font-size: .95rem;
+  letter-spacing: .08em;
+  opacity: .75;
+}
+
+.service-icon{
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.08);
+  font-size: 20px;
+}
+
+.service-card h3{
+  margin: 0 0 .5rem 0;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+
+.service-card p{
+  margin: 0 0 .85rem 0;
+  line-height: 1.6;
+  opacity: .88;
+}
+
+.service-card h4{
+  margin: .75rem 0 .5rem 0;
+  font-size: .95rem;
+  opacity: .95;
+}
+
+.service-card ul{
+  margin: 0;
+  padding-left: 1.1rem;
+  line-height: 1.6;
+  opacity: .9;
+}
+
+.service-card li{
+  margin: .35rem 0;
+}
+
+/* Nav flechas dentro de cada card */
+.service-nav{
+  display: flex;
+  gap: .6rem;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.nav-btn{
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.16);
+  background: rgba(59,130,246,0.95);
+  color: #fff;
+  font-weight: 800;
+  transition: transform .15s ease, background .15s ease, border-color .15s ease;
+}
+
+.nav-btn:hover{
+  transform: translateY(-1px);
+  background: rgba(59,130,246,1);
+  border-color: rgba(255,255,255,0.22);
+}
+
+.nav-btn.ghost{
+  background: rgba(255,255,255,0.08);
+  color: #f2f5ff;
+}
+
+.nav-btn.ghost:hover{
+  background: rgba(255,255,255,0.12);
+}
+
+.services-hint{
+  margin-top: .75rem;
+  text-align: center;
+  font-size: .95rem;
+  opacity: .75;
+}
+
+/* Responsive ajustes */
+@media (max-width: 520px){
+  .service-card{
+    padding: 1.1rem 1.05rem .95rem;
+  }
+}
+
+/* Accesibilidad: menos movimiento */
+@media (prefers-reduced-motion: reduce){
+  .services-carousel{ scroll-behavior: auto; }
+  .nav-btn{ transition: none; }
+  .nav-btn:hover{ transform: none; }
+}
+
 
 /* Process */
 /* ===== FRADA | Metodología "process" ===== */
