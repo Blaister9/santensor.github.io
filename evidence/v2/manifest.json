@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-10-16T15:05:04.570Z",
+  "tool": "Playwright Chromium",
+  "siteCommit": "7538f8c49ebb409b5e67e5870df2941c4ff71449",
+  "screenshots": [
+    {
+      "file": "preview/home-en-1440.png",
+      "url": "https://trainer-web-production-f2e9.up.railway.app/commercial-preview/",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "sha256": "6f3c0918ecdb0ed4d6f58bedf4b8e7e105d0722a14faa45065b5730b422e50b1"
+    },
+    {
+      "file": "preview/home-en-390.png",
+      "url": "https://trainer-web-production-f2e9.up.railway.app/commercial-preview/",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "sha256": "d3ae1e6d65053243797e77ffe88ce0fd593ed2b694a52ca8703fb4f1efb0ce30"
+    },
+    {
+      "file": "preview/home-es-1440.png",
+      "url": "https://trainer-web-production-f2e9.up.railway.app/commercial-preview/es/",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "sha256": "1c1895b1418d2e9bbe4485b8a3ccc20b9dd4fbd95cdaa5bd6cf60cdb1352c59c"
+    },
+    {
+      "file": "preview/home-es-390.png",
+      "url": "https://trainer-web-production-f2e9.up.railway.app/commercial-preview/es/",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "sha256": "2ed973e53d214c2b388f83318749ff127bee768ab6747d568cbadad941488f77"
+    }
+  ]
+}

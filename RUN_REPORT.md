@@ -23,4 +23,22 @@
 
 Las capturas sin sufijo `-full` corresponden al viewport exacto. Las capturas `-full` muestran la composición completa. Los JSON de accesibilidad incluyen comprobaciones que requieren revisión manual; cero violaciones automáticas no implica auditoría humana completa.
 
-La preview, commits, PRs y resultados remotos se registrarán tras comprobarlos. No se ha fusionado esta rama ni sustituido el sitio comercial publicado.
+## Preview y verificación remota
+
+- Preview EN: https://trainer-web-production-f2e9.up.railway.app/commercial-preview/
+- Preview ES: https://trainer-web-production-f2e9.up.railway.app/commercial-preview/es/
+- Laboratorio: https://trainer-web-production-f2e9.up.railway.app/commercial-preview/labs/
+- PR en borrador: https://github.com/Blaister9/santensor.github.io/pull/3
+- Fuente desplegada: `7538f8c49ebb409b5e67e5870df2941c4ff71449`, comprobada mediante `/commercial-preview/version.json`.
+- CI del commit funcional: https://github.com/Blaister9/santensor.github.io/actions/runs/38920652946 — **success**. Incluye build, lint, audit, 13 unitarias y las 12 E2E completas.
+- Suite contra HTTPS: **12/12 pasan** en 1,1 minutos. Resultado completo: `evidence/v2/preview/browser-results.json`. Repite idiomas, rutas, menú móvil, ausencia de JS, lab, contacto, axe y movimiento reducido sobre la preview real.
+- Capturas de preview EN/ES: `evidence/v2/preview/home-{en,es}-{1440,390}.png`. `evidence/v2/manifest.json` comprueba 1440 × 900 y 390 × 844, hashes y commit. Se inspeccionaron visualmente escritorio, móvil, página completa y fallo del lab; véase `evidence/v2/VISUAL_REVIEW.md`.
+- Revisión móvil adicional: 3/3 pruebas locales después de ampliar etiquetas. Recuperación de entrada inválida durante ejecución: 2/2 pruebas locales EN/ES, además de su inclusión en CI y suite remota final.
+
+El primer ensayo remoto detectó normalización de barras finales por Next.js en el host de preview. Se corrigió en el repositorio anfitrión y se añadió una regresión de rutas, fuentes y errores 404. La suite remota final pasa sin relajar sus aserciones de URL.
+
+`evidence/v2/preservation-before.json` y `preservation-after.json` registran HTTP 200 y el mismo SHA-256 del HTML de producción: `e004c60d7bb84461a757b5b349ad5781f754838fc3e23503cb3aa6b7b2e03bb5`. `main` sigue en `84e3c855af9cf112cdfdf4938e6197acdd40fea4`; `CNAME` y el workflow de publicación no cambian. Esto es evidencia puntual, no una garantía de disponibilidad continua. Hubo fallos transitorios de resolución DNS en comandos del equipo de ejecución; las comprobaciones posteriores terminaron correctamente.
+
+No se ha fusionado esta rama ni sustituido el sitio comercial publicado. Los commits posteriores al de fuente despliegan únicamente informes y evidencias en GitHub; no representan otra versión del producto.
+
+Comando remoto: establecer `SITE_TEST_URL=https://trainer-web-production-f2e9.up.railway.app`, `SITE_PATH_PREFIX=/commercial-preview` y `SITE_EVIDENCE_DIR=evidence/v2/preview`, y ejecutar `npm run test:e2e`. Ejecutar `node scripts/verify-preview.mjs after` y `node scripts/evidence-manifest.mjs` para las verificaciones complementarias.

@@ -1,0 +1,58 @@
+{
+  "checkedAt": "2026-10-16T15:03:52.518Z",
+  "phase": "after",
+  "production": {
+    "url": "https://santensor.com/",
+    "status": 200,
+    "sha256": "e004c60d7bb84461a757b5b349ad5781f754838fc3e23503cb3aa6b7b2e03bb5",
+    "cname": "santensor.com",
+    "unchanged": true
+  },
+  "preview": [
+    {
+      "route": "/commercial-preview/",
+      "status": 200,
+      "robots": "noindex, nofollow"
+    },
+    {
+      "route": "/commercial-preview/es/",
+      "status": 200,
+      "robots": "noindex, nofollow"
+    },
+    {
+      "route": "/commercial-preview/labs/",
+      "status": 200,
+      "robots": "noindex, nofollow"
+    },
+    {
+      "route": "/commercial-preview/es/labs/",
+      "status": 200,
+      "robots": "noindex, nofollow"
+    },
+    {
+      "route": "/commercial-preview/contact/",
+      "status": 200,
+      "robots": "noindex, nofollow"
+    },
+    {
+      "route": "/commercial-preview/es/contact/",
+      "status": 200,
+      "robots": "noindex, nofollow"
+    },
+    {
+      "route": "/api/health",
+      "status": 200,
+      "robots": null
+    },
+    {
+      "route": "/api/auth/status",
+      "status": 200,
+      "robots": null
+    },
+    {
+      "route": "/api/history",
+      "status": 401,
+      "robots": null
+    }
+  ]
+}
