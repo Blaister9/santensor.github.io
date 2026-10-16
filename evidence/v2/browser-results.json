@@ -3,7 +3,9 @@
     "argv": [
       "C:\\Program Files\\nodejs\\node.exe",
       "<workspace>\\site\\node_modules\\@playwright\\test\\cli.js",
-      "test"
+      "test",
+      "--grep",
+      "390|mobile menu"
     ],
     "configFile": "<workspace>\\site\\playwright.config.mjs",
     "rootDir": "<workspace>/site/tests/browser",
@@ -103,74 +105,6 @@
       "line": 0,
       "specs": [
         {
-          "title": "routes, visual evidence and axe en 1440",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 3109,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-10-16T14:53:27.522Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "892f01ebe3c3cd11efb8-fb15d9c166681073393b",
-          "file": "site.spec.mjs",
-          "line": 9,
-          "column": 39
-        },
-        {
-          "title": "routes, visual evidence and axe es 1440",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 2937,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-10-16T14:53:30.878Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "892f01ebe3c3cd11efb8-004305d73aa1f5b3389c",
-          "file": "site.spec.mjs",
-          "line": 9,
-          "column": 39
-        },
-        {
           "title": "routes, visual evidence and axe en 390",
           "ok": true,
           "tags": [],
@@ -186,12 +120,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2771,
+                  "duration": 3070,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-16T14:53:33.821Z",
+                  "startTime": "2026-10-16T14:57:33.222Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -220,12 +154,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3178,
+                  "duration": 2817,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-16T14:53:36.597Z",
+                  "startTime": "2026-10-16T14:57:36.428Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -237,40 +171,6 @@
           "file": "site.spec.mjs",
           "line": 9,
           "column": 39
-        },
-        {
-          "title": "language selector preserves routes, hashes, reload and direct-link priority",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 2820,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-10-16T14:53:39.782Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "892f01ebe3c3cd11efb8-c173103a958504f8043c",
-          "file": "site.spec.mjs",
-          "line": 37,
-          "column": 1
         },
         {
           "title": "mobile menu, language control, escape and focus work at 390px",
@@ -288,12 +188,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 751,
+                  "duration": 470,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-16T14:53:42.613Z",
+                  "startTime": "2026-10-16T14:57:39.250Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -305,219 +205,15 @@
           "file": "site.spec.mjs",
           "line": 52,
           "column": 1
-        },
-        {
-          "title": "lab pauses, inspects, requires review and recovers en",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 3782,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-10-16T14:53:43.374Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "892f01ebe3c3cd11efb8-f8507290c8530afaafe3",
-          "file": "site.spec.mjs",
-          "line": 67,
-          "column": 37
-        },
-        {
-          "title": "lab pauses, inspects, requires review and recovers es",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 3814,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-10-16T14:53:47.165Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "892f01ebe3c3cd11efb8-05b4dfd493acb67f6313",
-          "file": "site.spec.mjs",
-          "line": 67,
-          "column": 37
-        },
-        {
-          "title": "hero is a working system; reduced motion disables animations",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 4395,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-10-16T14:53:50.991Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "892f01ebe3c3cd11efb8-a65efc89fc8101e88d88",
-          "file": "site.spec.mjs",
-          "line": 107,
-          "column": 1
-        },
-        {
-          "title": "contact validates and prepares mailto without sending en",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 658,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-10-16T14:53:55.400Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "892f01ebe3c3cd11efb8-93cab23912628941f396",
-          "file": "site.spec.mjs",
-          "line": 117,
-          "column": 37
-        },
-        {
-          "title": "contact validates and prepares mailto without sending es",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 427,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-10-16T14:53:56.068Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "892f01ebe3c3cd11efb8-fc625ed8594d997872de",
-          "file": "site.spec.mjs",
-          "line": 117,
-          "column": 37
-        },
-        {
-          "title": "content and navigation remain usable without JavaScript",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 371,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-10-16T14:53:56.504Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "892f01ebe3c3cd11efb8-bee081d3427213ec9aea",
-          "file": "site.spec.mjs",
-          "line": 134,
-          "column": 1
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-16T14:53:26.123Z",
-    "duration": 31826.698,
-    "expected": 12,
+    "startTime": "2026-10-16T14:57:31.747Z",
+    "duration": 8328.955,
+    "expected": 3,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
