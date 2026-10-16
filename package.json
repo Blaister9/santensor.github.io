@@ -1,0 +1,17 @@
+{
+ "name": "santensor-commercial",
+ "private": true,
+ "type": "module",
+ "scripts": {
+  "build": "node scripts/build.mjs",
+  "test": "node --test tests/*.test.mjs",
+  "preview": "node scripts/serve.mjs",
+  "test:e2e": "playwright test",
+  "lint": "node --check js/workflow.mjs && node --check js/labs.mjs && node --check scripts/build.mjs"
+ },
+ "devDependencies": {
+  "@axe-core/playwright": "^4.11.1",
+  "@playwright/test": "^1.61.1",
+  "lighthouse": "^13.5.0"
+ }
+}
