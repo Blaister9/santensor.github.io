@@ -1,0 +1,190 @@
+{
+  "timestamp": "2026-10-16T03:54:18.769Z",
+  "durationSeconds": 68,
+  "sampleIntervalSeconds": 2,
+  "samples": [
+    {
+      "at": "2026-10-16T03:53:11.115Z",
+      "status": 200,
+      "candidate": false
+    },
+    {
+      "at": "2026-10-16T03:53:13.368Z",
+      "status": 200,
+      "candidate": false
+    },
+    {
+      "at": "2026-10-16T03:53:15.421Z",
+      "status": 200,
+      "candidate": false
+    },
+    {
+      "at": "2026-10-16T03:53:17.452Z",
+      "status": 200,
+      "candidate": false
+    },
+    {
+      "at": "2026-10-16T03:53:19.488Z",
+      "status": 200,
+      "candidate": false
+    },
+    {
+      "at": "2026-10-16T03:53:21.521Z",
+      "status": 200,
+      "candidate": false
+    },
+    {
+      "at": "2026-10-16T03:53:23.555Z",
+      "status": 200,
+      "candidate": false
+    },
+    {
+      "at": "2026-10-16T03:53:25.592Z",
+      "status": 200,
+      "candidate": false
+    },
+    {
+      "at": "2026-10-16T03:53:27.623Z",
+      "status": 200,
+      "candidate": false
+    },
+    {
+      "at": "2026-10-16T03:53:29.657Z",
+      "status": 200,
+      "candidate": false
+    },
+    {
+      "at": "2026-10-16T03:53:31.689Z",
+      "status": 200,
+      "candidate": false
+    },
+    {
+      "at": "2026-10-16T03:53:33.717Z",
+      "status": 200,
+      "candidate": false
+    },
+    {
+      "at": "2026-10-16T03:53:35.743Z",
+      "status": 200,
+      "candidate": false
+    },
+    {
+      "at": "2026-10-16T03:53:37.768Z",
+      "status": 200,
+      "candidate": false
+    },
+    {
+      "at": "2026-10-16T03:53:39.795Z",
+      "status": 200,
+      "candidate": false
+    },
+    {
+      "at": "2026-10-16T03:53:41.823Z",
+      "status": 200,
+      "candidate": false
+    },
+    {
+      "at": "2026-10-16T03:53:43.850Z",
+      "status": 200,
+      "candidate": false
+    },
+    {
+      "at": "2026-10-16T03:53:45.874Z",
+      "status": 200,
+      "candidate": false
+    },
+    {
+      "at": "2026-10-16T03:53:47.906Z",
+      "status": 200,
+      "candidate": false
+    },
+    {
+      "at": "2026-10-16T03:53:49.930Z",
+      "status": 200,
+      "candidate": false
+    },
+    {
+      "at": "2026-10-16T03:53:51.956Z",
+      "status": 200,
+      "candidate": false
+    },
+    {
+      "at": "2026-10-16T03:53:53.982Z",
+      "status": 200,
+      "candidate": false
+    },
+    {
+      "at": "2026-10-16T03:53:56.019Z",
+      "status": 200,
+      "candidate": false
+    },
+    {
+      "at": "2026-10-16T03:53:58.059Z",
+      "status": 200,
+      "candidate": false
+    },
+    {
+      "at": "2026-10-16T03:54:00.090Z",
+      "status": 200,
+      "candidate": true,
+      "cssStatus": 200
+    },
+    {
+      "at": "2026-10-16T03:54:02.337Z",
+      "status": 200,
+      "candidate": true,
+      "cssStatus": 200
+    },
+    {
+      "at": "2026-10-16T03:54:04.391Z",
+      "status": 200,
+      "candidate": true,
+      "cssStatus": 200
+    },
+    {
+      "at": "2026-10-16T03:54:06.437Z",
+      "status": 200,
+      "candidate": true,
+      "cssStatus": 200
+    },
+    {
+      "at": "2026-10-16T03:54:08.487Z",
+      "status": 200,
+      "candidate": true,
+      "cssStatus": 200
+    },
+    {
+      "at": "2026-10-16T03:54:10.531Z",
+      "status": 200,
+      "candidate": true,
+      "cssStatus": 200
+    },
+    {
+      "at": "2026-10-16T03:54:12.571Z",
+      "status": 200,
+      "candidate": true,
+      "cssStatus": 200
+    },
+    {
+      "at": "2026-10-16T03:54:14.622Z",
+      "status": 200,
+      "candidate": true,
+      "cssStatus": 200
+    },
+    {
+      "at": "2026-10-16T03:54:16.665Z",
+      "status": 200,
+      "candidate": true,
+      "cssStatus": 200
+    },
+    {
+      "at": "2026-10-16T03:54:18.722Z",
+      "status": 200,
+      "candidate": true,
+      "cssStatus": 200
+    }
+  ],
+  "observedHttpFailures": 0,
+  "candidateObserved": true,
+  "limits": "Sampled availability only; not a continuous or global zero-downtime guarantee."
+}

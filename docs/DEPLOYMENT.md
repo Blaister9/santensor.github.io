@@ -26,3 +26,9 @@ This uses the already isolated trainer service, not another Railway project or p
 Release gate: passing feature CI, public candidate browser/HTTP checks, preserved CNAME and a reachable baseline. Keep the known-good rollback branch/tag. Merge through the PR only after these checks; otherwise leave production intact. Observe the actual Pages build outcome and smoke all production routes after release. If it fails, create a normal revert commit/PR to the known-good version; never force-push or change DNS.
 
 The rollback snapshot can be served independently from the preserved branch without modifying the working branch. No production rollback is claimed unless actually exercised. Reports distinguish a prepared rollback from proven zero-downtime deployment behavior.
+
+## Release verified 2026-10-16 UTC
+
+PR #1 was merged normally as `36756da02c6848698fa93d48f796d0dd8fe90a33`. The actual Pages build reached `built` for that commit. HTTPS, `CNAME`, source `main:/` and legacy build mode remain intact. Four production browser tests passed; the domain's simulated mobile Lighthouse scores are 100/100/100/100.
+
+`evidence/rollback-drill.json` records a restored baseline serving six checked routes and matching the live pre-release HTML hash after normalizing Windows line endings. `evidence/production-release-monitor.json` records 34 observations over 68 seconds, with zero HTTP failures and the candidate observed. This is sampled availability, not a continuous or global zero-downtime guarantee. No production rollback or DNS change was performed.

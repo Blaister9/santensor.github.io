@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-10-16T03:47:56.389Z",
-  "url": "https://trainer-web-production-f2e9.up.railway.app/commercial-preview/",
+  "timestamp": "2026-10-16T03:54:45.258Z",
+  "url": "https://santensor.com/",
   "mode": "Lighthouse simulated mobile lab test; not field measurements",
   "scores": {
     "performance": 100,
     "accessibility": 100,
     "best-practices": 100,
-    "seo": 63
+    "seo": 100
   },
   "metrics": {
-    "first-contentful-paint": "0.9 s",
-    "largest-contentful-paint": "0.9 s",
+    "first-contentful-paint": "1.0 s",
+    "largest-contentful-paint": "1.0 s",
     "total-blocking-time": "0 ms",
     "cumulative-layout-shift": "0",
-    "speed-index": "1.7 s"
+    "speed-index": "1.4 s"
   },
   "runtimeError": null
 }
