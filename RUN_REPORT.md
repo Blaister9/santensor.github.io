@@ -11,12 +11,22 @@ Sitio comercial únicamente. Se parte del checkout limpio en `3af1fe3`, se conse
 - Medición sintética local: **LCP 1,3 s, TBT 30 ms, CLS 0,002**. No hay INP medido ni datos de usuarios reales. No se usa Lighthouse como aprobación visual.
 - [Revisión visual y evidencias](evidence/v2.1/VISUAL_REVIEW.md): tres actos EN/ES, 1440×900, 768×1024, 390×844, composiciones completas, laboratorio, vídeos y trazas. Trazas disponibles localmente y en artefacto CI, sin duplicarlas en Git.
 - [Decisiones de arquitectura y referencias](docs/PRODUCT_V2_1_DECISIONS.md). Se conservan HTML estático, motor, fuentes locales, Pages y CNAME. Solo GSAP y ScrollTrigger como nueva dependencia de movimiento, servidos localmente.
-- Destino aislado de revisión: https://santensor-v21-review.easy-chair-5765.chatgpt.site. Publicación y comprobación final se registran al terminar. Es privado para la cuenta propietaria; no se cambia el acceso ni se genera un token para eludirlo.
+- Preview publicada: https://santensor-v21-review.easy-chair-5765.chatgpt.site — estado `succeeded` confirmado por Sites el 2026-10-16. Es privada para la cuenta propietaria de ChatGPT; no se cambia el acceso ni se genera un token para eludirlo. La suite completa se ejecutó localmente y en CI, no contra el acceso autenticado remoto.
 - Preparación: `node scripts/prepare-review.mjs`. No usar `stage-preview.mjs` para esta misión: escribe en el repositorio del entrenador. No se modifica Railway ni DNS ni se contrata un plan de pago.
 
 Pendiente real: aprobación artística del usuario. Se mantienen fuera de alcance el transporte de correo y la inferencia de IA real. La validación local no equivale a auditoría completa con lector de pantalla ni pruebas físicas de dispositivos.
 
 Reproducción: `npm ci`, `npm run build`, `npm run lint`, `npm test`, `npx playwright install chromium`, `npm run test:e2e`. Para rendimiento, establecer `SITE_EVIDENCE_DIR=evidence/v2.1/local` y ejecutar `node scripts/audit.mjs`.
+
+## Publicación V2.1 verificada
+
+- Commit de código y artefacto desplegado: `81ed9187c291fc78e8dcaba6d0f4c2c6d17af2c5` (`feat: complete Santensor V2.1 scroll narrative and interactive states`). Los commits posteriores de informe no cambian el producto desplegado.
+- CI de PR: https://github.com/Blaister9/santensor.github.io/actions/runs/38930946062 — **success**. CI de push: https://github.com/Blaister9/santensor.github.io/actions/runs/38930940774 — **success**. Incluyen 13 unitarias y 20 E2E, auditoría de dependencias, lint y build. Vídeos y trazas en el artefacto `site-verification`.
+- Detalles de publicación: [deployment.json](evidence/v2.1/deployment.json). Preview EN `/`, ES `/es/`, laboratorio `/labs/` y `/es/labs/`.
+- Comprobación HTTPS sin sesión: HTTP 401, coherente con acceso privado. Para revisar la interfaz publicada hay que iniciar sesión con la cuenta propietaria de ChatGPT. No se genera un bypass ni se presenta ese 401 como una prueba de renderizado remoto.
+- `preservation-before.json` y `preservation-after.json`: producción HTTP 200, mismo SHA-256 `e004c60d7bb84461a757b5b349ad5781f754838fc3e23503cb3aa6b7b2e03bb5`, main en `84e3c855af9cf112cdfdf4938e6197acdd40fea4`, CNAME `santensor.com`.
+- PR #3 preparado para revisión visual; ninguna fusión. La aceptación artística continúa pendiente.
+- Empaquetado en Windows con Git Bash y `TAR_OPTIONS=--force-local`, evitando que tar interprete `C:` como host remoto. No se altera el paquete distribuido de GSAP: las observaciones de whitespace de `git diff --check` provienen de sus archivos de proveedor.
 
 ---
 

@@ -1,0 +1,17 @@
+{
+  "sourceCommit": "81ed9187c291fc78e8dcaba6d0f4c2c6d17af2c5",
+  "branch": "feat/santensor-v2-experience-i18n",
+  "url": "https://santensor-v21-review.easy-chair-5765.chatgpt.site",
+  "audience": "owner-private",
+  "projectId": "appgprj_6ad24bac9a9081919fc2a3c8328e02aa",
+  "deploymentId": "appgdep_6ad24eed4a0481918624a74b76880976",
+  "versionId": "appgprj_6ad24bac9a9081919fc2a3c8328e02aa~appgver_b47e7ab5ab048191b754b8c194ad0756",
+  "status": "succeeded",
+  "verifiedAt": "2026-10-16T16:21:15.674681+00:00",
+  "verification": "Sites deployment status succeeded; HTTPS responds 401 to unauthenticated requests as expected for owner-private access. Full browser suite runs locally and in GitHub CI, not against the authenticated preview",
+  "ci": [
+    "https://github.com/Blaister9/santensor.github.io/actions/runs/38930946062",
+    "https://github.com/Blaister9/santensor.github.io/actions/runs/38930940774"
+  ],
+  "ciConclusion": "success"
+}

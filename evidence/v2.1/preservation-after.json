@@ -1,0 +1,12 @@
+{
+  "checkedAt": "2026-10-16T16:21:26.293Z",
+  "phase": "after",
+  "production": {
+    "url": "https://santensor.com/",
+    "status": 200,
+    "sha256": "e004c60d7bb84461a757b5b349ad5781f754838fc3e23503cb3aa6b7b2e03bb5"
+  },
+  "main": "84e3c855af9cf112cdfdf4938e6197acdd40fea4",
+  "cname": "santensor.com",
+  "unchanged": true
+}
