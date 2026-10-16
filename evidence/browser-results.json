@@ -55,7 +55,7 @@
         "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
         "timeout": 30000,
         "use": {
-          "baseURL": "http://127.0.0.1:4173"
+          "baseURL": "https://trainer-web-production-f2e9.up.railway.app"
         },
         "dependencies": [],
         "ignoreSnapshots": false,
@@ -85,11 +85,7 @@
     "updateSourceMethod": "patch",
     "version": "1.64.1",
     "workers": 1,
-    "webServer": {
-      "command": "npm run preview",
-      "url": "http://127.0.0.1:4173",
-      "reuseExistingServer": true
-    }
+    "webServer": null
   },
   "suites": [
     {
@@ -114,12 +110,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4522,
+                  "duration": 10041,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-16T03:38:10.732Z",
+                  "startTime": "2026-10-16T03:47:07.472Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -148,12 +144,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1887,
+                  "duration": 10423,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-16T03:38:15.419Z",
+                  "startTime": "2026-10-16T03:47:17.664Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -182,12 +178,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2678,
+                  "duration": 11514,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-16T03:38:17.317Z",
+                  "startTime": "2026-10-16T03:47:28.100Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -216,12 +212,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 760,
+                  "duration": 1297,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-16T03:38:20.004Z",
+                  "startTime": "2026-10-16T03:47:39.623Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -239,8 +235,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-16T03:38:02.002Z",
-    "duration": 19389.744,
+    "startTime": "2026-10-16T03:47:06.769Z",
+    "duration": 34220.240999999995,
     "expected": 4,
     "skipped": 0,
     "unexpected": 0,

@@ -7,5 +7,6 @@ try{
  const result=await lighthouse(url,{port:chrome.port,logLevel:'error',output:'json',onlyCategories:['performance','accessibility','best-practices','seo']});
  const summary={timestamp:new Date().toISOString(),url,mode:'Lighthouse simulated mobile lab test; not field measurements',scores:Object.fromEntries(Object.entries(result.lhr.categories).map(([k,v])=>[k,Math.round(v.score*100)])),metrics:Object.fromEntries(['first-contentful-paint','largest-contentful-paint','total-blocking-time','cumulative-layout-shift','speed-index'].map(k=>[k,result.lhr.audits[k].displayValue])),runtimeError:result.lhr.runtimeError??null};
  await mkdir('evidence',{recursive:true});await writeFile('evidence/lighthouse-summary.json',JSON.stringify(summary,null,2));console.log(JSON.stringify(summary));
- if(summary.scores.performance<90||summary.scores.accessibility<95||summary.scores.seo<90)process.exitCode=1;
+ // Staging deliberately sends X-Robots-Tag: noindex and canonicalizes to the production domain.
+ if(summary.scores.performance<90||summary.scores.accessibility<95||(!url.includes('/commercial-preview/')&&summary.scores.seo<90))process.exitCode=1;
 }finally{await chrome?.kill();server?.kill();}
