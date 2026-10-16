@@ -21,6 +21,7 @@ test('commercial routes render their language and reciprocal SEO metadata withou
   assert.equal((html.match(/<h1>/g) ?? []).length, 1);
   assert.ok(!html.includes('/issues'));
   assert.ok(!html.includes('undefined'));
+  if(language==='es')for(const phrase of ['AI / SOFTWARE / AUTOMATION','JSON / TRACE','for the real world','Engineering'])assert.ok(!html.includes(phrase),phrase);
  }
 });
 test('six-stage success is immutable, inspected historically and requires a human', () => {
