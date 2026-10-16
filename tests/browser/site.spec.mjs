@@ -96,9 +96,12 @@ for (const language of ['en','es']) test(`lab pauses, inspects, requires review 
  await expect(page.locator('[data-evidence]')).toContainText(language==='en'?'Rejected':'Rechazada');
  await page.locator('[data-reset]').click();
  await expect(page.locator('[data-orchestrator]')).toHaveAttribute('data-stage','0');
+ await page.locator('[data-run]').click();
  await page.locator('[data-request]').fill('short');
  await page.locator('[data-load]').click();
  await expect(page.locator('[data-error]')).toContainText(language==='en'?'fictional text':'texto ficticio');
+ await expect(page.locator('[data-orchestrator]')).toHaveAttribute('data-running','false');
+ await expect(page.locator('[data-run]')).toBeEnabled();
  await page.locator('[data-request]').fill('<img src=x onerror="window.pwned=true"> unknown request NS-999 access');
  await page.locator('[data-load]').click();
  expect(await page.evaluate(() => window.pwned)).toBeUndefined();

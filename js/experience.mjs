@@ -41,7 +41,7 @@ function mountOrchestrator(root) {
  function reset() {
   stop();
   try {state = createRun(textarea?.value ?? labels.fixtures[0], scenario); inspected = 0; paused = false; find('[data-error]').textContent = ''; render();}
-  catch {find('[data-error]').textContent = labels.invalid;}
+  catch {find('[data-error]').textContent = labels.invalid; render();}
  }
  function move(action) {
   try {
