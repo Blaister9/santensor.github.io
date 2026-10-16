@@ -1,0 +1,5 @@
+﻿Replaces the legacy landing page with Santensor's English positioning: AI & Machine Learning Engineering, Software & Systems Engineering, then Enterprise Automation & Modernization. Adds an inspectable request workflow with synthetic fixtures, explicit mock API behavior and a mandatory human decision; cases and privacy state their limits.
+
+Preserves all existing assets, history, CNAME, DNS and Pages source configuration. The known-good baseline is saved in a remote rollback branch and tag. A local restoration drill matched the current live HTML hash and served all six checked legacy routes successfully.
+
+Validation: 5 state-machine tests, 4 browser tests on local and HTTPS candidate (390/768/1440 px; four routes; internal links; axe A/AA), zero npm audit findings. Lighthouse candidate performance/accessibility/best-practices: 100/100/100. Preview SEO is 63 because staging is intentionally noindex; local production markup scores SEO 100. Evidence is in evidence/ and the CI artifact. Public candidate: https://trainer-web-production-f2e9.up.railway.app/commercial-preview/ .

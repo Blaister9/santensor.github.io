@@ -1,0 +1,39 @@
+{
+  "timestamp": "2026-10-16T03:49:38.801Z",
+  "baseline": "22e06ba3aaaad1f54f99384a806f9925a3b35b21",
+  "rollbackSourceSha256": "ccf72bd44c1b59e277123c6a7e8eba0f72be7a469483158280fbe1f3e07eb2b2",
+  "lineEndingsNormalized": "LF",
+  "restoredWithoutHistoryRewrite": true,
+  "productionModified": false,
+  "checks": [
+    {
+      "route": "/",
+      "status": 200
+    },
+    {
+      "route": "/CNAME",
+      "status": 200
+    },
+    {
+      "route": "/css/main.css",
+      "status": 200
+    },
+    {
+      "route": "/js/main.js",
+      "status": 200
+    },
+    {
+      "route": "/components/hero.html",
+      "status": 200
+    },
+    {
+      "route": "/components/contact.html",
+      "status": 200
+    }
+  ],
+  "passed": true,
+  "liveBaselineStatus": 200,
+  "liveBaselineSha256": "ccf72bd44c1b59e277123c6a7e8eba0f72be7a469483158280fbe1f3e07eb2b2",
+  "liveMatchesRestoredBaseline": true,
+  "cname": "santensor.com"
+}
