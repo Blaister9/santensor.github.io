@@ -1,0 +1,272 @@
+{
+  "origin": "https://futures-regular-antiques-operator.trycloudflare.com",
+  "checkedAt": "2026-10-16T19:14:19.857Z",
+  "routes": [
+    {
+      "route": "/",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "status": 200,
+      "title": "Santensor — Engineering intelligent systems.",
+      "fonts": "loaded"
+    },
+    {
+      "route": "/es/",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "status": 200,
+      "title": "Santensor — Ingeniería de sistemas inteligentes.",
+      "fonts": "loaded"
+    },
+    {
+      "route": "/concept-b/",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "status": 200,
+      "title": "Intelligent systems workbench",
+      "fonts": "loaded"
+    },
+    {
+      "route": "/es/concept-b/",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "status": 200,
+      "title": "Mesa de sistemas inteligentes",
+      "fonts": "loaded"
+    },
+    {
+      "route": "/",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": 200,
+      "title": "Santensor — Engineering intelligent systems.",
+      "fonts": "loaded"
+    },
+    {
+      "route": "/es/",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": 200,
+      "title": "Santensor — Ingeniería de sistemas inteligentes.",
+      "fonts": "loaded"
+    },
+    {
+      "route": "/concept-b/",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": 200,
+      "title": "Intelligent systems workbench",
+      "fonts": "loaded"
+    },
+    {
+      "route": "/es/concept-b/",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": 200,
+      "title": "Mesa de sistemas inteligentes",
+      "fonts": "loaded"
+    }
+  ],
+  "gallery": [
+    {
+      "url": "https://futures-regular-antiques-operator.trycloudflare.com/es/",
+      "status": 200
+    },
+    {
+      "url": "https://futures-regular-antiques-operator.trycloudflare.com/es/concept-b/",
+      "status": 200
+    },
+    {
+      "url": "https://futures-regular-antiques-operator.trycloudflare.com/es/concepts/",
+      "status": 200
+    },
+    {
+      "url": "https://futures-regular-antiques-operator.trycloudflare.com/",
+      "status": 200
+    },
+    {
+      "url": "https://futures-regular-antiques-operator.trycloudflare.com/concept-b/",
+      "status": 200
+    },
+    {
+      "url": "https://futures-regular-antiques-operator.trycloudflare.com/review/review.md",
+      "status": 200
+    },
+    {
+      "url": "https://futures-regular-antiques-operator.trycloudflare.com/review/access.md",
+      "status": 200
+    },
+    {
+      "url": "https://futures-regular-antiques-operator.trycloudflare.com/review/v2.1/home-1440.png",
+      "status": 200
+    },
+    {
+      "url": "https://futures-regular-antiques-operator.trycloudflare.com/review/v3/home-1440.png",
+      "status": 200
+    },
+    {
+      "url": "https://futures-regular-antiques-operator.trycloudflare.com/review/compare-1440.png",
+      "status": 200
+    },
+    {
+      "url": "https://futures-regular-antiques-operator.trycloudflare.com/review/v2.1/home-1440-full.png",
+      "status": 200
+    },
+    {
+      "url": "https://futures-regular-antiques-operator.trycloudflare.com/review/v3/home-1440-full.png",
+      "status": 200
+    },
+    {
+      "url": "https://futures-regular-antiques-operator.trycloudflare.com/review/v2.1/home-390.png",
+      "status": 200
+    },
+    {
+      "url": "https://futures-regular-antiques-operator.trycloudflare.com/review/v3/home-390.png",
+      "status": 200
+    },
+    {
+      "url": "https://futures-regular-antiques-operator.trycloudflare.com/review/compare-390.png",
+      "status": 200
+    },
+    {
+      "url": "https://futures-regular-antiques-operator.trycloudflare.com/review/v2.1/home-390-full.png",
+      "status": 200
+    },
+    {
+      "url": "https://futures-regular-antiques-operator.trycloudflare.com/review/v3/home-390-full.png",
+      "status": 200
+    },
+    {
+      "url": "https://futures-regular-antiques-operator.trycloudflare.com/review/v3/tour-1440.webm",
+      "status": 200
+    },
+    {
+      "url": "https://futures-regular-antiques-operator.trycloudflare.com/review/v3/tour-390.webm",
+      "status": 200
+    },
+    {
+      "url": "https://futures-regular-antiques-operator.trycloudflare.com/review/v2.1/tour-1440.webm",
+      "status": 200
+    },
+    {
+      "url": "https://futures-regular-antiques-operator.trycloudflare.com/review/v2.1/tour-390.webm",
+      "status": 200
+    },
+    {
+      "url": "https://futures-regular-antiques-operator.trycloudflare.com/review/tests/chapter-1-es.png",
+      "status": 200
+    },
+    {
+      "url": "https://futures-regular-antiques-operator.trycloudflare.com/review/tests/chapter-2-es.png",
+      "status": 200
+    },
+    {
+      "url": "https://futures-regular-antiques-operator.trycloudflare.com/review/tests/chapter-3-es.png",
+      "status": 200
+    },
+    {
+      "url": "https://futures-regular-antiques-operator.trycloudflare.com/review/v3/home-interaction-1440.png",
+      "status": 200
+    },
+    {
+      "url": "https://futures-regular-antiques-operator.trycloudflare.com/review/v3/concept-b-1440.png",
+      "status": 200
+    },
+    {
+      "url": "https://futures-regular-antiques-operator.trycloudflare.com/review/v3/concept-b-390.png",
+      "status": 200
+    },
+    {
+      "url": "https://futures-regular-antiques-operator.trycloudflare.com/review/v3/concept-b-1440-full.png",
+      "status": 200
+    },
+    {
+      "url": "https://futures-regular-antiques-operator.trycloudflare.com/review/v3/concept-b-390-full.png",
+      "status": 200
+    },
+    {
+      "url": "https://futures-regular-antiques-operator.trycloudflare.com/review/v3/concept-b-interaction-1440.png",
+      "status": 200
+    },
+    {
+      "url": "https://futures-regular-antiques-operator.trycloudflare.com/review/v3/labs-1440-full.png",
+      "status": 200
+    },
+    {
+      "url": "https://futures-regular-antiques-operator.trycloudflare.com/review/v3/cases-1440-full.png",
+      "status": 200
+    },
+    {
+      "url": "https://futures-regular-antiques-operator.trycloudflare.com/review/v3/contact-1440-full.png",
+      "status": 200
+    },
+    {
+      "url": "https://futures-regular-antiques-operator.trycloudflare.com/review/tests/browser-results.json",
+      "status": 200
+    },
+    {
+      "url": "https://futures-regular-antiques-operator.trycloudflare.com/review/baseline-tests/browser-results.json",
+      "status": 200
+    },
+    {
+      "url": "https://futures-regular-antiques-operator.trycloudflare.com/review/performance-v3/lighthouse-summary.json",
+      "status": 200
+    },
+    {
+      "url": "https://futures-regular-antiques-operator.trycloudflare.com/review/performance-v2/lighthouse-summary.json",
+      "status": 200
+    },
+    {
+      "url": "https://futures-regular-antiques-operator.trycloudflare.com/review/manifest.json",
+      "status": 200
+    }
+  ],
+  "videos": [
+    {
+      "url": "https://futures-regular-antiques-operator.trycloudflare.com/review/v3/tour-1440.webm",
+      "duration": 32.2,
+      "currentTime": 0.3864,
+      "paused": false,
+      "error": null
+    },
+    {
+      "url": "https://futures-regular-antiques-operator.trycloudflare.com/review/v3/tour-390.webm",
+      "duration": 30.4,
+      "currentTime": 0.3978,
+      "paused": false,
+      "error": null
+    },
+    {
+      "url": "https://futures-regular-antiques-operator.trycloudflare.com/review/v2.1/tour-1440.webm",
+      "duration": 17.76,
+      "currentTime": 0.3967,
+      "paused": false,
+      "error": null
+    },
+    {
+      "url": "https://futures-regular-antiques-operator.trycloudflare.com/review/v2.1/tour-390.webm",
+      "duration": 16.92,
+      "currentTime": 0.4046,
+      "paused": false,
+      "error": null
+    }
+  ],
+  "errors": [],
+  "passed": true
+}

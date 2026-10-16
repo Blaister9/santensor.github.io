@@ -1,8 +1,18 @@
 {
   "baseline": "4b94f81",
   "branch": "feat/santensor-v3-independent",
-  "generatedAt": "2026-10-16T19:07:45.089Z",
+  "generatedAt": "2026-10-16T19:14:35.878Z",
   "files": [
+    {
+      "path": "access-check.json",
+      "bytes": 7935,
+      "sha256": "cdc97287eb3d5a8fd90c9ea307a542f1afbd7c63cfef781232481b0173e10515"
+    },
+    {
+      "path": "access.md",
+      "bytes": 4519,
+      "sha256": "960bbc7b93ea01e517734a55f80bea55f852ec064b2fc34174dfd818e8464835"
+    },
     {
       "path": "baseline-tests/act-1-en-1440.png",
       "bytes": 189197,
@@ -425,8 +435,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 7363,
-      "sha256": "c1aa2bb5c59832b397566b94df765dcb3f2dceb9f85065cb68e48fae5f80f098"
+      "bytes": 7594,
+      "sha256": "565e7c73591e2b0b200ea9be0eaa0e9144973047aae79e91610c8dde00025357"
     },
     {
       "path": "inspection/a-1440.png",
@@ -504,9 +514,19 @@
       "sha256": "7265ff4f505ae826451b489777c7c2ba81d2b0dd1a77759f1c16427db7cf3d3c"
     },
     {
+      "path": "preservation-check.json",
+      "bytes": 874,
+      "sha256": "6eb0721d113ca55396c34c30e866451b8854b970fb988d524a9f09684d9d7720"
+    },
+    {
+      "path": "public-navigation-results.json",
+      "bytes": 26782,
+      "sha256": "0a9e08433dfe32887e713767b72c6dd578498a758c6f039a2eb68c747a44f520"
+    },
+    {
       "path": "review.md",
-      "bytes": 21240,
-      "sha256": "c5ec7515528b2697b9737964a59e42a33bd3197eb34e3aabb6734a3faca22a05"
+      "bytes": 21403,
+      "sha256": "55f8abdb25fda2e2911e24d64942795cf1e6fa4a5e162ede6f2f89f8bfbb50c2"
     },
     {
       "path": "tests/axe-en-1440.json",

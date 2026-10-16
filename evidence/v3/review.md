@@ -94,7 +94,7 @@ Hay indicación visible de scroll en la primera pantalla, progreso, navegación 
 
 `js/workflow.mjs` y `js/contact.mjs` no cambian. Se conservan aprobación humana obligatoria, rechazo, corrección de solicitudes ambiguas, reintento explícito, historial de eventos, límites de entrada y uso de texto como datos. El nuevo documento visible del laboratorio se actualiza con la solicitud cargada, incluida una entrada hostil mostrada como texto.
 
-Contacto prepara un borrador para revisión, no lo envía. Los vídeos usan exclusivamente nombres y direcciones sintéticos. No se tocaron el entrenador, producción, DNS, CNAME ni la configuración de hosting. No se fusionó el PR #3, no se creó un commit y no se publicó una preview remota.
+Contacto prepara un borrador para revisión, no lo envía. Los vídeos usan exclusivamente nombres y direcciones sintéticos. No se tocaron el entrenador, producción, DNS, CNAME ni la configuración de hosting. No se fusionó el PR #3. Tras la implementación, el propietario autorizó guardar y subir la rama V3 y facilitar una preview HTTPS aislada. El estado de esa entrega se documenta en `V3_REVIEW_ACCESS.md`.
 
 ### Contenido editorial y producción
 
@@ -193,4 +193,4 @@ El recorrido automatizado avanza más rápido que una lectura comercial completa
 - `evidence/v3/performance-v2/` y `performance-v3/`: mediciones de Lighthouse.
 - `evidence/v3/manifest.json`: rutas, tamaños y hashes SHA-256 de los entregables locales.
 
-La preview ofrece una alternativa visual concreta y verificable. La publicación exige resolver el contenido editorial y obtener aceptación del propietario; no forma parte de esta entrega local.
+La preview ofrece una alternativa visual concreta y verificable. La publicación en producción exige resolver el contenido editorial y obtener aceptación del propietario; la preview temporal de revisión no constituye esa publicación.

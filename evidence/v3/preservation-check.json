@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-10-16T19:11:05Z",
+  "mainBeforeAndAfter": "84e3c855af9cf112cdfdf4938e6197acdd40fea4",
+  "pagesUnchanged": true,
+  "pages": {
+    "html_url": "https://santensor.com/",
+    "status": "built",
+    "cname": "santensor.com",
+    "source": {"branch": "main", "path": "/"},
+    "build_type": "legacy",
+    "https_enforced": true
+  },
+  "productionStatus": 200,
+  "productionHtmlUnchanged": true,
+  "cname": "santensor.com",
+  "trainerHeadBeforeAndAfter": "2a72d2e88d0e7b1dbe4aa2b8dbacfe9ebfcdc156",
+  "trainerCleanBeforeAndAfter": true,
+  "dnsABeforeAndAfter": ["185.199.108.153", "185.199.109.153", "185.199.110.153", "185.199.111.153"],
+  "dnsNSBeforeAndAfter": ["dns1.registrar-servers.com", "dns2.registrar-servers.com"],
+  "actions": "Only read operations against production, Pages, DNS and trainer. Branch push only; no merge or Railway deployment."
+}

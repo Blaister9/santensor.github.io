@@ -13,10 +13,11 @@ const gallery = (await readFile(`${root}/index.html`,'utf8'))
  .replaceAll('http://127.0.0.1:4173',previewOrigin)
  .replace('Preview local en','Preview de revisión en')
  .replace('No se ha publicado ni fusionado ningún cambio.','No se ha fusionado ni desplegado ningún cambio en producción.')
- .replace('<a href="review.md">Informe completo</a>',`<a href="${previewOrigin}/">A — English</a><a href="${previewOrigin}/concept-b/">B — English</a><a href="review.md">Informe completo</a>`)
+ .replace('<a href="review.md">Informe completo</a>',`<a href="${previewOrigin}/">A — English</a><a href="${previewOrigin}/concept-b/">B — English</a><a href="review.md">Informe completo</a><a href="access.md">Acceso y procesos</a>`)
  .replace('<a href="v3/concept-b-interaction-1440.png">','<div class="links"><a href="v3/concept-b-1440-full.png">B completa — escritorio</a><a href="v3/concept-b-390-full.png">B completa — móvil</a></div><a href="v3/concept-b-interaction-1440.png">');
 await writeFile(`${root}/index.html`,gallery);
 try {await copyFile('docs/V3_INDEPENDENT_REVIEW.md',`${root}/review.md`);} catch {}
+await copyFile('docs/V3_REVIEW_ACCESS.md',`${root}/access.md`);
 async function files(directory) {
  const result = [];
  for (const name of await readdir(directory)) {
