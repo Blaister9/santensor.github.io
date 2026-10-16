@@ -3,10 +3,13 @@
  "private": true,
  "type": "module",
  "scripts": {
-  "build": "node scripts/build.mjs",
+  "build": "node scripts/build.mjs --preview",
+  "build:production": "node scripts/build.mjs",
   "test": "node --test tests/*.test.mjs",
   "preview": "node scripts/serve.mjs",
   "test:e2e": "playwright test",
+  "test:e2e:legacy": "playwright test --config playwright.legacy.config.mjs",
+  "capture:v3": "node scripts/capture-v3.mjs v3",
   "lint": "node scripts/check.mjs"
  },
  "devDependencies": {

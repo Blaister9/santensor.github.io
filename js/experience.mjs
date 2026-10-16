@@ -24,8 +24,10 @@ document.querySelectorAll('[data-language]').forEach(link => link.addEventListen
 try {localStorage.setItem('santensor-language', language);} catch {}
 
 document.querySelectorAll('[data-orchestrator]').forEach(mountOrchestrator);
-import('./motion.mjs').catch(() => {});
-if (document.querySelector('[data-story]')) import('./story.mjs').catch(() => {});
+if (!document.body.classList.contains('studio-body') && !document.body.classList.contains('concept-b-body')) {
+ import('./motion.mjs').catch(() => {});
+ if (document.querySelector('[data-story]')) import('./story.mjs').catch(() => {});
+}
 
 function mountOrchestrator(root) {
  const labels = copy.lab;
@@ -84,9 +86,16 @@ function mountOrchestrator(root) {
   root.dataset.running = String(running);
   root.dataset.failed = String(state.failed);
   root.dataset.paused = String(paused);
+  if (find('[data-ticket-text]')) {
+   find('[data-ticket-text]').textContent = state.text;
+   find('[data-ticket-subject]').textContent = state.fields ? labels.values[state.fields.category] : labels.request;
+   find('[data-ticket-reference]').textContent = state.fields?.reference ?? 'S / 001';
+  }
   const circuit = find('.circuit');
-  if (running && !matchMedia('(prefers-reduced-motion: reduce)').matches) circuit.unpauseAnimations();
-  else circuit.pauseAnimations();
+  if (circuit) {
+   if (running && !matchMedia('(prefers-reduced-motion: reduce)').matches) circuit.unpauseAnimations();
+   else circuit.pauseAnimations();
+  }
   root.dataset.progress = String(state.stage / 5);
   root.style.setProperty('--execution-progress', state.stage / 5);
   const status = state.failed ? labels.error : state.stage === 5 ? labels.done : state.stage === 4 ? labels.reviewNeeded : running ? labels.running : paused ? labels.paused : labels.ready;
@@ -145,4 +154,9 @@ function mountOrchestrator(root) {
  }
  document.addEventListener('visibilitychange', () => {if (document.hidden && running) {stop(); paused = true; render();}});
  render();
+ const requestedScenario = new URLSearchParams(location.search).get('scenario');
+ if (scenarioSelect && ['success', 'ambiguous', 'failure'].includes(requestedScenario)) {
+  scenarioSelect.value = requestedScenario;
+  scenarioSelect.dispatchEvent(new Event('change'));
+ }
 }

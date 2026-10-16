@@ -3,7 +3,7 @@ import AxeBuilder from '@axe-core/playwright';
 import {mkdir, writeFile} from 'node:fs/promises';
 const prefix = process.env.SITE_PATH_PREFIX ?? '';
 const visit = (page, path) => page.goto(prefix + path);
-const evidence = process.env.SITE_EVIDENCE_DIR ?? 'evidence/v2.1/local';
+const evidence = process.env.SITE_EVIDENCE_DIR ?? 'evidence/v3/tests';
 
 for (const viewport of [{width:1440,height:900},{width:390,height:844}]) {
  for (const language of ['en', 'es']) test(`routes, visual evidence and axe ${language} ${viewport.width}`, async ({browser}) => {
@@ -115,7 +115,10 @@ test('hero is a working system; reduced motion disables animations', async ({pag
  await page.locator('[data-approve]').click();
  await page.locator('[data-inspector] summary').click();
  await expect(page.locator('[data-evidence]')).toContainText('Approved');
- expect(await page.locator('.orbital').evaluate(element => getComputedStyle(element).animationName)).toBe('none');
+ if (await page.locator('[data-v3-story]').count()) {
+  await expect(page.locator('[data-v3-story]')).not.toHaveClass(/is-scroll-story/);
+  expect(await page.locator('.artifact').first().evaluate(element => getComputedStyle(element).transitionDuration)).toBe('0s');
+ } else expect(await page.locator('.orbital').evaluate(element => getComputedStyle(element).animationName)).toBe('none');
 });
 for (const language of ['en','es']) test(`contact validates and prepares mailto without sending ${language}`, async ({page}) => {
  const externalWrites = [];

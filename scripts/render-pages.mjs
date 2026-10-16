@@ -2,11 +2,12 @@ import {mkdir, writeFile} from 'node:fs/promises';
 import {catalogs, languages, routeFor} from '../js/i18n.mjs';
 import {contactEmail} from '../js/contact.mjs';
 import {renderStory} from './render-story.mjs';
+import {renderStudioPage} from './render-v3.mjs';
 
 const escape = value => String(value).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
 const lines = value => escape(value).replaceAll('\n', '<br>');
 const arrow = '<span aria-hidden="true">↗</span>';
-const pages = ['', 'labs', 'cases', 'contact', 'privacy'];
+const pages = ['', 'labs', 'cases', 'contact', 'privacy', 'concepts', 'concept-b'];
 
 function scene(copy, compact = false) {
  const lab = copy.lab;
@@ -62,6 +63,10 @@ function contactPage(copy, language) {
 function privacyPage(copy) {return `<section class="page-heading wrap"><p class="eyebrow">${copy.privacy.eyebrow}</p><h1>${lines(copy.privacy.title)}</h1></section><div class="privacy-content wrap">${copy.privacy.sections.map(item => `<section><h2>${item[0]}</h2><p>${item[1]}</p></section>`).join('')}</div>`;}
 
 export function renderPage(language, page) {
+ return renderStudioPage(language, page, {contactPage, privacyPage});
+}
+
+export function renderLegacyPage(language, page) {
  const copy = catalogs[language];
  const otherLanguage = language === 'en' ? 'es' : 'en';
  const pageKey = page || 'home';

@@ -1,0 +1,58 @@
+[
+  {
+    "seconds": 0.16,
+    "name": "Portada"
+  },
+  {
+    "seconds": 2.33,
+    "name": "Capítulo táctil 2"
+  },
+  {
+    "seconds": 3.78,
+    "name": "Capítulo táctil 3"
+  },
+  {
+    "seconds": 5.25,
+    "name": "Simulación ejecutándose"
+  },
+  {
+    "seconds": 9.3,
+    "name": "Revisión humana"
+  },
+  {
+    "seconds": 13.99,
+    "name": "Secciones y contacto de Home"
+  },
+  {
+    "seconds": 14.81,
+    "name": "Navegación: labs"
+  },
+  {
+    "seconds": 16.44,
+    "name": "Fallo 503"
+  },
+  {
+    "seconds": 17.52,
+    "name": "Recuperación y revisión"
+  },
+  {
+    "seconds": 20.59,
+    "name": "Navegación: cases"
+  },
+  {
+    "seconds": 22.42,
+    "name": "Navegación: contact"
+  },
+  {
+    "seconds": 23.94,
+    "name": "Borrador local; no enviado"
+  },
+  {
+    "seconds": 25.97,
+    "name": "Concepto B"
+  },
+  {
+    "seconds": 28.71,
+    "name": "B: revisión humana requerida"
+  }
+]

@@ -7,3 +7,6 @@ test-results/
 *.log
 .local/
 evidence/v2.1/**/story-*.zip
+evidence/v3/**/story-*.zip
+evidence/v3/**/video/
+evidence/v3/**/recordings/

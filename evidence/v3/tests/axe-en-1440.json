@@ -1,0 +1,47 @@
+[
+  {
+    "path": "/",
+    "violations": [],
+    "passes": 23,
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "impact": "serious"
+      }
+    ]
+  },
+  {
+    "path": "/labs/",
+    "violations": [],
+    "passes": 29,
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "impact": "serious"
+      }
+    ]
+  },
+  {
+    "path": "/cases/",
+    "violations": [],
+    "passes": 18,
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "impact": "serious"
+      }
+    ]
+  },
+  {
+    "path": "/contact/",
+    "violations": [],
+    "passes": 27,
+    "incomplete": []
+  },
+  {
+    "path": "/privacy/",
+    "violations": [],
+    "passes": 16,
+    "incomplete": []
+  }
+]
