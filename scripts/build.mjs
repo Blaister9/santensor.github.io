@@ -1,6 +1,9 @@
 import {mkdir,copyFile,cp,readFile} from 'node:fs/promises';
 import {renderPages} from './render-pages.mjs';
 await mkdir('assets/fonts',{recursive:true});
+await mkdir('js/vendor', {recursive:true});
+for (const filename of ['gsap.min.js', 'ScrollTrigger.min.js']) await copyFile(`node_modules/gsap/dist/${filename}`, `js/vendor/${filename}`);
+await copyFile('node_modules/gsap/README.md', 'js/vendor/GSAP-NOTICE.md');
 for(const [family,weight] of [['space-grotesk',500],['inter',400],['ibm-plex-mono',400]]){
  await copyFile(`node_modules/@fontsource/${family}/files/${family}-latin-${weight}-normal.woff2`,`assets/fonts/${family}-latin-${weight}-normal.woff2`);
  await copyFile(`node_modules/@fontsource/${family}/LICENSE`,`assets/fonts/${family}-LICENSE.txt`);

@@ -24,6 +24,8 @@ document.querySelectorAll('[data-language]').forEach(link => link.addEventListen
 try {localStorage.setItem('santensor-language', language);} catch {}
 
 document.querySelectorAll('[data-orchestrator]').forEach(mountOrchestrator);
+import('./motion.mjs').catch(() => {});
+if (document.querySelector('[data-story]')) import('./story.mjs').catch(() => {});
 
 function mountOrchestrator(root) {
  const labels = copy.lab;
@@ -81,6 +83,12 @@ function mountOrchestrator(root) {
   root.dataset.stage = state.stage;
   root.dataset.running = String(running);
   root.dataset.failed = String(state.failed);
+  root.dataset.paused = String(paused);
+  const circuit = find('.circuit');
+  if (running && !matchMedia('(prefers-reduced-motion: reduce)').matches) circuit.unpauseAnimations();
+  else circuit.pauseAnimations();
+  root.dataset.progress = String(state.stage / 5);
+  root.style.setProperty('--execution-progress', state.stage / 5);
   const status = state.failed ? labels.error : state.stage === 5 ? labels.done : state.stage === 4 ? labels.reviewNeeded : running ? labels.running : paused ? labels.paused : labels.ready;
   find('[data-status]').textContent = status;
   find('[data-current]').textContent = `${String(state.stage + 1).padStart(2, '0')} / ${labels.stages[state.stage]}`;
@@ -92,8 +100,25 @@ function mountOrchestrator(root) {
   find('[data-approve]').disabled = state.policy !== 'review';
   find('[data-correct]').hidden = state.policy !== 'triage';
   find('[data-review-hint]').textContent = state.policy === 'triage' ? labels.correctionHint : labels.humanNote;
-  nodes.forEach(node => {const index = Number(node.dataset.node); node.classList.toggle('is-active', index === state.stage); node.classList.toggle('is-complete', index < state.stage); node.setAttribute('aria-pressed', String(index === inspected));});
-  root.querySelectorAll('[data-wire]').forEach(wire => wire.classList.toggle('is-traversed', Number(wire.dataset.wire) < state.stage));
+  nodes.forEach(node => {
+   const index = Number(node.dataset.node);
+   const nodeState = index < state.stage || state.stage === 5 && index === 5 ? 'complete' : index > state.stage ? 'waiting' : state.failed ? 'error' : state.stage === 4 ? 'review' : running ? 'running' : paused ? 'paused' : 'ready';
+   node.dataset.nodeState = nodeState;
+   node.classList.toggle('is-active', index === state.stage);
+   node.classList.toggle('is-complete', index < state.stage);
+   node.setAttribute('aria-pressed', String(index === inspected));
+   node.setAttribute('aria-label', `${labels.nodeLabel}: ${labels.stages[index]} — ${copy.story.labStates[nodeState]}`);
+   if (node.classList.contains('system-node')) {
+    let badge = node.querySelector('.node-state');
+    if (!badge) {badge = document.createElement('span'); badge.className = 'node-state'; node.append(badge);}
+    badge.textContent = copy.story.labStates[nodeState];
+   }
+  });
+  root.querySelectorAll('[data-wire]').forEach(wire => {
+   wire.classList.toggle('is-traversed', Number(wire.dataset.wire) < state.stage);
+   wire.classList.toggle('is-flowing', Number(wire.dataset.wire) === state.stage && running);
+   wire.classList.toggle('is-error', Number(wire.dataset.wire) === 2 && state.failed);
+  });
   root.querySelectorAll('[data-packet]').forEach(packet => packet.setAttribute('visibility', Number(packet.dataset.packet) === state.stage && running ? 'visible' : 'hidden'));
   find('[data-inspect-title]').textContent = `${String(inspected + 1).padStart(2, '0')} / ${labels.stages[inspected]}`;
   find('[data-inspect-description]').textContent = labels.stageDescriptions[inspected];

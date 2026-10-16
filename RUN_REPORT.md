@@ -1,4 +1,26 @@
-# SANTENSOR V2 — informe de ejecución
+# SANTENSOR V2.1 — informe de ejecución
+
+## Entrega V2.1 · 2026-10-16
+
+Sitio comercial únicamente. Se parte del checkout limpio en `3af1fe3`, se conserva `feat/santensor-v2-experience-i18n` y el PR #3. No se fusiona con main ni se trabaja en el entrenador.
+
+- Narrativa de tres actos, ocho estados, scrubbing GSAP, conexiones y paquetes SVG; pin temporal reversible en escritorio, salida accesible y capítulos verticales en móvil/tableta/movimiento reducido/sin JS.
+- Hero editorial con entrada finita; laboratorio con estados reales diferenciados, selección histórica, conexiones dirigidas, progreso y pausa de animaciones. Casos con arquitectura y límites conservados. Contacto prepara un borrador y marca errores, sin envío automático.
+- EN/ES completo, cambios de idioma equivalentes, navegación nativa. View Transitions evaluado y retirado tras un aborto observado; no se ocultan errores de consola para aprobarlo.
+- Build, lint y **13/13 unitarias** pasan. Suite final local: **20/20 Playwright**, incluyendo las 12 anteriores. Axe sin violaciones A/AA en rutas/tamaños comprobados, estados de scroll reversibles, limpieza responsive, teclado y fallos recuperables.
+- Medición sintética local: **LCP 1,3 s, TBT 30 ms, CLS 0,002**. No hay INP medido ni datos de usuarios reales. No se usa Lighthouse como aprobación visual.
+- [Revisión visual y evidencias](evidence/v2.1/VISUAL_REVIEW.md): tres actos EN/ES, 1440×900, 768×1024, 390×844, composiciones completas, laboratorio, vídeos y trazas. Trazas disponibles localmente y en artefacto CI, sin duplicarlas en Git.
+- [Decisiones de arquitectura y referencias](docs/PRODUCT_V2_1_DECISIONS.md). Se conservan HTML estático, motor, fuentes locales, Pages y CNAME. Solo GSAP y ScrollTrigger como nueva dependencia de movimiento, servidos localmente.
+- Destino aislado de revisión: https://santensor-v21-review.easy-chair-5765.chatgpt.site. Publicación y comprobación final se registran al terminar. Es privado para la cuenta propietaria; no se cambia el acceso ni se genera un token para eludirlo.
+- Preparación: `node scripts/prepare-review.mjs`. No usar `stage-preview.mjs` para esta misión: escribe en el repositorio del entrenador. No se modifica Railway ni DNS ni se contrata un plan de pago.
+
+Pendiente real: aprobación artística del usuario. Se mantienen fuera de alcance el transporte de correo y la inferencia de IA real. La validación local no equivale a auditoría completa con lector de pantalla ni pruebas físicas de dispositivos.
+
+Reproducción: `npm ci`, `npm run build`, `npm run lint`, `npm test`, `npx playwright install chromium`, `npm run test:e2e`. Para rendimiento, establecer `SITE_EVIDENCE_DIR=evidence/v2.1/local` y ejecutar `node scripts/audit.mjs`.
+
+---
+
+# Informe histórico V2 (anterior a esta misión)
 
 ## Implementado y verificado localmente
 

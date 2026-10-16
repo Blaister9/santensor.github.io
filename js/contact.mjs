@@ -17,9 +17,10 @@ if (typeof document !== 'undefined') {
   const status = document.querySelector('[data-contact-status]');
   const draft = document.querySelector('[data-draft]');
   const panel = document.querySelector('[data-draft-panel]');
-  form.addEventListener('input', () => {panel.hidden = true; status.textContent = '';});
+  form.addEventListener('input', event => {panel.hidden = true; status.textContent = ''; event.target.removeAttribute('aria-invalid');});
   form.addEventListener('submit', event => {
    event.preventDefault();
+   for (const field of form.querySelectorAll('[required]')) field.setAttribute('aria-invalid', String(!field.validity.valid));
    try {
     const fields = Object.fromEntries(new FormData(form));
     const inquiry = prepareInquiry({...fields, consent: fields.consent === 'on'}, document.documentElement.lang);

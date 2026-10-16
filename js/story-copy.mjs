@@ -1,0 +1,30 @@
+export const storyCopy = {
+ en: {
+  caseFlows: [['Request', 'Rules', 'Mock API', 'Human', 'Record'], ['Interface', 'Server controls', 'Voice session', 'Consented history'], ['Intake', 'Directory', 'Recovery', 'Review', 'Assignment']],
+  label: 'SYSTEM STUDY / 001', title: 'Intelligent systems in motion', skip: 'Skip to the lab', scroll: 'SCROLL TO CONNECT', demo: 'Illustrative architecture · Synthetic request', inspect: 'SYSTEM TELEMETRY', handoff: 'The story becomes a system.', handoffBody: 'Now control the same boundaries yourself. Change the request, interrupt execution and decide what happens next.', handoffCta: 'Open the interactive lab',
+  acts: [
+   {name: 'THE PROBLEM', title: 'More tools.\nLess context.', body: 'A request arrives by email. Its context lives in a document. Its owner lives in another system. People become the connection between all three.', annotation: 'Disconnected inputs / no shared state', route: ['Request', 'Document', 'Directory'], detail: 'The work is not missing. The connections are.'},
+   {name: 'THE INTELLIGENCE', title: 'Give the work\na way forward.', body: 'Interpret the request. Check the rules. Give each agent a bounded task and every API call an explicit contract. Keep uncertainty visible.', annotation: 'Interpretation → policy → tool contract', route: ['Interpret', 'Decide', 'Validate'], detail: 'An agent proposes. Policy defines what it may do.'},
+   {name: 'THE OUTCOME', title: 'An outcome.\nWith a history.', body: 'A failed tool call stops the flow. Recovery preserves the request. A person reviews the decision before a final record captures what happened and who owns it.', annotation: 'Recover → review → record', route: ['Recover', 'Human review', 'Record'], detail: 'A traceable outcome, with a person in control.'}
+  ],
+  documents: ['Access request', 'Account context', 'Unassigned task'], nodes: ['Interpretation', 'Policy / agent', 'Directory API', 'Human review', 'Final record'], nodeNotes: ['Context + intent', 'Bounded decision', 'Validated contract', 'Explicit approval', 'SYN-001 / owner'],
+  states: ['Waiting for context', 'Interpreting request', 'Checking policy', 'Validating API contract', '503 / flow stopped', 'Recovered / context preserved', 'Human review required', 'Recorded / trace complete'],
+  trace: ['SOURCE / NS-204', 'CONTEXT / STRUCTURED', 'POLICY / REVIEW', 'TOOL / VALIDATED', 'RETRY / EXPLICIT', 'REVIEW / HUMAN', 'RECORD / SYN-001'],
+  labStates: {waiting: 'Waiting', ready: 'Ready', running: 'Running', paused: 'Paused', complete: 'Complete', error: 'Error / retry', review: 'Human review', selected: 'Selected'},
+  legend: 'State of each component', contract: 'Execution boundary', local: 'Local simulation / no external writes', caseArchitecture: 'Architecture at a glance', caseResult: 'Result & evidence', contactSteps: ['Describe the problem', 'Review your draft', 'Send from your email app']
+ },
+ es: {
+  caseFlows: [['Solicitud', 'Reglas', 'API simulada', 'Persona', 'Registro'], ['Interfaz', 'Controles de servidor', 'Sesión de voz', 'Historial consentido'], ['Entrada', 'Directorio', 'Recuperación', 'Revisión', 'Asignación']],
+  label: 'ESTUDIO DE SISTEMA / 001', title: 'Sistemas inteligentes en movimiento', skip: 'Saltar al laboratorio', scroll: 'DESPLÁZATE PARA CONECTAR', demo: 'Arquitectura ilustrativa · Solicitud sintética', inspect: 'TELEMETRÍA DEL SISTEMA', handoff: 'La historia se convierte en sistema.', handoffBody: 'Ahora controla los mismos límites. Cambia la solicitud, interrumpe la ejecución y decide qué ocurre después.', handoffCta: 'Abrir el laboratorio interactivo',
+  acts: [
+   {name: 'EL PROBLEMA', title: 'Más herramientas.\nMenos contexto.', body: 'La solicitud llega por correo. Su contexto está en un documento. Su responsable, en otro sistema. Las personas terminan conectando los tres.', annotation: 'Entradas desconectadas / sin estado compartido', route: ['Solicitud', 'Documento', 'Directorio'], detail: 'El trabajo existe. Faltan las conexiones.'},
+   {name: 'LA INTELIGENCIA', title: 'Dale al trabajo\nun camino.', body: 'Interpreta la solicitud. Comprueba las reglas. Asigna una tarea acotada a cada agente y un contrato explícito a cada API. Haz visible la incertidumbre.', annotation: 'Interpretación → reglas → contrato de herramienta', route: ['Interpretar', 'Decidir', 'Validar'], detail: 'Un agente propone. Las reglas delimitan su acción.'},
+   {name: 'EL RESULTADO', title: 'Un resultado.\nCon historia.', body: 'Si una herramienta falla, el flujo se detiene. La recuperación conserva la solicitud. Una persona revisa la decisión antes de registrar qué ocurrió y quién es responsable.', annotation: 'Recuperar → revisar → registrar', route: ['Recuperar', 'Revisión humana', 'Registro'], detail: 'Un resultado trazable, con una persona al mando.'}
+  ],
+  documents: ['Solicitud de acceso', 'Contexto de cuenta', 'Tarea sin asignar'], nodes: ['Interpretación', 'Reglas / agente', 'API de directorio', 'Revisión humana', 'Registro final'], nodeNotes: ['Contexto + intención', 'Decisión acotada', 'Contrato validado', 'Aprobación explícita', 'SYN-001 / responsable'],
+  states: ['Esperando contexto', 'Interpretando solicitud', 'Comprobando reglas', 'Validando contrato de API', '503 / flujo detenido', 'Recuperado / contexto conservado', 'Requiere revisión humana', 'Registrado / traza completa'],
+  trace: ['ORIGEN / NS-204', 'CONTEXTO / ESTRUCTURADO', 'REGLAS / REVISIÓN', 'HERRAMIENTA / VALIDADA', 'REINTENTO / EXPLÍCITO', 'REVISIÓN / HUMANA', 'REGISTRO / SYN-001'],
+  labStates: {waiting: 'En espera', ready: 'Listo', running: 'En ejecución', paused: 'En pausa', complete: 'Completado', error: 'Error / reintentar', review: 'Revisión humana', selected: 'Seleccionado'},
+  legend: 'Estado de cada componente', contract: 'Límite de ejecución', local: 'Simulación local / sin escrituras externas', caseArchitecture: 'Arquitectura de un vistazo', caseResult: 'Resultado y evidencia', contactSteps: ['Describe el problema', 'Revisa tu borrador', 'Envíalo desde tu correo']
+ }
+};

@@ -6,3 +6,4 @@ test-results/
 !.env.example
 *.log
 .local/
+evidence/v2.1/**/story-*.zip

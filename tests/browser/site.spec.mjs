@@ -3,7 +3,7 @@ import AxeBuilder from '@axe-core/playwright';
 import {mkdir, writeFile} from 'node:fs/promises';
 const prefix = process.env.SITE_PATH_PREFIX ?? '';
 const visit = (page, path) => page.goto(prefix + path);
-const evidence = process.env.SITE_EVIDENCE_DIR ?? 'evidence/v2';
+const evidence = process.env.SITE_EVIDENCE_DIR ?? 'evidence/v2.1/local';
 
 for (const viewport of [{width:1440,height:900},{width:390,height:844}]) {
  for (const language of ['en', 'es']) test(`routes, visual evidence and axe ${language} ${viewport.width}`, async ({browser}) => {

@@ -1,3 +1,4 @@
+import {storyCopy} from './story-copy.mjs';
 export const languages = ['en', 'es'];
 export function routeFor(language, page = '') {
   if (!languages.includes(language)) throw new Error('Unsupported locale');
@@ -5,6 +6,7 @@ export function routeFor(language, page = '') {
 }
 export const catalogs = {
   en: {
+    story: storyCopy.en,
     nav: { home: 'Santensor home', label: 'Main navigation', capabilities: 'Expertise', labs: 'The lab', cases: 'Selected work', contact: 'Let’s talk', menu: 'Menu', close: 'Close menu', language: 'Switch to Spanish', skip: 'Skip to content', privacy: 'Privacy', footer: 'Independent engineering. Built for the real world.', languageNote: 'Language follows the link you open. Your selection is remembered on this device.' },
     meta: { home: ['Santensor — Intelligent systems in motion', 'Independent AI, software and automation engineering. Explore a working system, inspect its decisions, and discuss your next project.'], labs: ['Interactive lab — Santensor', 'Run a request orchestrator with synthetic data. Inspect decisions, recover from failures and control human review.'], cases: ['Selected engineering work — Santensor', 'Three transparent engineering studies: AI orchestration, private interview software and enterprise automation.'], contact: ['Discuss a project — Santensor', 'Tell Santensor about the problem you want to solve. Prepare a project inquiry using your own email application.'], privacy: ['Privacy — Santensor', 'How this site handles language preferences, local simulations and project inquiries.'], notfound: ['Page not found — Santensor', 'Find your way back to Santensor.'] },
     home: {
@@ -33,6 +35,7 @@ export const catalogs = {
     nojs: 'Navigation and content work without JavaScript. Enable JavaScript to run the local simulator and prepare an email draft.'
   },
   es: {
+    story: storyCopy.es,
     nav: { home: 'Inicio de Santensor', label: 'Navegación principal', capabilities: 'Especialidades', labs: 'Laboratorio', cases: 'Proyectos', contact: 'Hablemos', menu: 'Menú', close: 'Cerrar menú', language: 'Cambiar a inglés', skip: 'Saltar al contenido', privacy: 'Privacidad', footer: 'Ingeniería independiente. Para el mundo real.', languageNote: 'El idioma corresponde al enlace que abres. Tu selección se recuerda en este dispositivo.' },
     meta: { home: ['Santensor — Sistemas inteligentes en movimiento', 'Ingeniería independiente de IA, software y automatización. Explora un sistema funcional, inspecciona sus decisiones y conversemos sobre tu proyecto.'], labs: ['Laboratorio interactivo — Santensor', 'Ejecuta un orquestador con datos sintéticos. Inspecciona decisiones, recupera fallos y controla la revisión humana.'], cases: ['Proyectos de ingeniería — Santensor', 'Tres estudios transparentes: orquestación de IA, software privado de entrevistas y automatización empresarial.'], contact: ['Hablemos de tu proyecto — Santensor', 'Cuéntale a Santensor qué problema quieres resolver. Prepara una consulta desde tu aplicación de correo.'], privacy: ['Privacidad — Santensor', 'Cómo se gestionan el idioma, las simulaciones locales y las consultas de proyectos.'], notfound: ['Página no encontrada — Santensor', 'Regresa a Santensor.'] },
     home: {

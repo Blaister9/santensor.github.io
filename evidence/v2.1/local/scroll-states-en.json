@@ -1,0 +1,92 @@
+[
+  {
+    "progress": 0.08,
+    "act": 0,
+    "state": "waiting",
+    "wires": [
+      "1px",
+      "1px",
+      "1px",
+      "1px",
+      "1px",
+      "1px",
+      "1px"
+    ],
+    "packet": "matrix(1,0,0,1,0,0)"
+  },
+  {
+    "progress": 0.48,
+    "act": 1,
+    "state": "policy",
+    "wires": [
+      "0px",
+      "0px",
+      "0px",
+      "0px",
+      "1px",
+      "1px",
+      "1px"
+    ],
+    "packet": "matrix(1,0,0,1,510.6149,121.353)"
+  },
+  {
+    "progress": 0.71,
+    "act": 2,
+    "state": "error",
+    "wires": [
+      "0px",
+      "0px",
+      "0px",
+      "0px",
+      "0px",
+      "1px",
+      "1px"
+    ],
+    "packet": "matrix(1,0,0,1,745,275)"
+  },
+  {
+    "progress": 0.78,
+    "act": 2,
+    "state": "recovered",
+    "wires": [
+      "0px",
+      "0px",
+      "0px",
+      "0px",
+      "0px",
+      "1px",
+      "1px"
+    ],
+    "packet": "matrix(1,0,0,1,745,275)"
+  },
+  {
+    "progress": 0.86,
+    "act": 2,
+    "state": "review",
+    "wires": [
+      "0px",
+      "0px",
+      "0px",
+      "0px",
+      "0px",
+      "0px",
+      "1px"
+    ],
+    "packet": "matrix(1,0,0,1,678.2145,426.6858)"
+  },
+  {
+    "progress": 0.97,
+    "act": 2,
+    "state": "recorded",
+    "wires": [
+      "0px",
+      "0px",
+      "0px",
+      "0px",
+      "0px",
+      "0px",
+      "0px"
+    ],
+    "packet": "matrix(1,0,0,1,352.6317,463.1064)"
+  }
+]
