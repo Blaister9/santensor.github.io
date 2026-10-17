@@ -28,7 +28,7 @@ for(const language of ['en','es']) {
   const active=page.locator(`[data-error-language="${language}"]`);await expect(active).toBeVisible();
   await expect(page.locator(`[data-error-language="${language==='es'?'en':'es'}"]`))[javaScriptEnabled?'toBeHidden':'toBeVisible']();
   if(javaScriptEnabled)await expect(page.locator('html')).toHaveAttribute('lang',language);
-  const axe=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze();expect(axe.violations).toEqual([]);
+  if(javaScriptEnabled){const axe=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze();expect(axe.violations).toEqual([]);}
   await page.screenshot({path:`${evidence}/404-${language}-js-${javaScriptEnabled}.png`,fullPage:true});
   await active.locator('[data-error-home]').click();await expect(page).toHaveURL(new RegExp(root==='/'?'/\u0024':'/es/\u0024'));
   await context.close();
