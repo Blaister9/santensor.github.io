@@ -1,0 +1,106 @@
+{
+  "at": "2026-10-17T01:29:34.926Z",
+  "approved": "b4be51950948bd7e69234481769d4c2a009b57f4",
+  "previousMain": "84e3c855af9cf112cdfdf4938e6197acdd40fea4",
+  "rollbackTag": "rollback/pre-v4-production-20261016",
+  "pages": {
+    "url": "https://api.github.com/repos/Blaister9/santensor.github.io/pages",
+    "status": "built",
+    "cname": "santensor.com",
+    "custom_404": true,
+    "html_url": "https://santensor.com/",
+    "build_type": "legacy",
+    "source": {
+      "branch": "main",
+      "path": "/"
+    },
+    "public": true,
+    "protected_domain_state": null,
+    "pending_domain_unverified_at": null,
+    "https_certificate": {
+      "state": "approved",
+      "description": "The certificate has been approved.",
+      "domains": [
+        "santensor.com",
+        "www.santensor.com"
+      ],
+      "expires_at": "2026-12-06"
+    },
+    "https_enforced": true
+  },
+  "production": {
+    "status": 200,
+    "hash": "e004c60d7bb84461a757b5b349ad5781f754838fc3e23503cb3aa6b7b2e03bb5"
+  },
+  "dns": {
+    "method": "Read-only DNS over HTTPS; no resolver or zone configuration changed",
+    "a": {
+      "Status": 0,
+      "TC": false,
+      "RD": true,
+      "RA": true,
+      "AD": false,
+      "CD": false,
+      "Question": [
+        {
+          "name": "santensor.com",
+          "type": 1
+        }
+      ],
+      "Answer": [
+        {
+          "name": "santensor.com",
+          "type": 1,
+          "TTL": 1799,
+          "data": "185.199.109.153"
+        },
+        {
+          "name": "santensor.com",
+          "type": 1,
+          "TTL": 1799,
+          "data": "185.199.111.153"
+        },
+        {
+          "name": "santensor.com",
+          "type": 1,
+          "TTL": 1799,
+          "data": "185.199.110.153"
+        },
+        {
+          "name": "santensor.com",
+          "type": 1,
+          "TTL": 1799,
+          "data": "185.199.108.153"
+        }
+      ]
+    },
+    "ns": {
+      "Status": 0,
+      "TC": false,
+      "RD": true,
+      "RA": true,
+      "AD": false,
+      "CD": false,
+      "Question": [
+        {
+          "name": "santensor.com",
+          "type": 2
+        }
+      ],
+      "Answer": [
+        {
+          "name": "santensor.com",
+          "type": 2,
+          "TTL": 1800,
+          "data": "dns1.registrar-servers.com."
+        },
+        {
+          "name": "santensor.com",
+          "type": 2,
+          "TTL": 1800,
+          "data": "dns2.registrar-servers.com."
+        }
+      ]
+    }
+  }
+}

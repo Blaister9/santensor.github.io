@@ -124,6 +124,9 @@ p {
   width: 100%;
   display: block;
 }
+.optical-poster {position:absolute;inset:0;z-index:0;pointer-events:none}
+.optical-poster img {width:100%;height:100%;object-fit:cover;display:block}
+.graphics-ready .optical-poster,.has-optical-stills .optical-poster {display:none}
 .world-shade {
   position: absolute;
   inset: 0;

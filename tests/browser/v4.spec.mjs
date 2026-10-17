@@ -3,6 +3,7 @@ import { mkdir, writeFile } from "node:fs/promises";
 import AxeBuilder from "@axe-core/playwright";
 import {createHash} from 'node:crypto';
 const evidence = process.env.SITE_EVIDENCE_DIR ?? "evidence/v4";
+await mkdir(evidence,{recursive:true});
 const go = async (page, n) => {
   await page.locator(`.scene-nav [data-go="${n}"]`).click();
   await expect

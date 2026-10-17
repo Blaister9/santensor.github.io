@@ -1,3 +1,23 @@
+# Santensor V4: promoción autorizada a producción
+
+El propietario aprobó expresamente V4 y su integración en main. Se conserva el diseño aprobado en `b4be51950948bd7e69234481769d4c2a009b57f4`.
+
+Preparación verificada: checkout inicial limpio; main anterior `84e3c855af9cf112cdfdf4938e6197acdd40fea4`; tag remoto de restauración `rollback/pre-v4-production-20261016` publicado y comprobado. Pages usa actualmente `main:/` legacy, CNAME santensor.com y HTTPS obligatorio. No se modifica DNS.
+
+El build público elimina las marcas de preview y los hooks de inspección, conserva los avisos de simulación y publica una lista permitida de recursos. Se mantienen los controles editoriales y de seguridad. Actions validará preview y producción antes de desplegar exclusivamente dist desde main.
+
+Validación local: 18 unitarias y 12 pruebas de producción aprobadas; EN/ES, cuatro tamaños, teclado, WebGL, movimiento reducido, casos, contacto, ejecución, fallo, recuperación y trazas. La regresión de preview completó sus 11 casos de interfaz; el caso WebGL se repitió y aprobó tras corregir la creación del directorio de evidencia. CI ejecutará sus 12 casos juntos.
+
+La muestra local móvil en CPU x4, 1,6 Mbps y RTT 150 ms registra LCP 2,516 s y 185.599 bytes iniciales, frente a 3,016 s y 232.088 bytes de la evidencia anterior. Son muestras emuladas del modo 2.5D. Los renders aprobados no se modificaron.
+
+Publicación y validación del dominio: pendientes. No se afirma aún que santensor.com esté sirviendo V4.
+
+Detalles y restauración: [V4_PRODUCTION_RELEASE.md](docs/V4_PRODUCTION_RELEASE.md). Evidencia: [evidence/v4-production](evidence/v4-production).
+
+---
+
+## Informes anteriores (históricos)
+
 # Informe vigente: Santensor V4
 
 La entrega actual está en [docs/V4_HANDOFF.md](docs/V4_HANDOFF.md). Progreso de los siete hitos: [docs/V4_PROGRESS.md](docs/V4_PROGRESS.md).

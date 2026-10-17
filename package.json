@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node scripts/build.mjs --preview",
+    "build": "node scripts/build.mjs",
     "build:production": "node scripts/build.mjs",
     "test": "node --test tests/*.test.mjs",
     "preview": "node scripts/serve.mjs",
@@ -13,7 +13,10 @@
     "lint": "node scripts/check.mjs",
     "preview:v4": "node scripts/serve-v4.mjs",
     "capture:v4": "node scripts/record-v4-tour.mjs",
-    "measure:v4": "node scripts/measure-v4.mjs"
+    "measure:v4": "node scripts/measure-v4.mjs",
+    "build:preview": "node scripts/build.mjs --preview",
+    "test:e2e:production": "playwright test --config playwright.production.config.mjs",
+    "check:production": "node scripts/check-production.mjs"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.11.1",

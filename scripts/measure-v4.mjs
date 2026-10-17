@@ -5,6 +5,17 @@ import assert from "node:assert/strict";
 const browser = await chromium.launch(),
   results = [];
 const base = process.env.SITE_TEST_URL ?? "http://127.0.0.1:4180";
+const evidence = process.env.SITE_EVIDENCE_DIR ?? "evidence/v4";
+const readRender = () =>
+  globalThis.santensorExperience?.stats() ?? {
+    mode: document.body.classList.contains("graphics-fallback")
+      ? "css-fallback"
+      : document.body.classList.contains("graphics-ready")
+        ? "webgl"
+        : "loading",
+    instrumentation:
+      "Production DOM observation; internal frame counters are not exposed.",
+  };
 for (const mode of ["desktop", "mobile-throttled", "reduced-motion"]) {
   const mobile = mode !== "desktop",
     reduced = mode === "reduced-motion";
@@ -46,7 +57,9 @@ for (const mode of ["desktop", "mobile-throttled", "reduced-motion"]) {
   });
   await page.goto(base, { waitUntil: "networkidle" });
   await page.waitForFunction(
-    () => globalThis.santensorExperience?.stats().mode !== "loading",
+    () =>
+      document.body.classList.contains("graphics-ready") ||
+      document.body.classList.contains("has-optical-stills"),
     { timeout: 30000 },
   );
   const initialBytes = await page.evaluate(() =>
@@ -57,13 +70,9 @@ for (const mode of ["desktop", "mobile-throttled", "reduced-motion"]) {
         performance.getEntriesByType("navigation")[0].transferSize,
       ),
   );
-  const idleStart = await page.evaluate(() =>
-    globalThis.santensorExperience.stats(),
-  );
+  const idleStart = await page.evaluate(readRender);
   await page.waitForTimeout(450);
-  const idleEnd = await page.evaluate(() =>
-    globalThis.santensorExperience.stats(),
-  );
+  const idleEnd = await page.evaluate(readRender);
   const deltas = await page.evaluate(
     () =>
       new Promise((resolve) => {
@@ -82,16 +91,19 @@ for (const mode of ["desktop", "mobile-throttled", "reduced-motion"]) {
   );
   const metrics = await page.evaluate(() => ({
     timing: performance.getEntriesByType("navigation")[0].toJSON(),
-    resources: performance
-      .getEntriesByType("resource")
-      .map((e) => ({
-        name: new URL(e.name).pathname,
-        origin: new URL(e.name).origin,
-        bytes: e.transferSize,
-        duration: e.duration,
-      })),
+    resources: performance.getEntriesByType("resource").map((e) => ({
+      name: new URL(e.name).pathname,
+      origin: new URL(e.name).origin,
+      bytes: e.transferSize,
+      duration: e.duration,
+    })),
     measurements: globalThis.v4Measurements,
-    render: globalThis.santensorExperience.stats(),
+    render: globalThis.santensorExperience?.stats() ?? {
+      mode: document.body.classList.contains("graphics-fallback")
+        ? "css-fallback"
+        : "webgl",
+      instrumentation: "Production DOM observation",
+    },
   }));
   const bytes = metrics.resources.reduce(
       (n, r) => n + r.bytes,
@@ -108,7 +120,7 @@ for (const mode of ["desktop", "mobile-throttled", "reduced-motion"]) {
     `${mode} tour resource budget: ${bytes}`,
   );
   assert.ok(metrics.resources.every((r) => r.origin === new URL(base).origin));
-  if (!reduced) {
+  if (!reduced && idleStart.frames !== undefined) {
     assert.equal(
       idleStart.frames,
       idleEnd.frames,
@@ -123,7 +135,7 @@ for (const mode of ["desktop", "mobile-throttled", "reduced-motion"]) {
     conditions:
       mode === "mobile-throttled"
         ? "CDP 4× CPU, 150ms RTT, 1.6Mbps download; emulation, not a physical phone"
-        : "local Chromium laboratory measurement",
+        : `Chromium laboratory measurement against ${base}`,
     initialBytes,
     bytes,
     initialResourceBudget: reduced ? 300000 : 950000,
@@ -133,19 +145,23 @@ for (const mode of ["desktop", "mobile-throttled", "reduced-motion"]) {
       p95: sorted[Math.floor(sorted.length * 0.95)],
       max: Math.max(...sorted),
     },
-    idleRendererSleeps: reduced ? true : idleStart.frames === idleEnd.frames,
+    idleRendererSleeps:
+      idleStart.frames === undefined
+        ? null
+        : idleStart.frames === idleEnd.frames,
     ...metrics,
     errors,
   });
   await context.close();
 }
 const renderer = await readFile("js/vendor/cinematic-world.bundle.mjs");
-await mkdir("evidence/v4", { recursive: true });
+await mkdir(evidence, { recursive: true });
 await writeFile(
-  "evidence/v4/performance.json",
+  `${evidence}/performance.json`,
   JSON.stringify(
     {
       date: new Date().toISOString(),
+      source: base,
       renderer: { raw: renderer.length, gzip: gzipSync(renderer).length },
       results,
     },

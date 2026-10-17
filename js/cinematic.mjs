@@ -20,7 +20,9 @@ let lastWidth = innerWidth,
   lastProgress = 0,
   slowFrames = 0;
 const params = new URLSearchParams(location.search),
-  forceWebGL = params.get("quality") === "webgl";
+  forceWebGL =
+    document.body.dataset.buildMode !== "production" &&
+    params.get("quality") === "webgl";
 function requestRender() {
   if (!raf) raf = requestAnimationFrame(render);
 }
@@ -202,6 +204,11 @@ function renderStills(p) {
     index = Math.min(3, Math.floor(p)),
     t = p - index;
   stills.forEach((img, i) => {
+    // The next pose is only needed when the visitor actually begins its transition.
+    if (i === 1 && t <= 0.001) {
+      img.style.opacity = "0";
+      return;
+    }
     const path = `/assets/optical/${prefix}-${index + i}.webp`;
     if (img.dataset.path !== path) {
       img.dataset.path = path;
@@ -374,7 +381,8 @@ function setLanguage(next, push = true) {
   document.querySelector(".skip-operation").textContent = `${c.go} ↗`;
   document.querySelector(".scroll-cue").innerHTML =
     `${c.scroll} <span aria-hidden="true">↓</span>`;
-  document.querySelector(".preview-label").textContent = `V4 / ${c.preview}`;
+  const previewLabel = document.querySelector(".preview-label");
+  if (previewLabel) previewLabel.textContent = `V4 / ${c.preview}`;
   document.querySelector(".scene-nav").setAttribute("aria-label", c.scenes);
   document.querySelectorAll(".scene-nav a").forEach((el, i) => {
     el.setAttribute("aria-label", `0${i + 1} ${c.names[i]}`);
@@ -455,32 +463,39 @@ if (accelerated) {
         document.querySelector("#optical-world"),
         enableFallback,
       );
+      if (!useStills) document.body.classList.add("graphics-ready");
       requestRender();
     })
     .catch(enableFallback);
 } else enableFallback();
-globalThis.santensorExperience = {
-  get progress() {
-    return progress;
-  },
-  get operation() {
-    return operation?.state;
-  },
-  capture: (p) => world?.capture(p),
-  stats: () =>
-    useStills
-      ? {
-          mode: "css-fallback",
-          enhancement: "original-render-stills",
-          reason: reduced.matches
-            ? "reduced-motion"
-            : constrained
-              ? "device-budget"
-              : params.has("graphics-off")
-                ? "requested"
-                : !accelerated
-                  ? "unaccelerated-graphics"
-                  : "adaptive-or-context-loss",
-        }
-      : (world?.stats() ?? { mode: "loading" }),
-};
+// Inspection hooks belong to the review build and are removed from the production bundle.
+if (
+  typeof __SANTENSOR_PREVIEW__ === "undefined"
+    ? document.body.dataset.buildMode !== "production"
+    : __SANTENSOR_PREVIEW__
+)
+  globalThis.santensorExperience = {
+    get progress() {
+      return progress;
+    },
+    get operation() {
+      return operation?.state;
+    },
+    capture: (p) => world?.capture(p),
+    stats: () =>
+      useStills
+        ? {
+            mode: "css-fallback",
+            enhancement: "original-render-stills",
+            reason: reduced.matches
+              ? "reduced-motion"
+              : constrained
+                ? "device-budget"
+                : params.has("graphics-off")
+                  ? "requested"
+                  : !accelerated
+                    ? "unaccelerated-graphics"
+                    : "adaptive-or-context-loss",
+          }
+        : (world?.stats() ?? { mode: "loading" }),
+  };

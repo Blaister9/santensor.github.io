@@ -63,8 +63,8 @@ function contactPage(copy, language) {
 }
 function privacyPage(copy) {return `<section class="page-heading wrap"><p class="eyebrow">${copy.privacy.eyebrow}</p><h1>${lines(copy.privacy.title)}</h1></section><div class="privacy-content wrap">${copy.privacy.sections.map(item => `<section><h2>${item[0]}</h2><p>${item[1]}</p></section>`).join('')}</div>`;}
 
-export function renderPage(language, page) {
- return renderCinematicPage(language, page, {contactPage, privacyPage});
+export function renderPage(language, page, options = {}) {
+ return renderCinematicPage(language, page, {contactPage, privacyPage,...options});
 }
 
 export function renderLegacyPage(language, page) {
@@ -80,15 +80,15 @@ export function renderLegacyPage(language, page) {
 <html lang="${language}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${meta[0]}</title><meta name="description" content="${meta[1]}"><meta name="theme-color" content="#080F19"><link rel="canonical" href="https://santensor.com${path}">${languages.map(locale => `<link rel="alternate" hreflang="${locale}" href="https://santensor.com${routeFor(locale, pageRoute)}">`).join('')}<link rel="alternate" hreflang="x-default" href="https://santensor.com${routeFor('en', pageRoute)}"><meta property="og:title" content="${meta[0]}"><meta property="og:description" content="${meta[1]}"><meta property="og:type" content="website"><meta property="og:locale" content="${language === 'en' ? 'en_US' : 'es_CO'}"><meta property="og:url" content="https://santensor.com${path}"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="preload" href="/assets/fonts/space-grotesk-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="/css/experience.css"><link rel="stylesheet" href="/css/motion.css"><script type="module" src="/js/experience.mjs"></script>${page === 'contact' ? '<script type="module" src="/js/contact.mjs"></script>' : ''}</head><body><a class="skip" href="#main">${copy.nav.skip}</a><header class="site-header wrap"><a href="${routeFor(language)}" class="wordmark" aria-label="${copy.nav.home}"><span class="brand-symbol" aria-hidden="true">✳</span>SANTENSOR<span class="brand-dot">.</span></a><div class="header-actions">${languageLink('mobile-language')}<button class="menu-toggle" aria-controls="main-navigation" aria-expanded="false" aria-label="${copy.nav.menu}" hidden><span aria-hidden="true">☰</span></button></div><nav id="main-navigation" aria-label="${copy.nav.label}"><a href="${routeFor(language)}#capabilities">${copy.nav.capabilities}</a><a ${page === 'labs' ? 'aria-current="page"' : ''} href="${routeFor(language, 'labs')}">${copy.nav.labs}</a><a ${page === 'cases' ? 'aria-current="page"' : ''} href="${routeFor(language, 'cases')}">${copy.nav.cases}</a>${languageLink('nav-language')}<a ${page === 'contact' ? 'aria-current="page"' : ''} class="nav-cta" href="${routeFor(language, 'contact')}">${copy.nav.contact} ${arrow}</a></nav></header><main id="main">${content}<noscript><p class="wrap nojs">${copy.nojs}</p></noscript></main><footer class="site-footer wrap"><a class="wordmark" href="${routeFor(language)}">SANTENSOR<span class="brand-dot">.</span></a><p>${copy.nav.footer}</p><nav aria-label="${copy.nav.privacy}"><a href="${routeFor(language, 'privacy')}">${copy.nav.privacy}</a><a href="https://github.com/Blaister9/santensor.github.io">GitHub ${arrow}</a>${languageLink('footer-language')}</nav></footer></body></html>\n`;
 }
 
-export async function renderPages() {
+export async function renderPages(options = {}) {
  for (const language of languages) {
   for (const page of pages) {
    const directory = `.${routeFor(language, page)}`;
    await mkdir(directory, {recursive: true});
-   await writeFile(`${directory}index.html`, renderPage(language, page).replace(/[\t ]+$/gm, ''));
+   await writeFile(`${directory}index.html`, renderPage(language, page, options).replace(/[\t ]+$/gm, ''));
   }
-  await writeFile(language === 'en' ? '404.html' : 'es/404.html', renderPage(language, 'notfound'));
+  await writeFile(language === 'en' ? '404.html' : 'es/404.html', renderPage(language, 'notfound',options));
  }
- const urls = languages.flatMap(language => pages.map(page => `<url><loc>https://santensor.com${routeFor(language, page)}</loc>${languages.map(alternate => `<xhtml:link rel="alternate" hreflang="${alternate}" href="https://santensor.com${routeFor(alternate, page)}"/>`).join('')}</url>`));
+ const urls = languages.flatMap(language => pages.filter(page=>!['concepts','concept-b'].includes(page)).map(page => `<url><loc>https://santensor.com${routeFor(language, page)}</loc>${languages.map(alternate => `<xhtml:link rel="alternate" hreflang="${alternate}" href="https://santensor.com${routeFor(alternate, page)}"/>`).join('')}</url>`));
  await writeFile('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">${urls.join('')}</urlset>\n`);
 }

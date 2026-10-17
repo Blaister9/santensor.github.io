@@ -1,7 +1,10 @@
-name: Static site validation
-on: [push, pull_request]
+name: V4 validation and GitHub Pages
+on: [push, pull_request, workflow_dispatch]
 permissions:
   contents: read
+concurrency:
+  group: santensor-${{ github.ref }}
+  cancel-in-progress: false
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -15,12 +18,39 @@ jobs:
       - run: npm audit
       - run: npm run lint
       - run: npm test
-      - run: npm run build
-      - run: test "$(cat CNAME)" = santensor.com
       - run: npx playwright install --with-deps chromium
+      - run: npm run build:preview
       - run: npm run test:e2e
+        env:
+          SITE_EVIDENCE_DIR: evidence/v4-production/preview
+      - run: npm run build:production
+      - run: node scripts/check-production.mjs
+      - run: test "$(cat CNAME)" = santensor.com
+      - run: npm run test:e2e:production
+        env:
+          SITE_EVIDENCE_DIR: evidence/v4-production/candidate
+      - uses: actions/upload-pages-artifact@v4
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        with:
+          path: dist
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: site-verification
-          path: evidence/
+          name: v4-production-verification
+          path: evidence/v4-production/
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: validate
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@v5
+      - name: Deploy verified production artifact
+        id: deployment
+        uses: actions/deploy-pages@v4

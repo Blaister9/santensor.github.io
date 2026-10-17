@@ -1,0 +1,30 @@
+{
+  "mode": "Actual WebGL; capability-detection override in test only; software renderer, not physical GPU evidence",
+  "hashes": [
+    {
+      "scene": 0,
+      "hash": "c3b37f4258ac9681cd68d7f81c833ee4f50541fba84b5ed544c9c2d5116c0713"
+    },
+    {
+      "scene": 1,
+      "hash": "89688f2877d0dd72336a846bc449edbe8d9200a2b7eff247a9c4c2365987a54c"
+    },
+    {
+      "scene": 2,
+      "hash": "30f8c4036c250f57dd2ae7da3324624d6c0f64878102cf1f5528bed8c319f151"
+    },
+    {
+      "scene": 3,
+      "hash": "5f10d518d24884633abb9498049c43db7a177a288190e007d8156383f03e0f11"
+    },
+    {
+      "scene": 4,
+      "hash": "f6fa18727c58aaf2bbf72038b0d33f1e40b5dfa5ecb4ccf8054e598c41ae0a7b"
+    }
+  ],
+  "observed": {
+    "errors": [],
+    "missing": [],
+    "foreign": []
+  }
+}
