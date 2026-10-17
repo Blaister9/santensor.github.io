@@ -28,6 +28,8 @@ for(const language of ['en','es']) {
   const active=page.locator(`[data-error-language="${language}"]`);await expect(active).toBeVisible();
   await expect(page.locator(`[data-error-language="${language==='es'?'en':'es'}"]`))[javaScriptEnabled?'toBeHidden':'toBeVisible']();
   if(javaScriptEnabled)await expect(page.locator('html')).toHaveAttribute('lang',language);
+  const axe=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze();expect(axe.violations).toEqual([]);
+  await page.screenshot({path:`${evidence}/404-${language}-js-${javaScriptEnabled}.png`,fullPage:true});
   await active.locator('[data-error-home]').click();await expect(page).toHaveURL(new RegExp(root==='/'?'/\u0024':'/es/\u0024'));
   await context.close();
  });
@@ -56,7 +58,7 @@ for(const viewport of [{width:1440,height:900},{width:1363,height:936},{width:76
     const sizes=await page.locator('.standalone-surface button,.standalone-surface textarea,.standalone-surface select,.standalone-surface .field-label').evaluateAll(els=>els.filter(el=>el.getClientRects().length).map(el=>({tag:el.tagName,text:el.textContent.slice(0,55),font:parseFloat(getComputedStyle(el).fontSize),height:el.getBoundingClientRect().height})));
     for(const size of sizes){expect(size.font).toBeGreaterThanOrEqual(14);if(size.tag==='BUTTON')expect(size.height).toBeGreaterThanOrEqual(44);}
     for(const href of await page.locator('a[href^="/"],link[rel="stylesheet"],script[src^="/"],img[src^="/"]').evaluateAll(els=>els.map(el=>el.getAttribute('href')??el.getAttribute('src'))))expect((await request.get(href.split('#')[0])).status(),href).toBe(200);
-    await page.screenshot({path:`${evidence}/${root==='/es/'?'es':'en'}-${route.replace('/','')||'home'}-${viewport.width}.png`,fullPage:true});
+    await page.screenshot({path:`${evidence}/${root==='/es/'?'es':'en'}-${route.replace('/','')||'home'}-${viewport.width}.png`,fullPage:!!route});
     reports.push({root,route,sizes,axeViolations:axe.violations});
    }
    await page.goto(root+'#scene-3');

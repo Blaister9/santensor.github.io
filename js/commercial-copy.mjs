@@ -28,14 +28,14 @@ export const commercialCopy = {
     'Explore the five scenes, switch language during a run, and inspect the repository and accessibility regressions.',
     'Automated browser checks use emulation. Physical touch, virtual keyboards, screen readers and GPU performance require separate device checks.'
    ],links:[['Explore the five scenes','home'],['Public repository','https://github.com/Blaister9/santensor.github.io'],['Architecture & checks','/assets/projects/portfolio.html']]},
-   {title:'A private technical interview practice app.',discipline:'AI APPLICATION SOFTWARE',kind:'Product in development',details:[
+   {title:'A private technical interview practice app.',discipline:'AI APPLICATION SOFTWARE',kind:'Product in development',image:'trainer.png',alt:'Existing private trainer screenshot showing explicitly synthetic written practice and unscored feedback; it does not demonstrate physical audio.',details:[
     'Technical interview practice needs questions related to a role and controlled handling of session content.',
     'A private application with written practice, an AI voice-session integration and optional history.',
     'Session access controls, server-side credentials, usage limits, consent for persistence and voice-session lifecycle handling.',
     'A Next.js application separates browser interaction, server endpoints and PostgreSQL persistence. Voice transport uses WebRTC; the server mediates the session connection.',
     'The technical review note records inspected implementation and existing test coverage. The private repository and application are not public demos.',
     'Voice lifecycle coverage includes browser mocks. Physical microphone, speaker, mobile audio and the usefulness of evaluation remain unvalidated. No hiring or language-proficiency outcome is claimed.'
-   ],links:[['Read the technical review note','/assets/projects/trainer.html']]},
+   ],links:[['Inspect the synthetic practice screenshot','/assets/projects/trainer.png'],['Read the technical review note','/assets/projects/trainer.html']]},
   ],
   contactTitle:'Tell me what needs to work better.',contactIntro:'Describe the problem, what you need delivered and any constraints. Email is the direct channel for starting a technical conversation.',
   emailAction:'Write an email',copyEmail:'Copy email address',copied:'Email address copied.',copyError:'Select and copy the email address above.',
@@ -69,14 +69,14 @@ export const commercialCopy = {
     'Recorre las cinco escenas, cambia de idioma durante una ejecución y revisa el repositorio y las regresiones de accesibilidad.',
     'Las pruebas automatizadas usan emulación. Tacto físico, teclado virtual, lectores de pantalla y rendimiento de GPU requieren pruebas adicionales en dispositivos.'
    ],links:[['Recorrer las cinco escenas','home'],['Repositorio público','https://github.com/Blaister9/santensor.github.io'],['Arquitectura y pruebas','/assets/projects/portfolio.html']]},
-   {title:'Una aplicación privada de práctica de entrevistas.',discipline:'SOFTWARE CON IA',kind:'Producto en desarrollo',details:[
+   {title:'Una aplicación privada de práctica de entrevistas.',discipline:'SOFTWARE CON IA',kind:'Producto en desarrollo',image:'trainer.png',alt:'Captura existente del entrenador con práctica escrita explícitamente sintética y sin calificación; no demuestra audio físico.',details:[
     'La práctica de entrevistas técnicas necesita preguntas relacionadas con una vacante y manejo controlado del contenido de sesión.',
     'Una aplicación privada con práctica escrita, integración de sesiones de voz con IA e historial opcional.',
     'Controles de acceso y sesión, credenciales en servidor, límites de uso, consentimiento para persistencia y manejo del ciclo de voz.',
     'Una aplicación Next.js separa navegador, endpoints de servidor y persistencia PostgreSQL. El transporte de voz usa WebRTC y el servidor media la conexión de sesión.',
     'La nota técnica registra la implementación inspeccionada y la cobertura existente. El repositorio privado y la aplicación no son demostraciones públicas.',
     'Las pruebas del ciclo de voz incluyen simulaciones de navegador. Micrófono, altavoz, audio móvil y utilidad de la evaluación siguen sin validación física. No se afirman resultados de contratación ni nivel de idioma.'
-   ],links:[['Leer la nota técnica','/assets/projects/trainer.html']]},
+   ],links:[['Inspeccionar captura de práctica sintética','/assets/projects/trainer.png'],['Leer la nota técnica','/assets/projects/trainer.html']]},
   ],
   contactTitle:'Cuéntame qué necesita funcionar mejor.',contactIntro:'Describe el problema, lo que necesitas recibir y las restricciones del proyecto. El correo es el canal directo para iniciar una conversación técnica.',
   emailAction:'Escribir un correo',copyEmail:'Copiar dirección de correo',copied:'Dirección de correo copiada.',copyError:'Selecciona y copia la dirección de correo de arriba.',
