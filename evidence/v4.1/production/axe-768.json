@@ -1,0 +1,92 @@
+[
+  {
+    "language": "en",
+    "scene": 0,
+    "violations": []
+  },
+  {
+    "language": "en",
+    "scene": 1,
+    "violations": []
+  },
+  {
+    "language": "en",
+    "scene": 2,
+    "violations": []
+  },
+  {
+    "language": "en",
+    "scene": 3,
+    "violations": []
+  },
+  {
+    "language": "en",
+    "scene": 4,
+    "violations": []
+  },
+  {
+    "language": "en",
+    "route": "labs",
+    "violations": []
+  },
+  {
+    "language": "en",
+    "route": "cases",
+    "violations": []
+  },
+  {
+    "language": "en",
+    "route": "contact",
+    "violations": []
+  },
+  {
+    "language": "en",
+    "route": "privacy",
+    "violations": []
+  },
+  {
+    "language": "es",
+    "scene": 0,
+    "violations": []
+  },
+  {
+    "language": "es",
+    "scene": 1,
+    "violations": []
+  },
+  {
+    "language": "es",
+    "scene": 2,
+    "violations": []
+  },
+  {
+    "language": "es",
+    "scene": 3,
+    "violations": []
+  },
+  {
+    "language": "es",
+    "scene": 4,
+    "violations": []
+  },
+  {
+    "language": "es",
+    "route": "labs",
+    "violations": []
+  },
+  {
+    "language": "es",
+    "route": "cases",
+    "violations": []
+  },
+  {
+    "language": "es",
+    "route": "contact",
+    "violations": []
+  },
+  {
+    "language": "es",
+    "route": "privacy",
+    "violations": []
+  }
+]

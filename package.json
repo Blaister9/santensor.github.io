@@ -6,6 +6,7 @@
     "build": "node scripts/build.mjs",
     "build:production": "node scripts/build.mjs",
     "test": "node --test tests/*.test.mjs",
+    "test:links": "node scripts/check-evidence-links.mjs",
     "preview": "node scripts/serve.mjs",
     "test:e2e": "playwright test",
     "test:e2e:legacy": "playwright test --config playwright.legacy.config.mjs",

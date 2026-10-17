@@ -1,0 +1,266 @@
+{
+  "viewport": {
+    "width": 1363,
+    "height": 936
+  },
+  "emulation": true,
+  "physicalTouch": false,
+  "virtualKeyboard": false,
+  "reports": [
+    {
+      "root": "/",
+      "route": "",
+      "sizes": [],
+      "axeViolations": []
+    },
+    {
+      "root": "/",
+      "route": "labs/",
+      "sizes": [
+        {
+          "tag": "LABEL",
+          "text": "Scenario",
+          "font": 14,
+          "height": 22.390625
+        },
+        {
+          "tag": "SELECT",
+          "text": "Access requestAmbiguous requestService failure",
+          "font": 16,
+          "height": 48
+        },
+        {
+          "tag": "LABEL",
+          "text": "Request",
+          "font": 14,
+          "height": 22.390625
+        },
+        {
+          "tag": "TEXTAREA",
+          "text": "SYNTHETIC: Account NS-204 requests 8 developer accounts",
+          "font": 16,
+          "height": 122
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Run process ↗",
+          "font": 14,
+          "height": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Controlled 503",
+          "font": 14,
+          "height": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Reset",
+          "font": 14,
+          "height": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Next step",
+          "font": 14,
+          "height": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Pause",
+          "font": 14,
+          "height": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "01Intake",
+          "font": 14,
+          "height": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "02Understand",
+          "font": 14,
+          "height": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "03Policy check",
+          "font": 14,
+          "height": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "04Tool call",
+          "font": 14,
+          "height": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "05Human review",
+          "font": 14,
+          "height": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "06Result",
+          "font": 14,
+          "height": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Export trace ↓",
+          "font": 14,
+          "height": 44
+        }
+      ],
+      "axeViolations": []
+    },
+    {
+      "root": "/",
+      "route": "cases/",
+      "sizes": [],
+      "axeViolations": []
+    },
+    {
+      "root": "/",
+      "route": "contact/",
+      "sizes": [],
+      "axeViolations": []
+    },
+    {
+      "root": "/",
+      "route": "privacy/",
+      "sizes": [],
+      "axeViolations": []
+    },
+    {
+      "root": "/es/",
+      "route": "",
+      "sizes": [],
+      "axeViolations": []
+    },
+    {
+      "root": "/es/",
+      "route": "labs/",
+      "sizes": [
+        {
+          "tag": "LABEL",
+          "text": "Escenario",
+          "font": 14,
+          "height": 22.390625
+        },
+        {
+          "tag": "SELECT",
+          "text": "Solicitud de accesoSolicitud ambiguaFallo del servicio",
+          "font": 16,
+          "height": 48
+        },
+        {
+          "tag": "LABEL",
+          "text": "Solicitud",
+          "font": 14,
+          "height": 22.390625
+        },
+        {
+          "tag": "TEXTAREA",
+          "text": "SINTÉTICO: La cuenta NS-204 solicita 8 cuentas de desar",
+          "font": 16,
+          "height": 122
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Ejecutar proceso ↗",
+          "font": 14,
+          "height": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "503 controlado",
+          "font": 14,
+          "height": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Reiniciar",
+          "font": 14,
+          "height": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Siguiente paso",
+          "font": 14,
+          "height": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Pausar",
+          "font": 14,
+          "height": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "01Recepción",
+          "font": 14,
+          "height": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "02Comprensión",
+          "font": 14,
+          "height": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "03Validación",
+          "font": 14,
+          "height": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "04Herramienta",
+          "font": 14,
+          "height": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "05Revisión humana",
+          "font": 14,
+          "height": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "06Resultado",
+          "font": 14,
+          "height": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Exportar traza ↓",
+          "font": 14,
+          "height": 44
+        }
+      ],
+      "axeViolations": []
+    },
+    {
+      "root": "/es/",
+      "route": "cases/",
+      "sizes": [],
+      "axeViolations": []
+    },
+    {
+      "root": "/es/",
+      "route": "contact/",
+      "sizes": [],
+      "axeViolations": []
+    },
+    {
+      "root": "/es/",
+      "route": "privacy/",
+      "sizes": [],
+      "axeViolations": []
+    }
+  ],
+  "errors": []
+}

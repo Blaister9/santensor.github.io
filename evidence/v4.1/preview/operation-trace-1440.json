@@ -1,0 +1,201 @@
+{
+  "errors": [],
+  "run": {
+    "stage": 5,
+    "text": "SYNTHETIC: Account NS-204 requests 12 developer accounts for a fictional laboratory.",
+    "scenario": "failure",
+    "receivedAt": "2026-10-17T02:40:41.674Z",
+    "fields": {
+      "reference": "NS-204",
+      "category": "access",
+      "certainty": "exact",
+      "method": "rules"
+    },
+    "policy": "review",
+    "tool": {
+      "request": {
+        "method": "GET",
+        "resource": "/synthetic-directory",
+        "reference": "NS-204"
+      },
+      "auth": "authenticated",
+      "status": 200,
+      "response": {
+        "reference": "NS-204",
+        "owner": "operations"
+      }
+    },
+    "result": {
+      "id": "SYN-001",
+      "outcome": "approved",
+      "owner": "operations",
+      "externalWrites": 0
+    },
+    "failed": false,
+    "events": [
+      {
+        "stage": 0,
+        "code": "intake",
+        "sequence": 1
+      },
+      {
+        "stage": 1,
+        "code": "understand",
+        "sequence": 2
+      },
+      {
+        "stage": 2,
+        "code": "policyKnown",
+        "sequence": 3
+      },
+      {
+        "stage": 3,
+        "code": "toolError",
+        "sequence": 4
+      },
+      {
+        "stage": 3,
+        "code": "retry",
+        "sequence": 5
+      },
+      {
+        "stage": 4,
+        "code": "review",
+        "sequence": 6
+      },
+      {
+        "stage": 5,
+        "code": "approved",
+        "sequence": 7
+      }
+    ],
+    "snapshots": [
+      {
+        "stage": 0,
+        "text": "SYNTHETIC: Account NS-204 requests 12 developer accounts for a fictional laboratory.",
+        "receivedAt": "2026-10-17T02:40:41.674Z",
+        "fields": null,
+        "policy": null,
+        "tool": null,
+        "result": null,
+        "failed": false
+      },
+      {
+        "stage": 1,
+        "text": "SYNTHETIC: Account NS-204 requests 12 developer accounts for a fictional laboratory.",
+        "receivedAt": "2026-10-17T02:40:41.674Z",
+        "fields": {
+          "reference": "NS-204",
+          "category": "access",
+          "certainty": "exact",
+          "method": "rules"
+        },
+        "policy": null,
+        "tool": null,
+        "result": null,
+        "failed": false
+      },
+      {
+        "stage": 2,
+        "text": "SYNTHETIC: Account NS-204 requests 12 developer accounts for a fictional laboratory.",
+        "receivedAt": "2026-10-17T02:40:41.674Z",
+        "fields": {
+          "reference": "NS-204",
+          "category": "access",
+          "certainty": "exact",
+          "method": "rules"
+        },
+        "policy": "review",
+        "tool": null,
+        "result": null,
+        "failed": false
+      },
+      {
+        "stage": 3,
+        "text": "SYNTHETIC: Account NS-204 requests 12 developer accounts for a fictional laboratory.",
+        "receivedAt": "2026-10-17T02:40:41.674Z",
+        "fields": {
+          "reference": "NS-204",
+          "category": "access",
+          "certainty": "exact",
+          "method": "rules"
+        },
+        "policy": "review",
+        "tool": {
+          "request": {
+            "method": "GET",
+            "resource": "/synthetic-directory",
+            "reference": "NS-204"
+          },
+          "auth": "authenticated",
+          "status": 200,
+          "response": {
+            "reference": "NS-204",
+            "owner": "operations"
+          }
+        },
+        "result": null,
+        "failed": false
+      },
+      {
+        "stage": 4,
+        "text": "SYNTHETIC: Account NS-204 requests 12 developer accounts for a fictional laboratory.",
+        "receivedAt": "2026-10-17T02:40:41.674Z",
+        "fields": {
+          "reference": "NS-204",
+          "category": "access",
+          "certainty": "exact",
+          "method": "rules"
+        },
+        "policy": "review",
+        "tool": {
+          "request": {
+            "method": "GET",
+            "resource": "/synthetic-directory",
+            "reference": "NS-204"
+          },
+          "auth": "authenticated",
+          "status": 200,
+          "response": {
+            "reference": "NS-204",
+            "owner": "operations"
+          }
+        },
+        "result": null,
+        "failed": false
+      },
+      {
+        "stage": 5,
+        "text": "SYNTHETIC: Account NS-204 requests 12 developer accounts for a fictional laboratory.",
+        "receivedAt": "2026-10-17T02:40:41.674Z",
+        "fields": {
+          "reference": "NS-204",
+          "category": "access",
+          "certainty": "exact",
+          "method": "rules"
+        },
+        "policy": "review",
+        "tool": {
+          "request": {
+            "method": "GET",
+            "resource": "/synthetic-directory",
+            "reference": "NS-204"
+          },
+          "auth": "authenticated",
+          "status": 200,
+          "response": {
+            "reference": "NS-204",
+            "owner": "operations"
+          }
+        },
+        "result": {
+          "id": "SYN-001",
+          "outcome": "approved",
+          "owner": "operations",
+          "externalWrites": 0
+        },
+        "failed": false
+      }
+    ]
+  }
+}

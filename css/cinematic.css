@@ -547,7 +547,8 @@ p {
   font-size: 36px;
   line-height: 1.18;
 }
-.case-kind {
+.case-kind,
+.professional-role {
   font-family: Mono;
   font-size: 10px;
   color: var(--gold);
@@ -1624,4 +1625,103 @@ pre {
   .glass-surface {
     will-change: auto;
   }
+}
+
+/* V4.1: readable commercial content and operational controls. */
+.capability-lines {list-style:none;padding:0;margin:15px 0;color:#e2d7c4;font-size:13px;line-height:1.8}
+.hero-commercial {display:flex;gap:10px 22px;flex-wrap:wrap;pointer-events:auto}
+.hero-commercial a {font-size:14px;min-height:44px;display:flex;align-items:center;color:var(--gold);border-bottom:1px solid var(--line)}
+.scene-copy[data-copy="0"] p:not(.eyebrow) {font-size:15px;line-height:1.65;max-width:410px}
+.scene-copy[data-copy="0"] .text-link {margin-top:10px;font-size:13px;min-height:44px;padding-bottom:4px}
+.professional-profile {max-width:790px;padding:25px 0;margin-top:35px;border-top:1px solid var(--line)}
+.professional-profile h2 {font-size:30px;letter-spacing:-.03em}
+.professional-profile p {font-size:15px}
+.cases-contact {border-top:1px solid var(--line);margin-top:45px;padding:25px 0;max-width:790px}
+.cases-contact p {font-size:16px;line-height:1.7}
+.technical-note {scroll-margin-top:24px;margin-bottom:60px;min-block-size:calc(100svh - 140px)}
+.project-capture {display:block;width:100%;height:auto;border:1px solid var(--line);margin:24px 0}
+.project-evidence {display:flex;flex-direction:column;gap:10px}
+.project-evidence a,.text-link {color:var(--gold);font-size:14px;min-height:44px;display:inline-flex;align-items:center}
+.case-kind,.professional-role,.study dt {font-size:14px}
+.study dd {font-size:15px;line-height:1.75}
+.direct-contact {max-width:900px;padding-top:25px}
+.direct-contact .email-link {display:inline-block;font-size:clamp(18px,3vw,28px);margin-bottom:25px}
+.direct-contact p {font-size:15px;max-width:650px}
+.direct-contact .button,.direct-contact button {font-size:15px;min-height:44px}
+.recovery-languages {display:flex;gap:25px;margin-top:40px;padding-bottom:40px}
+.recovery-languages a {text-decoration:underline;min-height:44px}
+.site-header nav {font-size:14px}
+.site-header .language-switch {font-size:13px}
+.site-header nav a {min-height:44px;display:inline-flex;align-items:center}
+.context-actions button,.context-inspector p,.context-inspector button {font-size:14px}
+.context-actions button {min-height:44px}
+.context-inspector {max-width:380px;max-height:65svh;overflow-y:auto}
+.skip-operation {font-size:14px;min-height:44px;display:flex;align-items:center}
+.surface-app,.standalone-surface {font-size:15px;background:#111a1e}
+.surface-app .field-label,.standalone-surface .field-label {font-size:14px}
+.surface-app textarea,.surface-app select,.standalone-surface textarea,.standalone-surface select {font-size:16px;background:#0b1116;line-height:1.5}
+.operation-controls button,.review-controls button,.evidence-actions button,.evidence-actions a,.process-node,.event-trace button {font-size:14px;min-height:44px}
+.surface-app .hint,.standalone-surface .hint,.operation-note,.operation-error,.execution-status,.review-controls p,.evidence-description,.evidence-values dt,.evidence-values dd,.event-trace summary,.process-history summary {font-size:14px;line-height:1.6}
+.process-header,.evidence-heading .mono,.process-node .mono,.event-trace .mono,.surface-top {font-size:13px}
+.event-trace button {padding-block:10px}
+.review-controls {padding:12px;background:#1a272b;border:1px solid #e3bc7b80}
+.process-history {margin-top:18px}
+.process-history summary {cursor:pointer;color:var(--gold);min-height:44px}
+.evidence-actions {margin:15px 0}
+.operating .glass-surface {height:calc(100svh - 350px);min-height:400px;background:#111a1e}
+.operating .journey-bottom .skip-operation {display:none}
+.operating .journey-bottom {bottom:20px;padding-top:10px}
+.operating .surface-app {height:calc(100% - 54px);padding:18px}
+.standalone-surface {background:#111a1e}
+.exploration .result-summary p,.exploration .result-summary a,.expertise-detail p,.expertise-detail a,.commercial-links {font-size:14px}
+.expertise-selector button {min-height:44px}
+.operating .editorial p:not(.eyebrow),.results-view .editorial p:not(.eyebrow) {font-size:14px}
+@media (min-width:1000px) {
+ .scene-copy[data-copy="0"] h1 {font-size:clamp(48px,4.4vw,68px)}
+ .editorial {top:24vh}
+}
+@media (max-width:999px) {
+ .standalone-lab {grid-template-columns:1fr}
+ .operating .editorial {top:130px;left:25px;width:calc(100% - 50px)}
+ .operating .editorial h2 {font-size:27px;max-width:650px}
+ .operating .editorial p:not(.eyebrow) {display:none}
+ .operating .glass-surface {width:calc(100vw - 50px);height:calc(100svh - 340px);min-height:320px}
+ .operating .surface-app {height:calc(100% - 46px);padding:16px}
+ .operation-tabs {display:flex;left:25px;right:25px;top:220px;border-bottom:1px solid var(--line)}
+ .operation-tabs button {font-size:14px;min-height:44px;flex:1;padding:8px 0}
+ .operating .surface-preview {display:none}
+ .operating .journey-bottom .skip-operation,.operating .scroll-cue {display:none}
+}
+@media (max-width:700px) {
+ .site-header {left:16px;right:16px;gap:6px}
+ .site-header nav {font-size:12px;gap:9px}
+ .site-header .language-switch {font-size:12px;white-space:nowrap}
+ .site-header nav > a[data-route="labs"] {font-size:12px;display:inline-flex}
+ .site-header nav > a[data-route="labs"]:after {content:none}
+ .brand-mark {margin-right:0;font-size:20px}
+ .wordmark {font-size:10px;gap:4px;letter-spacing:.08em}
+ .brand-dot {display:none}
+ .contact-link span {display:none}
+ .editorial {top:18svh}
+ .experience[data-scene="0"] .scene-copy[data-copy="0"] {background:linear-gradient(#090b0df5,#090b0de8 88%,#090b0d00);padding-bottom:20px;height:max-content}
+ .scene-copy[data-copy="0"] h1 {font-size:39px;max-width:300px}
+ .scene-copy[data-copy="0"] p:not(.eyebrow) {font-size:14px;line-height:1.6;max-width:330px}
+ .capability-lines {font-size:12px;line-height:1.75;margin:12px 0}
+ .hero-commercial {gap:4px 18px}
+ .hero-commercial a {font-size:13px}
+ .hero-commercial {gap:4px 16px}
+ .capability-lines {font-size:13px}
+ .scene-copy[data-copy="0"] .text-link {font-size:12px;margin-top:5px}
+ .scene-copy:not([data-copy="0"]) p:not(.eyebrow) {font-size:14px}
+ .journey-bottom {bottom:50px}
+ .journey-bottom .skip-operation {font-size:13px}
+ .context-actions {bottom:12svh}
+ .context-actions button {font-size:13px;padding:6px 9px}
+ .operating .editorial {top:120px}
+ .operating .editorial h2 {font-size:25px;max-width:330px}
+ .operation-tabs {top:200px}
+ .operating .surface-top {padding:10px 16px}
+ .exploration .expertise-detail p {font-size:14px}
+ .exploration {top:235px;bottom:100px;background:#0d1417ed;padding:16px}
+ .exploration .commercial-links {font-size:14px;gap:12px}
 }

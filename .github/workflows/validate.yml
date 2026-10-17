@@ -25,6 +25,9 @@ jobs:
           SITE_EVIDENCE_DIR: evidence/v4-production/preview
       - run: npm run build:production
       - run: node scripts/check-production.mjs
+      - run: npm run test:links
+        env:
+          SITE_EVIDENCE_DIR: evidence/v4-production/candidate
       - run: test "$(cat CNAME)" = santensor.com
       - run: npm run test:e2e:production
         env:
@@ -32,6 +35,11 @@ jobs:
       - uses: actions/upload-pages-artifact@v4
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         with:
+          path: dist
+      - uses: actions/upload-artifact@v4
+        if: github.ref != 'refs/heads/main'
+        with:
+          name: santensor-v41-review-build
           path: dist
       - uses: actions/upload-artifact@v4
         if: always()

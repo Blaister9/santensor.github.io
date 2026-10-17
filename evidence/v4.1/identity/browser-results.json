@@ -1,0 +1,201 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "<workspace>\\site\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config",
+      "playwright.production.config.mjs",
+      "--grep",
+      "production navigation|generated social"
+    ],
+    "configFile": "<workspace>\\site\\playwright.production.config.mjs",
+    "rootDir": "<workspace>/site/tests/browser",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "<workspace>/site/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "<workspace>/site/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "production.spec.mjs",
+          "hardening.spec.mjs"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "<workspace>\\site\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "<workspace>\\site\\tests\\browser",
+        "snapshotDir": "<workspace>\\site\\tests\\browser",
+        "testIgnore": [],
+        "testMatch": [
+          "production.spec.mjs",
+          "hardening.spec.mjs"
+        ],
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4182",
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "evidence/v4.1/identity/browser-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "node scripts/serve-production.mjs",
+      "url": "http://127.0.0.1:4182",
+      "reuseExistingServer": true
+    }
+  },
+  "suites": [
+    {
+      "title": "hardening.spec.mjs",
+      "file": "hardening.spec.mjs",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "generated social metadata, evidence notes and direct contact",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3066,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-17T05:35:19.680Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8ccebaa160db4016fd9d-f03fbad819b9704ffc90",
+          "file": "hardening.spec.mjs",
+          "line": 82,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "production.spec.mjs",
+      "file": "production.spec.mjs",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "production navigation, direct email contact and internal-path exclusion",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2835,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-17T05:35:22.970Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "42f84ff91e7b867fad77-ae1326e5316a774047db",
+          "file": "production.spec.mjs",
+          "line": 341,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-17T05:35:18.781Z",
+    "duration": 7109.321,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

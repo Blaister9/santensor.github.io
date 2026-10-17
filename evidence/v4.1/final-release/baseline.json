@@ -1,0 +1,476 @@
+[
+  {
+    "viewport": {
+      "width": 360,
+      "height": 740
+    },
+    "language": "en",
+    "boxes": [
+      {
+        "class": "site-header",
+        "text": "S/SANTENSOR®ENGINEERING / V.04.1LabWorkEN / ESContact ↗",
+        "box": {
+          "x": 16,
+          "y": 0,
+          "width": 328,
+          "height": 78,
+          "top": 0,
+          "right": 344,
+          "bottom": 78,
+          "left": 16
+        }
+      },
+      {
+        "class": "scene-copy active",
+        "text": "ANATOMY OF A DECISION / 01Anatomy of a decision.I develop so",
+        "box": {
+          "x": 25,
+          "y": 133.1875,
+          "width": 310,
+          "height": 444.265625,
+          "top": 133.1875,
+          "right": 335,
+          "bottom": 577.453125,
+          "left": 25
+        }
+      },
+      {
+        "class": "hero-commercial",
+        "text": "Projects & evidence ↗Let’s talk ↗",
+        "box": {
+          "x": 25,
+          "y": 464.453125,
+          "width": 310,
+          "height": 44,
+          "top": 464.453125,
+          "right": 335,
+          "bottom": 508.453125,
+          "left": 25
+        }
+      },
+      {
+        "class": "text-link",
+        "text": "Enter the archive ↓",
+        "box": {
+          "x": 25,
+          "y": 513.453125,
+          "width": 140.828125,
+          "height": 44,
+          "top": 513.453125,
+          "right": 165.828125,
+          "bottom": 557.453125,
+          "left": 25
+        }
+      },
+      {
+        "class": "journey-bottom",
+        "text": "CONCEPTUAL VISUALIZATIONGo to operation ↗SCROLL TO EXPLORE ↓",
+        "box": {
+          "x": 25,
+          "y": 613.8125,
+          "width": 310,
+          "height": 76.1875,
+          "top": 613.8125,
+          "right": 335,
+          "bottom": 690,
+          "left": 25
+        }
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "width": 360,
+      "height": 740
+    },
+    "language": "es",
+    "boxes": [
+      {
+        "class": "site-header",
+        "text": "S/SANTENSOR®INGENIERÍA / V.04.1LaboratorioProyectosEN / ESCo",
+        "box": {
+          "x": 16,
+          "y": 0,
+          "width": 328,
+          "height": 78,
+          "top": 0,
+          "right": 344,
+          "bottom": 78,
+          "left": 16
+        }
+      },
+      {
+        "class": "scene-copy active",
+        "text": "ANATOMÍA DE UNA DECISIÓN / 01Anatomía de una decisión.Desarr",
+        "box": {
+          "x": 25,
+          "y": 133.1875,
+          "width": 310,
+          "height": 466.65625,
+          "top": 133.1875,
+          "right": 335,
+          "bottom": 599.84375,
+          "left": 25
+        }
+      },
+      {
+        "class": "hero-commercial",
+        "text": "Proyectos y evidencia ↗Conversemos ↗",
+        "box": {
+          "x": 25,
+          "y": 486.84375,
+          "width": 310,
+          "height": 44,
+          "top": 486.84375,
+          "right": 335,
+          "bottom": 530.84375,
+          "left": 25
+        }
+      },
+      {
+        "class": "text-link",
+        "text": "Entrar al archivo ↓",
+        "box": {
+          "x": 25,
+          "y": 535.84375,
+          "width": 137.03125,
+          "height": 44,
+          "top": 535.84375,
+          "right": 162.03125,
+          "bottom": 579.84375,
+          "left": 25
+        }
+      },
+      {
+        "class": "journey-bottom",
+        "text": "VISUALIZACIÓN CONCEPTUALIr a la operación ↗DESPLAZA PARA EXP",
+        "box": {
+          "x": 25,
+          "y": 613.8125,
+          "width": 310,
+          "height": 76.1875,
+          "top": 613.8125,
+          "right": 335,
+          "bottom": 690,
+          "left": 25
+        }
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "language": "en",
+    "boxes": [
+      {
+        "class": "site-header",
+        "text": "S/SANTENSOR®ENGINEERING / V.04.1LabWorkEN / ESContact ↗",
+        "box": {
+          "x": 16,
+          "y": 0,
+          "width": 358,
+          "height": 78,
+          "top": 0,
+          "right": 374,
+          "bottom": 78,
+          "left": 16
+        }
+      },
+      {
+        "class": "scene-copy active",
+        "text": "ANATOMY OF A DECISION / 01Anatomy of a decision.I develop so",
+        "box": {
+          "x": 25,
+          "y": 151.90625,
+          "width": 340,
+          "height": 444.265625,
+          "top": 151.90625,
+          "right": 365,
+          "bottom": 596.171875,
+          "left": 25
+        }
+      },
+      {
+        "class": "hero-commercial",
+        "text": "Projects & evidence ↗Let’s talk ↗",
+        "box": {
+          "x": 25,
+          "y": 483.171875,
+          "width": 340,
+          "height": 44,
+          "top": 483.171875,
+          "right": 365,
+          "bottom": 527.171875,
+          "left": 25
+        }
+      },
+      {
+        "class": "text-link",
+        "text": "Enter the archive ↓",
+        "box": {
+          "x": 25,
+          "y": 532.171875,
+          "width": 140.828125,
+          "height": 44,
+          "top": 532.171875,
+          "right": 165.828125,
+          "bottom": 576.171875,
+          "left": 25
+        }
+      },
+      {
+        "class": "journey-bottom",
+        "text": "CONCEPTUAL VISUALIZATIONGo to operation ↗SCROLL TO EXPLORE ↓",
+        "box": {
+          "x": 25,
+          "y": 717.8125,
+          "width": 340,
+          "height": 76.1875,
+          "top": 717.8125,
+          "right": 365,
+          "bottom": 794,
+          "left": 25
+        }
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "language": "es",
+    "boxes": [
+      {
+        "class": "site-header",
+        "text": "S/SANTENSOR®INGENIERÍA / V.04.1LaboratorioProyectosEN / ESCo",
+        "box": {
+          "x": 16,
+          "y": 0,
+          "width": 358,
+          "height": 78,
+          "top": 0,
+          "right": 374,
+          "bottom": 78,
+          "left": 16
+        }
+      },
+      {
+        "class": "scene-copy active",
+        "text": "ANATOMÍA DE UNA DECISIÓN / 01Anatomía de una decisión.Desarr",
+        "box": {
+          "x": 25,
+          "y": 151.90625,
+          "width": 340,
+          "height": 466.65625,
+          "top": 151.90625,
+          "right": 365,
+          "bottom": 618.5625,
+          "left": 25
+        }
+      },
+      {
+        "class": "hero-commercial",
+        "text": "Proyectos y evidencia ↗Conversemos ↗",
+        "box": {
+          "x": 25,
+          "y": 505.5625,
+          "width": 340,
+          "height": 44,
+          "top": 505.5625,
+          "right": 365,
+          "bottom": 549.5625,
+          "left": 25
+        }
+      },
+      {
+        "class": "text-link",
+        "text": "Entrar al archivo ↓",
+        "box": {
+          "x": 25,
+          "y": 554.5625,
+          "width": 137.03125,
+          "height": 44,
+          "top": 554.5625,
+          "right": 162.03125,
+          "bottom": 598.5625,
+          "left": 25
+        }
+      },
+      {
+        "class": "journey-bottom",
+        "text": "VISUALIZACIÓN CONCEPTUALIr a la operación ↗DESPLAZA PARA EXP",
+        "box": {
+          "x": 25,
+          "y": 717.8125,
+          "width": 340,
+          "height": 76.1875,
+          "top": 717.8125,
+          "right": 365,
+          "bottom": 794,
+          "left": 25
+        }
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "language": "en",
+    "boxes": [
+      {
+        "class": "site-header",
+        "text": "S/SANTENSOR®ENGINEERING / V.04.1LabWorkEN / ESContact ↗",
+        "box": {
+          "x": 50.390625,
+          "y": 0,
+          "width": 1339.21875,
+          "height": 102,
+          "top": 0,
+          "right": 1389.609375,
+          "bottom": 102,
+          "left": 50.390625
+        }
+      },
+      {
+        "class": "scene-copy active",
+        "text": "ANATOMY OF A DECISION / 01Anatomy of a decision.I develop so",
+        "box": {
+          "x": 100.796875,
+          "y": 216,
+          "width": 518.390625,
+          "height": 0,
+          "top": 216,
+          "right": 619.1875,
+          "bottom": 216,
+          "left": 100.796875
+        }
+      },
+      {
+        "class": "hero-commercial",
+        "text": "Projects & evidence ↗Let’s talk ↗",
+        "box": {
+          "x": 100.796875,
+          "y": 630.484375,
+          "width": 518.390625,
+          "height": 44,
+          "top": 630.484375,
+          "right": 619.1875,
+          "bottom": 674.484375,
+          "left": 100.796875
+        }
+      },
+      {
+        "class": "text-link",
+        "text": "Enter the archive ↓",
+        "box": {
+          "x": 100.796875,
+          "y": 684.484375,
+          "width": 164.640625,
+          "height": 44,
+          "top": 684.484375,
+          "right": 265.4375,
+          "bottom": 728.484375,
+          "left": 100.796875
+        }
+      },
+      {
+        "class": "journey-bottom",
+        "text": "CONCEPTUAL VISUALIZATIONGo to operation ↗SCROLL TO EXPLORE ↓",
+        "box": {
+          "x": 57.59375,
+          "y": 783,
+          "width": 1324.8125,
+          "height": 65,
+          "top": 783,
+          "right": 1382.40625,
+          "bottom": 848,
+          "left": 57.59375
+        }
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "language": "es",
+    "boxes": [
+      {
+        "class": "site-header",
+        "text": "S/SANTENSOR®INGENIERÍA / V.04.1LaboratorioProyectosEN / ESCo",
+        "box": {
+          "x": 50.390625,
+          "y": 0,
+          "width": 1339.21875,
+          "height": 102,
+          "top": 0,
+          "right": 1389.609375,
+          "bottom": 102,
+          "left": 50.390625
+        }
+      },
+      {
+        "class": "scene-copy active",
+        "text": "ANATOMÍA DE UNA DECISIÓN / 01Anatomía de una decisión.Desarr",
+        "box": {
+          "x": 100.796875,
+          "y": 216,
+          "width": 518.390625,
+          "height": 0,
+          "top": 216,
+          "right": 619.1875,
+          "bottom": 216,
+          "left": 100.796875
+        }
+      },
+      {
+        "class": "hero-commercial",
+        "text": "Proyectos y evidencia ↗Conversemos ↗",
+        "box": {
+          "x": 100.796875,
+          "y": 630.484375,
+          "width": 518.390625,
+          "height": 44,
+          "top": 630.484375,
+          "right": 619.1875,
+          "bottom": 674.484375,
+          "left": 100.796875
+        }
+      },
+      {
+        "class": "text-link",
+        "text": "Entrar al archivo ↓",
+        "box": {
+          "x": 100.796875,
+          "y": 684.484375,
+          "width": 160.53125,
+          "height": 44,
+          "top": 684.484375,
+          "right": 261.328125,
+          "bottom": 728.484375,
+          "left": 100.796875
+        }
+      },
+      {
+        "class": "journey-bottom",
+        "text": "VISUALIZACIÓN CONCEPTUALIr a la operación ↗DESPLAZA PARA EXP",
+        "box": {
+          "x": 57.59375,
+          "y": 783,
+          "width": 1324.8125,
+          "height": 65,
+          "top": 783,
+          "right": 1382.40625,
+          "bottom": 848,
+          "left": 57.59375
+        }
+      }
+    ]
+  }
+]

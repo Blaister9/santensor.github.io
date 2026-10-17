@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-17",
+  "commit": "78deecb28e37be375f3abf2b04530d711e14dacc",
+  "mode": "read-only source and existing reports; no trainer changes or new provider calls",
+  "files": [
+    {
+      "file": "package.json",
+      "sha256": "b2ac079375a173e1b771ffda3966a5c880ea13f00d50b556296a7fe7837288b1"
+    },
+    {
+      "file": "tests/security.test.ts",
+      "sha256": "23fc401e6f4639a4fb23c1b214f0148d1caf091f78322ddc19daa4ffac52af99"
+    },
+    {
+      "file": "tests/browser/voice-lifecycle.spec.ts",
+      "sha256": "5b4a4a36072aaa5abcd1b1f4cc1880c01e0725f5fe7bc1d23d3635b1b7a8fc35"
+    },
+    {
+      "file": "evidence/real-voice.json",
+      "sha256": "241b2872b55a26a8518587b8d1a3c3174ae3448353ea168e9a045add1d047392"
+    }
+  ],
+  "publicDisclosure": "Independent trainer summary and existing screenshot with explicitly synthetic written input. No institutional material, private source, real-user conversations, credentials or raw session reports are copied."
+}

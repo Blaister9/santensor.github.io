@@ -247,6 +247,7 @@ test("production WebGL enhancement renders the same optical system", async ({
 
 for (const viewport of [
   { width: 1440, height: 900 },
+  { width: 1363, height: 936 },
   { width: 768, height: 1024 },
   { width: 390, height: 844 },
   { width: 360, height: 740 },
@@ -304,7 +305,8 @@ for (const viewport of [
     await expect(page.locator(".skip")).toBeFocused();
     await page.keyboard.press("Enter");
     await expect.poll(() => progress(page)).toBeCloseTo(3, 2);
-    await page.locator("[data-request]").focus();
+    await page.keyboard.press("Tab");
+    await expect(page.locator("[data-request]")).toBeFocused();
     await page.keyboard.press("ControlOrMeta+A");
     await page.keyboard.type(
       "SYNTHETIC: Account NS-204 requests 10 accounts for a fictional test.",
@@ -313,7 +315,8 @@ for (const viewport of [
     await expect(page.locator("[data-run]")).toBeFocused();
     await page.keyboard.press("Enter");
     await expect(page.locator("[data-review]")).toBeVisible();
-    await page.locator("[data-approve]").focus();
+    for (let i = 0; i < 30 && !(await page.locator('[data-approve]').evaluate(el => el === document.activeElement)); i++) await page.keyboard.press('Tab');
+    await expect(page.locator('[data-approve]')).toBeFocused();
     await page.keyboard.press("Enter");
     await expect(page.locator("[data-evidence-values]")).toContainText(
       "SYN-001",
@@ -335,7 +338,7 @@ for (const viewport of [
     await context.close();
   });
 
-test("production navigation, contact draft and internal-path exclusion", async ({
+test("production navigation, direct email contact and internal-path exclusion", async ({
   page,
   request,
 }) => {
@@ -347,22 +350,13 @@ test("production navigation, contact draft and internal-path exclusion", async (
   expect((await exportTrace(page)).run.result.outcome).toBe("rejected");
   await page.locator('header [data-route="cases"]').click();
   await expect(page.locator(".study")).toHaveCount(3);
-  await expect(page.locator(".case-kind").first()).toContainText(
-    "Experimental",
+  await expect(page.locator(".study .case-kind").first()).toContainText(
+    "prototype",
   );
   await page.locator('header [data-route="contact"]').click();
-  await page.locator("#name").fill("Synthetic Visitor");
-  await page.locator("#email").fill("visitor@example.invalid");
-  await page
-    .locator("#message")
-    .fill("A fictional inquiry about an inspectable engineering system.");
-  await page.locator('[name="consent"]').check();
-  await page.locator('[type="submit"]').click();
-  await expect(page.locator("[data-draft-panel]")).toBeVisible();
-  await expect(page.locator("[data-open-draft]")).toHaveAttribute(
-    "href",
-    /^mailto:/,
-  );
+  await expect(page.locator('a.email-link')).toHaveAttribute('href','mailto:santiagopazbedoya@gmail.com');
+  await expect(page.locator('a.button.primary')).toHaveAttribute('href',/^mailto:/);
+  await expect(page.locator('form')).toHaveCount(0);
   for (const path of [
     "/review/",
     "/evidence/v4/",

@@ -1,0 +1,20 @@
+[
+  {
+    "language": "en",
+    "skipFocus": "<a href=\"/\" class=\"wordmark\" aria-label=\"Santensor home\"><span class=\"brand-mark\" aria-hidden=\"true\">S/</span>SANTENSOR<span class=\"brand-dot\">®</span></a>"
+  },
+  {
+    "language": "en",
+    "resultURL": "http://127.0.0.1:4182/labs/#scene-4",
+    "targetExists": 0
+  },
+  {
+    "language": "es",
+    "skipFocus": "<a href=\"/es/\" class=\"wordmark\" aria-label=\"Inicio de Santensor\"><span class=\"brand-mark\" aria-hidden=\"true\">S/</span>SANTENSOR<span class=\"brand-dot\">®</span></a>"
+  },
+  {
+    "language": "es",
+    "resultURL": "http://127.0.0.1:4182/es/labs/#scene-4",
+    "targetExists": 0
+  }
+]

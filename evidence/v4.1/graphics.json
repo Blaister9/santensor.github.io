@@ -1,0 +1,160 @@
+[
+  {
+    "requestedMode": "css-fallback",
+    "observedMode": "css-fallback",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "initial": {
+      "lcpMs": 176,
+      "bytes": 266770,
+      "stats": {
+        "mode": "css-fallback",
+        "enhancement": "original-render-stills",
+        "reason": "requested"
+      }
+    },
+    "scenes": [
+      {
+        "scene": 0,
+        "automationNavigationMs": 62.913499999999885,
+        "stats": {
+          "mode": "css-fallback",
+          "enhancement": "original-render-stills",
+          "reason": "requested"
+        }
+      },
+      {
+        "scene": 1,
+        "automationNavigationMs": 48.23500000000013,
+        "stats": {
+          "mode": "css-fallback",
+          "enhancement": "original-render-stills",
+          "reason": "requested"
+        }
+      },
+      {
+        "scene": 2,
+        "automationNavigationMs": 71.8719000000001,
+        "stats": {
+          "mode": "css-fallback",
+          "enhancement": "original-render-stills",
+          "reason": "requested"
+        }
+      },
+      {
+        "scene": 3,
+        "automationNavigationMs": 75.82670000000007,
+        "stats": {
+          "mode": "css-fallback",
+          "enhancement": "original-render-stills",
+          "reason": "requested"
+        }
+      },
+      {
+        "scene": 4,
+        "automationNavigationMs": 69.3400999999999,
+        "stats": {
+          "mode": "css-fallback",
+          "enhancement": "original-render-stills",
+          "reason": "requested"
+        }
+      }
+    ],
+    "backend": null,
+    "physicalGPU": false,
+    "notes": "Local Chromium; navigation timings include automation and are not render-frame benchmarks. CSS fallback metrics are not WebGL metrics."
+  },
+  {
+    "requestedMode": "webgl",
+    "observedMode": "webgl",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "initial": {
+      "lcpMs": 100,
+      "bytes": 822736,
+      "stats": {
+        "mode": "webgl",
+        "frames": 2,
+        "drawCalls": 135,
+        "triangles": 4432,
+        "pixelRatio": 0.8333333333333334,
+        "geometries": 30,
+        "textures": 2
+      }
+    },
+    "scenes": [
+      {
+        "scene": 0,
+        "automationNavigationMs": 47.28279999999995,
+        "stats": {
+          "mode": "webgl",
+          "frames": 2,
+          "drawCalls": 135,
+          "triangles": 4432,
+          "pixelRatio": 0.8333333333333334,
+          "geometries": 30,
+          "textures": 2
+        }
+      },
+      {
+        "scene": 1,
+        "automationNavigationMs": 306.00469999999996,
+        "stats": {
+          "mode": "webgl",
+          "frames": 4,
+          "drawCalls": 135,
+          "triangles": 4432,
+          "pixelRatio": 0.8333333333333334,
+          "geometries": 30,
+          "textures": 2
+        }
+      },
+      {
+        "scene": 2,
+        "automationNavigationMs": 54.31269999999995,
+        "stats": {
+          "mode": "webgl",
+          "frames": 5,
+          "drawCalls": 134,
+          "triangles": 4372,
+          "pixelRatio": 0.8333333333333334,
+          "geometries": 30,
+          "textures": 2
+        }
+      },
+      {
+        "scene": 3,
+        "automationNavigationMs": 51.217899999999645,
+        "stats": {
+          "mode": "webgl",
+          "frames": 6,
+          "drawCalls": 135,
+          "triangles": 4432,
+          "pixelRatio": 0.8333333333333334,
+          "geometries": 30,
+          "textures": 2
+        }
+      },
+      {
+        "scene": 4,
+        "automationNavigationMs": 53.31739999999991,
+        "stats": {
+          "mode": "webgl",
+          "frames": 7,
+          "drawCalls": 135,
+          "triangles": 4432,
+          "pixelRatio": 0.8333333333333334,
+          "geometries": 30,
+          "textures": 2
+        }
+      }
+    ],
+    "backend": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+    "physicalGPU": false,
+    "notes": "Local Chromium; navigation timings include automation and are not render-frame benchmarks. CSS fallback metrics are not WebGL metrics."
+  }
+]
