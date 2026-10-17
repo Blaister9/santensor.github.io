@@ -1,2 +1,30 @@
-import {defineConfig} from '@playwright/test';
-export default defineConfig({testDir:'./tests/browser',testMatch:'v4.spec.mjs',workers:1,retries:0,timeout:45000,reporter:[['list'],['json',{outputFile:process.env.SITE_EVIDENCE_DIR?`${process.env.SITE_EVIDENCE_DIR}/browser-results.json`:'evidence/v4/browser-results.json'}]],use:{baseURL:process.env.SITE_TEST_URL??'http://127.0.0.1:4180',viewport:{width:1440,height:900}},webServer:process.env.SITE_TEST_URL?undefined:{command:'node scripts/serve-v4.mjs',url:'http://127.0.0.1:4180',reuseExistingServer:true}});
+import { defineConfig } from "@playwright/test";
+export default defineConfig({
+  testDir: "./tests/browser",
+  testMatch: "v4.spec.mjs",
+  workers: 1,
+  retries: 0,
+  timeout: 45000,
+  reporter: [
+    ["list"],
+    [
+      "json",
+      {
+        outputFile: process.env.SITE_EVIDENCE_DIR
+          ? `${process.env.SITE_EVIDENCE_DIR}/browser-results.json`
+          : "evidence/v4/browser-results.json",
+      },
+    ],
+  ],
+  use: {
+    baseURL: process.env.SITE_TEST_URL ?? "http://127.0.0.1:4180",
+    viewport: { width: 1440, height: 900 },
+  },
+  webServer: process.env.SITE_TEST_URL
+    ? undefined
+    : {
+        command: "node scripts/serve-v4.mjs",
+        url: "http://127.0.0.1:4180",
+        reuseExistingServer: true,
+      },
+});

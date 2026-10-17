@@ -10,7 +10,7 @@
   "persistentSurface": true,
   "stats": {
     "mode": "webgl",
-    "drawCalls": 369,
+    "drawCalls": 135,
     "triangles": 4432,
     "pixelRatio": 1,
     "geometries": 30,

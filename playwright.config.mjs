@@ -1,2 +1,1 @@
-import {defineConfig} from '@playwright/test';
-export default defineConfig({testDir:'./tests/browser',testMatch:['site.spec.mjs','v3.spec.mjs'],workers:1,retries:0,reporter:[['list'],['json',{outputFile:process.env.SITE_EVIDENCE_DIR?`${process.env.SITE_EVIDENCE_DIR}/browser-results.json`:'evidence/v3/tests/browser-results.json'}]],use:{baseURL:process.env.SITE_TEST_URL??'http://127.0.0.1:4173',viewport:{width:1440,height:900}},webServer:process.env.SITE_TEST_URL?undefined:{command:'npm run preview',url:'http://127.0.0.1:4173',reuseExistingServer:true}});
+export {default} from './playwright.v4.config.mjs';

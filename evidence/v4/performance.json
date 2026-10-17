@@ -1,0 +1,518 @@
+{
+  "date": "2026-10-17T00:16:16.241Z",
+  "renderer": {
+    "raw": 555666,
+    "gzip": 141386
+  },
+  "results": [
+    {
+      "mode": "desktop",
+      "viewport": "1440x900 / DPR 1",
+      "conditions": "local Chromium laboratory measurement",
+      "initialBytes": 328240,
+      "bytes": 478714,
+      "initialResourceBudget": 950000,
+      "tourResourceBudget": 1250000,
+      "frameIntervalsMs": {
+        "median": 16.700000000000045,
+        "p95": 33.40000000000009,
+        "max": 33.40000000000009
+      },
+      "idleRendererSleeps": true,
+      "timing": {
+        "name": "http://127.0.0.1:4180/",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 96.80000000074506,
+        "navigationId": 8989,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0.10000000055879354,
+        "domainLookupStart": 0.900000000372529,
+        "domainLookupEnd": 3.2000000001862645,
+        "connectStart": 3.2000000001862645,
+        "secureConnectionStart": 0,
+        "connectEnd": 6.5,
+        "requestStart": 6.7000000001862645,
+        "responseStart": 8,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 8,
+        "responseEnd": 8.400000000372529,
+        "transferSize": 11290,
+        "encodedBodySize": 10990,
+        "decodedBodySize": 10990,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 15.900000000372529,
+        "domContentLoadedEventStart": 86.6000000005588,
+        "domContentLoadedEventEnd": 86.6000000005588,
+        "domComplete": 96.80000000074506,
+        "loadEventStart": 96.80000000074506,
+        "loadEventEnd": 96.80000000074506,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "low"
+        }
+      },
+      "resources": [
+        {
+          "name": "/assets/fonts/space-grotesk-latin-500-normal.woff2",
+          "origin": "http://127.0.0.1:4180",
+          "bytes": 13612,
+          "duration": 7.900000000372529
+        },
+        {
+          "name": "/css/cinematic.css",
+          "origin": "http://127.0.0.1:4180",
+          "bytes": 28442,
+          "duration": 8.699999999254942
+        },
+        {
+          "name": "/js/cinematic.mjs",
+          "origin": "http://127.0.0.1:4180",
+          "bytes": 18234,
+          "duration": 8.700000000186265
+        },
+        {
+          "name": "/js/i18n.mjs",
+          "origin": "http://127.0.0.1:4180",
+          "bytes": 30233,
+          "duration": 1.7999999998137355
+        },
+        {
+          "name": "/js/cinematic-copy.mjs",
+          "origin": "http://127.0.0.1:4180",
+          "bytes": 14333,
+          "duration": 1.8999999994412065
+        },
+        {
+          "name": "/js/cinematic-operation.mjs",
+          "origin": "http://127.0.0.1:4180",
+          "bytes": 13647,
+          "duration": 2
+        },
+        {
+          "name": "/js/story-copy.mjs",
+          "origin": "http://127.0.0.1:4180",
+          "bytes": 6422,
+          "duration": 1.7999999998137355
+        },
+        {
+          "name": "/js/workflow.mjs",
+          "origin": "http://127.0.0.1:4180",
+          "bytes": 6225,
+          "duration": 1.7999999998137355
+        },
+        {
+          "name": "/assets/fonts/inter-latin-400-normal.woff2",
+          "origin": "http://127.0.0.1:4180",
+          "bytes": 23964,
+          "duration": 56.19999999925494
+        },
+        {
+          "name": "/assets/fonts/ibm-plex-mono-latin-400-normal.woff2",
+          "origin": "http://127.0.0.1:4180",
+          "bytes": 15008,
+          "duration": 55.700000000186265
+        },
+        {
+          "name": "/assets/optical/desktop-0.webp",
+          "origin": "http://127.0.0.1:4180",
+          "bytes": 71752,
+          "duration": 2.2999999998137355
+        },
+        {
+          "name": "/assets/optical/desktop-1.webp",
+          "origin": "http://127.0.0.1:4180",
+          "bytes": 75078,
+          "duration": 4.699999999254942
+        },
+        {
+          "name": "/assets/optical/desktop-2.webp",
+          "origin": "http://127.0.0.1:4180",
+          "bytes": 54848,
+          "duration": 3.800000000745058
+        },
+        {
+          "name": "/assets/optical/desktop-3.webp",
+          "origin": "http://127.0.0.1:4180",
+          "bytes": 35162,
+          "duration": 2.8999999994412065
+        },
+        {
+          "name": "/assets/optical/desktop-4.webp",
+          "origin": "http://127.0.0.1:4180",
+          "bytes": 60464,
+          "duration": 3.3999999994412065
+        }
+      ],
+      "measurements": {
+        "lcp": 1320,
+        "cls": 0.0017788666231969095,
+        "longTasks": [
+          58
+        ]
+      },
+      "render": {
+        "mode": "css-fallback",
+        "enhancement": "original-render-stills",
+        "reason": "unaccelerated-graphics"
+      },
+      "errors": []
+    },
+    {
+      "mode": "mobile-throttled",
+      "viewport": "390x844 / DPR 3",
+      "conditions": "CDP 4× CPU, 150ms RTT, 1.6Mbps download; emulation, not a physical phone",
+      "initialBytes": 232088,
+      "bytes": 268994,
+      "initialResourceBudget": 950000,
+      "tourResourceBudget": 1250000,
+      "frameIntervalsMs": {
+        "median": 16.699999999999818,
+        "p95": 33.40000000000009,
+        "max": 33.40000000000009
+      },
+      "idleRendererSleeps": true,
+      "timing": {
+        "name": "http://127.0.0.1:4180/",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 1809.5999999996275,
+        "navigationId": 2993,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0.09999999962747097,
+        "domainLookupStart": 0.599999999627471,
+        "domainLookupEnd": 2.900000000372529,
+        "connectStart": 2.900000000372529,
+        "secureConnectionStart": 0,
+        "connectEnd": 6.099999999627471,
+        "requestStart": 6.2000000001862645,
+        "responseStart": 7.5,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 7.5,
+        "responseEnd": 223.09999999962747,
+        "transferSize": 11290,
+        "encodedBodySize": 10990,
+        "decodedBodySize": 10990,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 225.90000000037253,
+        "domContentLoadedEventStart": 1380.7999999998137,
+        "domContentLoadedEventEnd": 1381,
+        "domComplete": 1809.5999999996275,
+        "loadEventStart": 1809.5999999996275,
+        "loadEventEnd": 1809.5999999996275,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "high"
+        }
+      },
+      "resources": [
+        {
+          "name": "/assets/fonts/space-grotesk-latin-500-normal.woff2",
+          "origin": "http://127.0.0.1:4180",
+          "bytes": 13612,
+          "duration": 329.90000000037253
+        },
+        {
+          "name": "/css/cinematic.css",
+          "origin": "http://127.0.0.1:4180",
+          "bytes": 28442,
+          "duration": 469
+        },
+        {
+          "name": "/js/cinematic.mjs",
+          "origin": "http://127.0.0.1:4180",
+          "bytes": 18234,
+          "duration": 405.30000000074506
+        },
+        {
+          "name": "/js/i18n.mjs",
+          "origin": "http://127.0.0.1:4180",
+          "bytes": 30233,
+          "duration": 542.0999999996275
+        },
+        {
+          "name": "/js/cinematic-copy.mjs",
+          "origin": "http://127.0.0.1:4180",
+          "bytes": 14333,
+          "duration": 369.90000000037253
+        },
+        {
+          "name": "/js/cinematic-operation.mjs",
+          "origin": "http://127.0.0.1:4180",
+          "bytes": 13647,
+          "duration": 384.09999999962747
+        },
+        {
+          "name": "/assets/fonts/inter-latin-400-normal.woff2",
+          "origin": "http://127.0.0.1:4180",
+          "bytes": 23964,
+          "duration": 599.1999999992549
+        },
+        {
+          "name": "/assets/fonts/ibm-plex-mono-latin-400-normal.woff2",
+          "origin": "http://127.0.0.1:4180",
+          "bytes": 15008,
+          "duration": 529.1000000005588
+        },
+        {
+          "name": "/js/workflow.mjs",
+          "origin": "http://127.0.0.1:4180",
+          "bytes": 6225,
+          "duration": 263.79999999981374
+        },
+        {
+          "name": "/js/story-copy.mjs",
+          "origin": "http://127.0.0.1:4180",
+          "bytes": 6422,
+          "duration": 200.90000000037253
+        },
+        {
+          "name": "/assets/optical/mobile-0.webp",
+          "origin": "http://127.0.0.1:4180",
+          "bytes": 25648,
+          "duration": 407.8999999994412
+        },
+        {
+          "name": "/assets/optical/mobile-1.webp",
+          "origin": "http://127.0.0.1:4180",
+          "bytes": 25030,
+          "duration": 407.59999999962747
+        },
+        {
+          "name": "/assets/optical/mobile-2.webp",
+          "origin": "http://127.0.0.1:4180",
+          "bytes": 21040,
+          "duration": 272.5
+        },
+        {
+          "name": "/assets/optical/mobile-3.webp",
+          "origin": "http://127.0.0.1:4180",
+          "bytes": 15866,
+          "duration": 233.20000000018626
+        }
+      ],
+      "measurements": {
+        "lcp": 3016,
+        "cls": 0.011420327751522257,
+        "longTasks": []
+      },
+      "render": {
+        "mode": "css-fallback",
+        "enhancement": "original-render-stills",
+        "reason": "unaccelerated-graphics"
+      },
+      "errors": []
+    },
+    {
+      "mode": "reduced-motion",
+      "viewport": "390x844 / DPR 3",
+      "conditions": "local Chromium laboratory measurement",
+      "initialBytes": 232088,
+      "bytes": 289152,
+      "initialResourceBudget": 300000,
+      "tourResourceBudget": 300000,
+      "frameIntervalsMs": {
+        "median": 16.700000000000045,
+        "p95": 33.299999999999955,
+        "max": 33.40000000000009
+      },
+      "idleRendererSleeps": true,
+      "timing": {
+        "name": "http://127.0.0.1:4180/",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 77.5,
+        "navigationId": 2364,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0.19999999925494194,
+        "domainLookupStart": 0.6999999992549419,
+        "domainLookupEnd": 2.2999999998137355,
+        "connectStart": 2.2999999998137355,
+        "secureConnectionStart": 0,
+        "connectEnd": 4.199999999254942,
+        "requestStart": 4.2999999998137355,
+        "responseStart": 5.099999999627471,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 5.099999999627471,
+        "responseEnd": 5.5,
+        "transferSize": 11290,
+        "encodedBodySize": 10990,
+        "decodedBodySize": 10990,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 11.799999999813735,
+        "domContentLoadedEventStart": 66.19999999925494,
+        "domContentLoadedEventEnd": 66.29999999981374,
+        "domComplete": 77.5,
+        "loadEventStart": 77.5,
+        "loadEventEnd": 77.5,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "high"
+        }
+      },
+      "resources": [
+        {
+          "name": "/assets/fonts/space-grotesk-latin-500-normal.woff2",
+          "origin": "http://127.0.0.1:4180",
+          "bytes": 13612,
+          "duration": 9.399999999441206
+        },
+        {
+          "name": "/css/cinematic.css",
+          "origin": "http://127.0.0.1:4180",
+          "bytes": 28442,
+          "duration": 10.400000000372529
+        },
+        {
+          "name": "/js/cinematic.mjs",
+          "origin": "http://127.0.0.1:4180",
+          "bytes": 18234,
+          "duration": 10.599999999627471
+        },
+        {
+          "name": "/js/cinematic-copy.mjs",
+          "origin": "http://127.0.0.1:4180",
+          "bytes": 14333,
+          "duration": 2
+        },
+        {
+          "name": "/js/i18n.mjs",
+          "origin": "http://127.0.0.1:4180",
+          "bytes": 30233,
+          "duration": 1.7000000001862645
+        },
+        {
+          "name": "/js/cinematic-operation.mjs",
+          "origin": "http://127.0.0.1:4180",
+          "bytes": 13647,
+          "duration": 2
+        },
+        {
+          "name": "/js/story-copy.mjs",
+          "origin": "http://127.0.0.1:4180",
+          "bytes": 6422,
+          "duration": 1.400000000372529
+        },
+        {
+          "name": "/js/workflow.mjs",
+          "origin": "http://127.0.0.1:4180",
+          "bytes": 6225,
+          "duration": 1.5
+        },
+        {
+          "name": "/assets/fonts/inter-latin-400-normal.woff2",
+          "origin": "http://127.0.0.1:4180",
+          "bytes": 23964,
+          "duration": 40.700000000186265
+        },
+        {
+          "name": "/assets/fonts/ibm-plex-mono-latin-400-normal.woff2",
+          "origin": "http://127.0.0.1:4180",
+          "bytes": 15008,
+          "duration": 39.799999999813735
+        },
+        {
+          "name": "/assets/optical/mobile-0.webp",
+          "origin": "http://127.0.0.1:4180",
+          "bytes": 25648,
+          "duration": 5.2000000001862645
+        },
+        {
+          "name": "/assets/optical/mobile-1.webp",
+          "origin": "http://127.0.0.1:4180",
+          "bytes": 25030,
+          "duration": 6.2999999998137355
+        },
+        {
+          "name": "/assets/optical/mobile-2.webp",
+          "origin": "http://127.0.0.1:4180",
+          "bytes": 21040,
+          "duration": 2.2999999998137355
+        },
+        {
+          "name": "/assets/optical/mobile-3.webp",
+          "origin": "http://127.0.0.1:4180",
+          "bytes": 15866,
+          "duration": 2.3999999994412065
+        },
+        {
+          "name": "/assets/optical/mobile-4.webp",
+          "origin": "http://127.0.0.1:4180",
+          "bytes": 20158,
+          "duration": 2.900000000372529
+        }
+      ],
+      "measurements": {
+        "lcp": 1252,
+        "cls": 0.00767835328826385,
+        "longTasks": []
+      },
+      "render": {
+        "mode": "css-fallback",
+        "enhancement": "original-render-stills",
+        "reason": "reduced-motion"
+      },
+      "errors": []
+    }
+  ]
+}

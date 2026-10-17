@@ -1,0 +1,24 @@
+[
+  {
+    "name": "scrollytelling",
+    "url": "https://scrollytelling.ai/",
+    "status": 200,
+    "title": "Scrollytelling platform — immersive stories built with AI",
+    "capturedAt": "2026-10-17T00:11:56.508Z",
+    "use": "Reference inspection only. No assets copied into the experience."
+  },
+  {
+    "name": "bruno-simon",
+    "url": "https://bruno-simon.com/",
+    "status": 200,
+    "title": "Bruno's",
+    "capturedAt": "2026-10-17T00:12:22.695Z",
+    "use": "Reference inspection only. No assets copied into the experience."
+  },
+  {
+    "name": "approved-prototype",
+    "url": "https://weekend-kick-characterization-guam.trycloudflare.com/es/",
+    "error": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://weekend-kick-characterization-guam.trycloudflare.com/es/\nCall log:\n\u001b[2m  - navigating to \"https://weekend-kick-characterization-guam.trycloudflare.com/es/\", waiting until \"domcontentloaded\"\u001b[22m\n",
+    "recoveredAssets": false
+  }
+]

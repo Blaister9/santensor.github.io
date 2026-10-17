@@ -3,11 +3,9 @@
     "argv": [
       "C:\\Program Files\\nodejs\\node.exe",
       "C:\\Users\\santi\\Documents\\Santensor-Agent-Workspace\\site\\node_modules\\@playwright\\test\\cli.js",
-      "test",
-      "--config",
-      "playwright.v4.config.mjs"
+      "test"
     ],
-    "configFile": "C:\\Users\\santi\\Documents\\Santensor-Agent-Workspace\\site\\playwright.v4.config.mjs",
+    "configFile": "C:\\Users\\santi\\Documents\\Santensor-Agent-Workspace\\site\\playwright.config.mjs",
     "rootDir": "C:/Users/santi/Documents/Santensor-Agent-Workspace/site/tests/browser",
     "failOnFlakyTests": false,
     "forbidOnly": false,
@@ -105,6 +103,40 @@
       "line": 0,
       "specs": [
         {
+          "title": "procedural WebGL camera is reversible independently of the lightweight alternative",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5205,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-17T00:17:26.244Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ea3077be348787e694d6-5833f11271b68ff605c2",
+          "file": "v4.spec.mjs",
+          "line": 13,
+          "column": 1
+        },
+        {
           "title": "executable operation, failure recovery, historical evidence 1440",
           "ok": true,
           "tags": [],
@@ -120,12 +152,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 11707,
+                  "duration": 7421,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-17T00:07:26.427Z",
+                  "startTime": "2026-10-17T00:17:31.626Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -135,8 +167,8 @@
           ],
           "id": "ea3077be348787e694d6-66c5a1c7823c89b995b2",
           "file": "v4.spec.mjs",
-          "line": 6,
-          "column": 72
+          "line": 25,
+          "column": 3
         },
         {
           "title": "executable operation, failure recovery, historical evidence 390",
@@ -154,12 +186,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 8715,
+                  "duration": 6661,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-17T00:07:38.270Z",
+                  "startTime": "2026-10-17T00:17:39.058Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -169,8 +201,8 @@
           ],
           "id": "ea3077be348787e694d6-362efa81e30289bb4c56",
           "file": "v4.spec.mjs",
-          "line": 6,
-          "column": 72
+          "line": 25,
+          "column": 3
         },
         {
           "title": "commercial routes, independent laboratory and contact draft",
@@ -188,12 +220,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 7812,
+                  "duration": 2567,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-17T00:07:46.994Z",
+                  "startTime": "2026-10-17T00:17:45.732Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -203,7 +235,279 @@
           ],
           "id": "ea3077be348787e694d6-ec87c396166b1f5bc7d0",
           "file": "v4.spec.mjs",
-          "line": 37,
+          "line": 130,
+          "column": 1
+        },
+        {
+          "title": "reversible continuous scroll, persistent surfaces and contextual architecture",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1326,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-17T00:17:48.311Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ea3077be348787e694d6-91080805bae4092bc1b1",
+          "file": "v4.spec.mjs",
+          "line": 163,
+          "column": 1
+        },
+        {
+          "title": "EN ES preserves camera, run, failure and result 1440",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2488,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-17T00:17:49.653Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ea3077be348787e694d6-7a535486fb867c5cdbbd",
+          "file": "v4.spec.mjs",
+          "line": 227,
+          "column": 3
+        },
+        {
+          "title": "EN ES preserves camera, run, failure and result 390",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2368,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-17T00:17:52.150Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ea3077be348787e694d6-ac615924ba8ba82703fc",
+          "file": "v4.spec.mjs",
+          "line": 227,
+          "column": 3
+        },
+        {
+          "title": "layout, keyboard and accessibility 1440",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11330,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-17T00:17:54.525Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ea3077be348787e694d6-0be05f1327cf59fde9d8",
+          "file": "v4.spec.mjs",
+          "line": 282,
+          "column": 3
+        },
+        {
+          "title": "layout, keyboard and accessibility 768",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11471,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-17T00:18:05.866Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ea3077be348787e694d6-88e63991fe099e28fdc9",
+          "file": "v4.spec.mjs",
+          "line": 282,
+          "column": 3
+        },
+        {
+          "title": "layout, keyboard and accessibility 390",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11335,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-17T00:18:17.345Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ea3077be348787e694d6-078e1f15cf3cebf32b4b",
+          "file": "v4.spec.mjs",
+          "line": 282,
+          "column": 3
+        },
+        {
+          "title": "layout, keyboard and accessibility 360",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 10071,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-17T00:18:28.688Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ea3077be348787e694d6-e80c80c2dbe3f096624d",
+          "file": "v4.spec.mjs",
+          "line": 282,
+          "column": 3
+        },
+        {
+          "title": "no WebGL and JavaScript-disabled accessible paths",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2320,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-17T00:18:38.766Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ea3077be348787e694d6-1e6a96513637f508037e",
+          "file": "v4.spec.mjs",
+          "line": 355,
           "column": 1
         }
       ]
@@ -211,9 +515,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-17T00:07:25.932Z",
-    "duration": 29006.188000000002,
-    "expected": 3,
+    "startTime": "2026-10-17T00:17:25.469Z",
+    "duration": 75694.542,
+    "expected": 12,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
