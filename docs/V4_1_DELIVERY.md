@@ -41,7 +41,7 @@ Preview local del build: `npm run preview` → http://127.0.0.1:4173. La copia a
 
 ## PENDIENTE
 
-- Confirmar nombre profesional, título/especialidad, experiencia publicable y forma habitual de colaboración. El sitio utiliza el identificador público Blaister9. Los datos faltantes están en la [lista editorial](V4_1_EDITORIAL_REVIEW.md); no hay placeholders en el sitio o la preview.
+- Confirmar únicamente el nombre profesional público. El 17 de octubre de 2026 se autorizaron el título Mechatronics Engineer, el posicionamiento AI & Software Engineering, la experiencia técnica y la colaboración remota. Ya se incorporan al perfil EN/ES. La [lista editorial](V4_1_EDITORIAL_REVIEW.md) registra la única pendiente de identidad; no hay placeholders en el sitio o la preview.
 - Revisión del nuevo contenido comercial y composición por el propietario antes de sustituir producción. **No se declara production-ready ni se fusiona con main.**
 - Pruebas físicas de tacto, teclado virtual, lector de pantalla y GPU. La evidencia del entrenador no valida físicamente voz ni utilidad de evaluación.
 

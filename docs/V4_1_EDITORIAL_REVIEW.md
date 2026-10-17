@@ -4,11 +4,13 @@ La rama conserva las cinco escenas de V4. La primera pantalla explica aplicacion
 
 El texto EN/ES completo está en `js/commercial-copy.mjs`. Se puede revisar en la preview antes de decidir su integración. No se afirma entrenamiento de modelos propios, clientes, producción empresarial, resultados económicos, certificaciones ni años de experiencia.
 
-## Identidad pendiente de confirmación
+## Identidad profesional autorizada
 
-El único identificador profesional publicado es el usuario público del repositorio, Blaister9. Falta confirmar el nombre profesional, el título o especialidad autorizada, la experiencia que se puede divulgar y la forma habitual de colaboración. Se solicitó esta información durante el trabajo. No se añadieron marcadores provisionales al sitio, HTML oculto ni metadatos de persona.
+El propietario autorizó el título **Mechatronics Engineer**, el posicionamiento **AI & Software Engineering**, la experiencia técnica y la descripción de colaboración remota el 17 de octubre de 2026. El perfil EN/ES utiliza el texto proporcionado: aplicaciones de software, soluciones con IA e integraciones empresariales; experiencia en aplicaciones empresariales, APIs, Power Platform, Dynamics 365, Dataverse y automatización; trabajo actual con agentes, modelos de lenguaje y aplicaciones de machine learning; colaboración con requisitos, entregables, hitos y revisiones técnicas definidos.
 
-La descripción de colaboración plantea acordar un problema, un prototipo y una revisión de evidencia; no atribuye contratos anteriores. La identidad personal requiere revisión antes de sustituir producción. Esta entrega no se declara production-ready.
+Power Platform, Dynamics 365 y Dataverse se presentan como experiencia complementaria en el cuerpo del perfil, sin convertirse en el posicionamiento ni el titular principal de Santensor. No se añaden empleadores, clientes, proyectos institucionales, certificaciones, años de experiencia ni métricas.
+
+**Único dato de identidad pendiente: nombre profesional público.** Se omite del sitio y de los metadatos hasta recibir confirmación. El perfil conserva el enlace al usuario público Blaister9 para acceder al código. No se publica el marcador recibido ni se añaden placeholders al HTML. La presentación personal definitiva y la revisión previa a producción siguen pendientes; esta entrega no se declara production-ready.
 
 ## Proyectos
 
