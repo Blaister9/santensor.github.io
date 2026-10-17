@@ -87,7 +87,16 @@ test('generated social metadata, evidence notes and direct contact',async({page,
   for(const selector of ['meta[property="og:title"]','meta[property="og:description"]','meta[property="og:image"]','meta[name="twitter:image"]'])expect(await page.locator(selector).getAttribute('content')).toBeTruthy();
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href','https://santensor.com'+root+route);
   for(const lang of ['en','es','x-default'])await expect(page.locator(`link[hreflang="${lang}"]`)).toHaveCount(1);
+  if(['','cases/','contact/'].includes(route))await expect(page).toHaveTitle(/E\. Santiago Paz/);
+  if(['','cases/'].includes(route)){
+   const data=JSON.parse(await page.locator('script[type="application/ld+json"]').textContent());
+   const person=data['@graph'].find(item=>item['@type']==='Person'),site=data['@graph'].find(item=>item['@type']==='WebSite');
+   expect(person.name).toBe('E. Santiago Paz');expect(site.name).toBe('Santensor');expect(site.author['@id']).toBe(person['@id']);
+   expect(person).not.toHaveProperty('affiliation');expect(person).not.toHaveProperty('award');
+  }
  }
+ await page.goto('/');await page.locator('[data-language]').click();await expect(page.locator('[data-professional-byline]')).toContainText('E. Santiago Paz · Ingeniero Mecatrónico');
+ const translated=JSON.parse(await page.locator('script[type="application/ld+json"]').textContent());expect(translated['@graph'].find(item=>item['@type']==='Person').jobTitle).toBe('Ingeniero Mecatrónico');
  const social=await (await request.get('/assets/social/santensor-v41.png')).body();expect(social.readUInt32BE(16)).toBe(1200);expect(social.readUInt32BE(20)).toBe(630);
  for(const key of ['workflow','portfolio','trainer']){
   await page.goto(`/assets/projects/${key}.html`);const axe=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze();expect(axe.violations).toEqual([]);

@@ -1,3 +1,4 @@
+import {professionalSchema} from './professional-identity.mjs';
 import {commercialCopy} from './commercial-copy.mjs';
 import { catalogs, routeFor } from "./i18n.mjs";
 import { cinematicCopy } from "./cinematic-copy.mjs";
@@ -380,6 +381,8 @@ function setLanguage(next, push = true) {
     el.querySelector("p:not(.eyebrow)").textContent = i===0?commercialCopy[language].intro:c.bodies[i];
   });
   const commercial = commercialCopy[language];
+  document.querySelectorAll('[data-professional-byline]').forEach(el=>el.textContent=commercial.identityByline);
+  document.querySelector('script[type="application/ld+json"]').textContent=JSON.stringify(professionalSchema(language));
   document.querySelectorAll('.capability-lines li').forEach((el,i)=>el.textContent=commercial.capabilities[i]);
   document.querySelectorAll('.hero-commercial a').forEach((el,i)=>{el.textContent=(i?commercial.contact:commercial.projects)+' ↗';el.href=routeFor(language,i?'contact':'cases');});
   document.querySelector(".scene-copy .text-link").innerHTML =

@@ -10,7 +10,9 @@ El propietario autorizó el título **Mechatronics Engineer**, el posicionamient
 
 Power Platform, Dynamics 365 y Dataverse se presentan como experiencia complementaria en el cuerpo del perfil, sin convertirse en el posicionamiento ni el titular principal de Santensor. No se añaden empleadores, clientes, proyectos institucionales, certificaciones, años de experiencia ni métricas.
 
-**Único dato de identidad pendiente: nombre profesional público.** Se omite del sitio y de los metadatos hasta recibir confirmación. El perfil conserva el enlace al usuario público Blaister9 para acceder al código. No se publica el marcador recibido ni se añaden placeholders al HTML. La presentación personal definitiva y la revisión previa a producción siguen pendientes; esta entrega no se declara production-ready.
+El propietario confirmó y autorizó el nombre público **E. Santiago Paz** el 17 de octubre de 2026. Santensor continúa como marca principal; el nombre aparece como presentación breve en portada y como encabezado del perfil profesional. El título en español es **Ingeniero Mecatrónico**. El enlace Blaister9 permanece como acceso al código, sin sustituir el nombre profesional.
+
+La biografía distingue la experiencia técnica empresarial de los proyectos actuales con agentes de IA, aplicaciones con LLM y machine learning. No presenta estas áreas en desarrollo como experiencia comercial consolidada. Los metadatos de portada, proyectos y contacto incorporan el nombre; los datos estructurados WebSite/Person identifican al autor sin inventar organización, empleadores, universidad, certificaciones o métricas. No quedan datos de identidad pendientes ni placeholders. Continúa pendiente la revisión de esta versión antes de sustituir producción.
 
 ## Proyectos
 

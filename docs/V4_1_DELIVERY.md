@@ -9,7 +9,7 @@
 - Los casos distinguen el laboratorio de automatización, el portafolio como desarrollo de software y el entrenador privado en desarrollo. Incluyen problema, solución, contribución, arquitectura, evidencia y límites. Hay capturas reales, demostraciones, código público y notas técnicas. La captura del entrenador muestra una práctica sintética existente, sin datos de usuarios.
 - Campos de 16 px, etiquetas/texto operativo de 14 px y botones de al menos 44 px en el laboratorio. Revisión humana y recuperación preceden a la cronología; exportar e inspeccionar resultados están al principio del panel.
 - Contacto mediante correo confirmado y copia de dirección, sin formulario ni paso intermedio. No se afirma envío ni se incorpora backend.
-- HTML generado con títulos/descripciones por ruta, canonical, hreflang EN/ES, Open Graph, Twitter Card, imagen social original de 1200 × 630 y WebSite estructurado. Sin datos de persona u organización no confirmados.
+- HTML generado con títulos/descripciones por ruta, canonical, hreflang EN/ES, Open Graph, Twitter Card, imagen social original de 1200 × 630 y WebSite y Person estructurados, con nombre y título autorizados. Sin datos de organización no confirmados.
 
 ## EVIDENCIADO
 
@@ -41,7 +41,7 @@ Preview local del build: `npm run preview` → http://127.0.0.1:4173. La copia a
 
 ## PENDIENTE
 
-- Confirmar únicamente el nombre profesional público. El 17 de octubre de 2026 se autorizaron el título Mechatronics Engineer, el posicionamiento AI & Software Engineering, la experiencia técnica y la colaboración remota. Ya se incorporan al perfil EN/ES. La [lista editorial](V4_1_EDITORIAL_REVIEW.md) registra la única pendiente de identidad; no hay placeholders en el sitio o la preview.
+- Identidad pública confirmada e incorporada: E. Santiago Paz, Ingeniero Mecatrónico, con posicionamiento AI & Software Engineering, experiencia técnica y colaboración remota autorizadas. No quedan datos de identidad pendientes. Véase la [lista editorial](V4_1_EDITORIAL_REVIEW.md).
 - Revisión del nuevo contenido comercial y composición por el propietario antes de sustituir producción. **No se declara production-ready ni se fusiona con main.**
 - Pruebas físicas de tacto, teclado virtual, lector de pantalla y GPU. La evidencia del entrenador no valida físicamente voz ni utilidad de evaluación.
 
