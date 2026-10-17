@@ -1,0 +1,24 @@
+{
+  "base": "https://eos-luis-subsidiaries-equation.trycloudflare.com",
+  "version": {
+    "branch": "feat/santensor-v4-ux-hardening",
+    "commit": "e47ea5bd9e3e88eda5b0c55f01a5dada5c934531",
+    "reviewCommit": "e47ea5bd9e3e88eda5b0c55f01a5dada5c934531",
+    "purpose": "V4.1 editorial and functional review",
+    "production": false
+  },
+  "checks": [
+    {
+      "language": "en",
+      "name": true,
+      "personSchema": true,
+      "brandPreserved": "S/\nSANTENSOR"
+    },
+    {
+      "language": "es",
+      "name": true,
+      "personSchema": true,
+      "brandPreserved": "S/\nSANTENSOR"
+    }
+  ]
+}

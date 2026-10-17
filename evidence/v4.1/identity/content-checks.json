@@ -1,0 +1,26 @@
+[
+  {
+    "language": "en",
+    "width": 1440,
+    "authorizedProfile": true,
+    "placeholderAbsent": true
+  },
+  {
+    "language": "es",
+    "width": 1440,
+    "authorizedProfile": true,
+    "placeholderAbsent": true
+  },
+  {
+    "language": "en",
+    "width": 390,
+    "authorizedProfile": true,
+    "placeholderAbsent": true
+  },
+  {
+    "language": "es",
+    "width": 390,
+    "authorizedProfile": true,
+    "placeholderAbsent": true
+  }
+]

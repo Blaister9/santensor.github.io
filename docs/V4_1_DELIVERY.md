@@ -1,5 +1,7 @@
 # Santensor V4.1 — entrega para revisión
 
+Actualización del 17 de octubre: [identidad profesional confirmada de E. Santiago Paz](V4_1_IDENTITY.md), con metadatos, capturas y validación propios. El informe siguiente conserva la referencia de aceptación inicial; la actualización identifica el código posterior.
+
 ## HECHO
 
 - El laboratorio conserva la solicitud y la ejecución. «Explorar el resultado» selecciona la decisión real incluso después de inspeccionar un evento histórico, sin abandonar el laboratorio.
