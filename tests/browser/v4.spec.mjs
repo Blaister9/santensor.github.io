@@ -1,0 +1,30 @@
+import {test,expect} from '@playwright/test';
+import {mkdir,writeFile} from 'node:fs/promises';
+const evidence=process.env.SITE_EVIDENCE_DIR??'evidence/v4';
+const go=async(page,n)=>{await page.locator(`.scene-nav [data-go="${n}"]`).click();await expect.poll(()=>page.evaluate(()=>globalThis.santensorExperience.progress)).toBeCloseTo(n,2);};
+
+for(const viewport of [{width:1440,height:900},{width:390,height:844}])test(`executable operation, failure recovery, historical evidence ${viewport.width}`,async({browser})=>{
+ const context=await browser.newContext({viewport});const page=await context.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));
+ await page.goto('/');await go(page,3);
+ await mkdir(evidence,{recursive:true});
+ await page.screenshot({path:`${evidence}/operation-${viewport.width}.png`});
+ await page.locator('[data-request]').fill('SYNTHETIC: Account NS-204 requests 12 developer accounts for a fictional laboratory.');
+ await page.locator('[data-run]').click();await expect(page.locator('[data-review]')).toBeVisible();
+ await page.locator('[data-approve]').click();
+ await expect.poll(()=>page.evaluate(()=>globalThis.santensorExperience.operation.run.result.outcome)).toBe('approved');
+ await expect(page.locator('[data-evidence-values]')).toContainText('SYN-001');
+ if(viewport.width<700)await page.locator('[data-panel-tab="0"]').click();
+ await page.locator('[data-break]').click();await expect(page.locator('[data-retry]')).toBeVisible();
+ await expect.poll(()=>page.evaluate(()=>globalThis.santensorExperience.operation.run.tool.status)).toBe(503);
+ await page.screenshot({path:`${evidence}/failure-${viewport.width}.png`});
+ await page.locator('[data-retry]').click();await page.locator('[data-step]').click();await page.locator('[data-approve]').click();
+ const run=await page.evaluate(()=>globalThis.santensorExperience.operation.run);
+ expect(run.result.externalWrites).toBe(0);expect(run.events.map(e=>e.code)).toContain('retry');expect(run.events.map(e=>e.code)).toContain('toolError');
+ await page.screenshot({path:`${evidence}/recovered-${viewport.width}.png`});
+ if(viewport.width<700)await page.locator('[data-panel-tab="0"]').click();
+ await page.locator('[data-reset]').click();await page.locator('[data-request]').fill('short');await page.locator('[data-run]').click();await expect(page.locator('[data-error]')).toContainText('20–600');
+ await page.locator('[data-request]').fill('SYNTHETIC: Unknown account requests access to an unidentified resource.');await page.locator('[data-run]').click();await expect(page.locator('[data-review]')).toBeVisible();await expect(page.locator('[data-approve]')).toBeDisabled();await page.locator('[data-correct]').click();
+ expect((await page.evaluate(()=>globalThis.santensorExperience.operation.run)).result.outcome).toBe('corrected');
+ await writeFile(`${evidence}/operation-trace-${viewport.width}.json`,JSON.stringify({errors,run},null,2));
+ expect(errors).toEqual([]);await context.close();
+});

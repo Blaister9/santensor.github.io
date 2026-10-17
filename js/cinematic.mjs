@@ -1,9 +1,11 @@
 import {catalogs} from './i18n.mjs';
 import {cinematicCopy} from './cinematic-copy.mjs';
+import {mountOperation} from './cinematic-operation.mjs';
 const home = document.querySelector('[data-journey]');
 let language=document.documentElement.lang;
 const clamp=(v,a=0,b=1)=>Math.max(a,Math.min(b,v));
 let progress=home?0:4, world, raf=0;
+let operation;
 let contextScene=-1,contextSelection=-1;
 const reduced=matchMedia('(prefers-reduced-motion: reduce)');
 function requestRender(){if(!raf)raf=requestAnimationFrame(render);}
@@ -12,6 +14,11 @@ function render(){
  if(home){
   progress=clamp(scrollY/(innerHeight*1.6),0,4);
   const index=Math.round(progress),operating=progress>2.65;
+  const reveal=clamp((progress-2.3)/.65);
+  const isOperation=index===3;
+  document.body.classList.toggle('operating',isOperation);
+  document.body.classList.toggle('results-view',index===4);
+  home.style.setProperty('--app',String(reveal));
   if(index!==contextScene){contextScene=index;contextSelection=-1;renderContext();}
   home.dataset.progress=progress.toFixed(4);
   document.querySelector('.experience').dataset.scene=index;
@@ -37,11 +44,20 @@ function render(){
   const idx=Math.min(3,Math.floor(progress));let t=progress-idx;t=t*t*(3-2*t);
   document.querySelectorAll('[data-surface]').forEach((el,i)=>{
    const a=poses[idx][i],b=poses[idx+1][i],p=a.map((n,k)=>n+(b[k]-n)*t);
+   if(mobile&&isOperation){p[0]+=(0-(operation?.panel??0))*1.1;}
+   const interactive=isOperation&&operating&&(!mobile||i===(operation?.panel??0));
+   el.querySelector('.surface-app').inert=!interactive;
+   el.style.pointerEvents=interactive?'auto':'none';
+   el.setAttribute('aria-hidden',String(!interactive));
    el.style.transform=`translate(-50%,-50%) translate(${p[0]*innerWidth}px,${p[1]*innerHeight}px) rotateY(${p[3]}deg) rotateX(${operating?0:3}deg) scale(${p[2]})`;
    el.dataset.pose=p.map(x=>x.toFixed(4)).join(',');
   });
+  const tabs=document.querySelector('[data-operation-tabs]');tabs.hidden=!isOperation;
+  tabs.querySelectorAll('button').forEach((button,i)=>button.setAttribute('aria-pressed',String(i===(operation?.panel??0))));
+  document.querySelector('[data-disclosure]').textContent=cinematicCopy[language][isOperation?'executable':'conceptual'];
  }
- world?.render(reduced.matches?Math.round(progress):progress);
+ const state=operation?.run;
+ world?.render(reduced.matches?Math.round(progress):progress,state?.stage??0,state?.failed??false);
 }
 function renderContext(){
  if(!home)return;
@@ -57,13 +73,14 @@ document.addEventListener('click',event=>{
  if(event.target.closest('[data-context-close]')){const old=contextSelection;contextSelection=-1;renderContext();document.querySelector(`[data-context="${old}"]`)?.focus();}
 });
 document.addEventListener('keydown',event=>{if(event.key==='Escape'&&contextSelection>=0){const old=contextSelection;contextSelection=-1;renderContext();document.querySelector(`[data-context="${old}"]`)?.focus();}});
-document.querySelectorAll('[data-go]').forEach(link=>link.addEventListener('click',event=>{event.preventDefault();const p=Number(link.dataset.go);history.replaceState(null,'',`#scene-${p}`);scrollTo({top:p*innerHeight*1.6,behavior:'instant'});requestRender();}));
+document.addEventListener('click',event=>{const link=event.target.closest('[data-go]');if(!home||!link)return;event.preventDefault();const p=Number(link.dataset.go);history.replaceState(null,'',`#scene-${p}`);scrollTo({top:p*innerHeight*1.6,behavior:'instant'});requestRender();});
 addEventListener('scroll',requestRender,{passive:true});
 addEventListener('resize',()=>{world?.resize();requestRender();});
 document.addEventListener('visibilitychange',()=>{if(!document.hidden)requestRender();});
 document.querySelectorAll('[data-language]').forEach(link=>link.addEventListener('click',()=>{try{localStorage.setItem('santensor-language',link.dataset.language);}catch{}if(location.hash)link.hash=location.hash;}));
 requestRender();
+if(home||document.querySelector('[data-standalone-lab]'))operation=mountOperation({language,onChange:requestRender});
 if(!reduced.matches&&!new URLSearchParams(location.search).has('graphics-off')){
  import('./vendor/cinematic-world.bundle.mjs').then(({createWorld})=>{world=createWorld(document.querySelector('#optical-world'),()=>document.body.classList.add('graphics-fallback'));requestRender();}).catch(()=>document.body.classList.add('graphics-fallback'));
 }else document.body.classList.add('graphics-fallback');
-globalThis.santensorExperience={get progress(){return progress;},stats:()=>world?.stats()??{mode:'css-fallback'}};
+globalThis.santensorExperience={get progress(){return progress;},get operation(){return operation?.state;},stats:()=>world?.stats()??{mode:'css-fallback'}};
