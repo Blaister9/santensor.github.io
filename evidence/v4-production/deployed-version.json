@@ -1,0 +1,49 @@
+{
+  "at": "2026-10-17T01:55:38.759Z",
+  "origin": "https://santensor.com",
+  "release": {
+    "version": "4",
+    "commit": "4f81e7d07aef97c2e401b6b599a9a7f48e819a0a",
+    "mode": "production"
+  },
+  "hashes": [
+    {
+      "path": "/",
+      "status": 200,
+      "sha256": "f0f06b5a466e2bea6413d464569b70d8b535410940d6fbc50e980c861de23faf",
+      "matchesVerifiedBuild": true
+    },
+    {
+      "path": "/es/",
+      "status": 200,
+      "sha256": "31b1d57325775057c69a2a51e3bc90f49071da944ba14fbcf71f676a6982edcb",
+      "matchesVerifiedBuild": true
+    },
+    {
+      "path": "/css/cinematic.css",
+      "status": 200,
+      "sha256": "2c07bba068c1093157f4e751387e31acade1afadd54fd9ccf3b1d788dca53252",
+      "matchesVerifiedBuild": true
+    },
+    {
+      "path": "/js/cinematic.mjs",
+      "status": 200,
+      "sha256": "8b3a87882544c17e1d7ef3235e48aefe505bcf41073d6b911fc43bf23b18a2a3",
+      "matchesVerifiedBuild": true
+    },
+    {
+      "path": "/js/contact.mjs",
+      "status": 200,
+      "sha256": "e95210e6ca23dbabccdf1aaaad6f6377c19a3d30485ab3ca0a8f8dbffe12f743",
+      "matchesVerifiedBuild": true
+    },
+    {
+      "path": "/js/vendor/cinematic-world.bundle.mjs",
+      "status": 200,
+      "sha256": "957bcefa5591214b2edea8d1ceb59b3eda244448827884cb2e7cae2816832284",
+      "matchesVerifiedBuild": true
+    }
+  ],
+  "tunnelRequired": false,
+  "limits": "HTTPS checked from the execution computer, not a physical mobile device or an independent field network."
+}

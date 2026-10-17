@@ -1,18 +1,33 @@
-# Santensor V4: promoción autorizada a producción
+# Santensor V4 publicada y verificada en producci?n
 
-El propietario aprobó expresamente V4 y su integración en main. Se conserva el diseño aprobado en `b4be51950948bd7e69234481769d4c2a009b57f4`.
+El dominio principal sirve la direcci?n V4 aprobada por el propietario. Comprobaci?n HTTPS: 2026-10-17 UTC (2026-10-16 en Bogot?). Producci?n: [EN](https://santensor.com/) ? [ES](https://santensor.com/es/).
 
-Preparación verificada: checkout inicial limpio; main anterior `84e3c855af9cf112cdfdf4938e6197acdd40fea4`; tag remoto de restauración `rollback/pre-v4-production-20261016` publicado y comprobado. Pages usa actualmente `main:/` legacy, CNAME santensor.com y HTTPS obligatorio. No se modifica DNS.
+Integraci?n con historial preservado: `4f81e7d07aef97c2e401b6b599a9a7f48e819a0a`. Incorpora la referencia art?stica aprobada `b4be51950948bd7e69234481769d4c2a009b57f4` y la preparaci?n de producci?n `93b0120dc20638a4a86cffa97daabae45019288b`. SHA remoto de main comprobado despu?s del push. El commit posterior de este informe y sus evidencias no modifica la aplicaci?n; su SHA se puede consultar en main y en [release.json](https://santensor.com/release.json).
 
-El build público elimina las marcas de preview y los hooks de inspección, conserva los avisos de simulación y publica una lista permitida de recursos. Se mantienen los controles editoriales y de seguridad. Actions validará preview y producción antes de desplegar exclusivamente dist desde main.
+[GitHub Actions de integraci?n](https://github.com/Blaister9/santensor.github.io/actions/runs/38992588641): **success** en validaci?n y despliegue. Incluye auditor?a de dependencias, lint, 18 unitarias, 12 E2E de preview, 12 E2E del paquete de producci?n y comprobaci?n del artefacto. Pages deployment `7133292118`: **success**, entorno github-pages, URL https://santensor.com/.
 
-Validación local: 18 unitarias y 12 pruebas de producción aprobadas; EN/ES, cuatro tamaños, teclado, WebGL, movimiento reducido, casos, contacto, ejecución, fallo, recuperación y trazas. La regresión de preview completó sus 11 casos de interfaz; el caso WebGL se repitió y aprobó tras corregir la creación del directorio de evidencia. CI ejecutará sus 12 casos juntos.
+La comprobaci?n del dominio valid? el identificador V4/production y el SHA, y compar? mediante SHA-256 el contenido EN/ES, CSS y tres m?dulos JavaScript con el build validado. Evidencia: [deployed-version.json](evidence/v4-production/deployed-version.json). El paquete p?blico contiene 40 archivos y 12 HTML; excluye galer?as, informes, scripts internos, conceptos anteriores y hooks de inspecci?n. Las rutas internas comprobadas responden 404 intencionalmente. Se conservan las advertencias de simulaci?n determinista y datos sint?ticos.
 
-La muestra local móvil en CPU x4, 1,6 Mbps y RTT 150 ms registra LCP 2,516 s y 185.599 bytes iniciales, frente a 3,016 s y 232.088 bytes de la evidencia anterior. Son muestras emuladas del modo 2.5D. Los renders aprobados no se modificaron.
+**Pruebas contra HTTPS real: 12/12 aprobadas**, cero omitidas, fallidas o inestables. [Resultado Playwright](evidence/v4-production/https/browser-results.json).
 
-Publicación y validación del dominio: pendientes. No se afirma aún que santensor.com esté sirviendo V4.
+- Cinco escenas, scroll nativo continuo y reversible, permanencia de las tres superficies y transici?n a controles operativos.
+- Solicitud editable, ejecuci?n, aprobaci?n y rechazo, fallo 503 controlado, recuperaci?n sin duplicar la recepci?n, historial y exportaci?n real de trazas, reinicio, validaci?n de entrada y revisi?n manual de cuenta desconocida. Cero escrituras externas.
+- EN/ES durante un fallo conserva escena, eventos y recuperaci?n. Navegaci?n comercial, laboratorio, casos experimentales identificados y contacto que prepara un borrador real sin afirmar env?o.
+- Tama?os 1440?900, 768?1024, 390?844 y 360?740; teclado, movimiento reducido, rutas sin JavaScript y ausencia de bloqueos de scroll/desbordamientos. 72 an?lisis axe WCAG 2/2.1 A/AA: cero violaciones autom?ticas.
+- Cero errores cr?ticos JS/consola, recursos ausentes o solicitudes de recursos a otros or?genes en las sesiones observadas. No existe dependencia de un t?nel temporal.
+- WebGL ejercitado mediante anulaci?n de detecci?n de GPU solo dentro de la prueba, con cinco capturas distintas; no equivale a hardware gr?fico f?sico. [Capturas](evidence/v4-production/https/) y [evidencia WebGL](evidence/v4-production/https/webgl.json).
 
-Detalles y restauración: [V4_PRODUCTION_RELEASE.md](docs/V4_PRODUCTION_RELEASE.md). Evidencia: [evidence/v4-production](evidence/v4-production).
+**Rendimiento del dominio**: Chromium, sesi?n nueva por perfil, muestra de laboratorio con CPU ?4, RTT 150 ms, descarga 1,6 Mbps, viewport 390?844 y DPR 3. M?vil: LCP **2,356 s**, CLS **0,01145**, transferencia inicial **112.890 bytes**, recorrido **174.826 bytes**; modo 2.5D. Escritorio: LCP 1,444 s. Movimiento reducido: LCP 1,324 s, sin descargar el renderer WebGL. Los presupuestos de recursos pasan. [Medici?n y recursos](evidence/v4-production/performance-https/performance.json).
+
+La comparaci?n local controlada antes/despu?s pas? de LCP 3,016 s a 2,516 s y de 232.088 a 185.599 bytes iniciales; la medici?n HTTPS usa compresi?n del servidor y no se atribuye toda su diferencia al c?digo. La optimizaci?n descubre el primer render en HTML, selecciona su variante m?vil, difiere el siguiente y agrupa m?dulos; no cambia los renders aprobados. Estas muestras no son Core Web Vitals de usuarios reales ni INP de campo.
+
+V?deos reales de producci?n: [escritorio](evidence/v4-production/https/video/desktop.webm) y [m?vil emulado](evidence/v4-production/https/video/mobile.webm), con l?nea temporal, fuente y errores registrados junto a cada v?deo. Incluyen las cinco escenas, operaci?n, fallo, recuperaci?n, regreso entre escenas y navegaci?n comercial.
+
+CNAME santensor.com y HTTPS obligatorio conservados; Pages cambi? de legacy main:/ a workflow para servir exclusivamente dist validado. Consultas A/NS antes y despu?s coinciden; no se escribi? DNS. [Configuraci?n](evidence/v4-production/pages-workflow.json) y [Actions, Pages y DNS](evidence/v4-production/production-deployment.json). No se modificaron el entrenador, Railway, otros repositorios ni credenciales.
+
+**Pendientes y l?mites**: ning?n bloqueo funcional detectado en este alcance. No se realizaron pruebas en tel?fono/GPU f?sicos, lector de pantalla ni redes de campo independientes; las verificaciones son Chromium automatizado y emulaci?n. El contacto prepara borradores y la IA/API son simulaciones expl?citas, conforme a las funcionalidades existentes.
+
+**Restauraci?n**: tag remoto `rollback/pre-v4-production-20261016` ? `84e3c855af9cf112cdfdf4938e6197acdd40fea4`. Revertir la integraci?n mediante `git revert -m 1 4f81e7d07aef97c2e401b6b599a9a7f48e819a0a`, revisar y publicar main sin force-push; restaurar Pages a legacy main:/ conservando el dominio. Procedimiento completo: [V4_PRODUCTION_RELEASE.md](docs/V4_PRODUCTION_RELEASE.md). No se ejecut? rollback sobre producci?n.
 
 ---
 

@@ -1,0 +1,424 @@
+{
+  "date": "2026-10-17T01:57:26.315Z",
+  "source": "https://santensor.com",
+  "renderer": {
+    "raw": 555666,
+    "gzip": 141386
+  },
+  "results": [
+    {
+      "mode": "desktop",
+      "viewport": "1440x900 / DPR 1",
+      "conditions": "Chromium laboratory measurement against https://santensor.com",
+      "initialBytes": 158994,
+      "bytes": 384546,
+      "initialResourceBudget": 950000,
+      "tourResourceBudget": 1250000,
+      "frameIntervalsMs": {
+        "median": 16.700000000000045,
+        "p95": 33.40000000000009,
+        "max": 33.40000000000009
+      },
+      "idleRendererSleeps": null,
+      "timing": {
+        "name": "https://santensor.com/",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 259.2999999988824,
+        "navigationId": 6132,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "h2",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "gzip",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0.19999999925494194,
+        "domainLookupStart": 4.5,
+        "domainLookupEnd": 9.199999999254942,
+        "connectStart": 9.199999999254942,
+        "secureConnectionStart": 37,
+        "connectEnd": 68.09999999962747,
+        "requestStart": 68.39999999850988,
+        "responseStart": 93.39999999850988,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 93.39999999850988,
+        "responseEnd": 94.09999999962747,
+        "transferSize": 3582,
+        "encodedBodySize": 3282,
+        "decodedBodySize": 11205,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 103.09999999962747,
+        "domContentLoadedEventStart": 228.5,
+        "domContentLoadedEventEnd": 228.5,
+        "domComplete": 259.2999999988824,
+        "loadEventStart": 259.2999999988824,
+        "loadEventEnd": 259.2999999988824,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "low"
+        }
+      },
+      "resources": [
+        {
+          "name": "/assets/fonts/space-grotesk-latin-500-normal.woff2",
+          "origin": "https://santensor.com",
+          "bytes": 13612,
+          "duration": 43.09999999962747
+        },
+        {
+          "name": "/css/cinematic.css",
+          "origin": "https://santensor.com",
+          "bytes": 6676,
+          "duration": 80.89999999850988
+        },
+        {
+          "name": "/js/cinematic.mjs",
+          "origin": "https://santensor.com",
+          "bytes": 24400,
+          "duration": 89
+        },
+        {
+          "name": "/assets/optical/desktop-0.webp",
+          "origin": "https://santensor.com",
+          "bytes": 71752,
+          "duration": 77.29999999888241
+        },
+        {
+          "name": "/assets/fonts/inter-latin-400-normal.woff2",
+          "origin": "https://santensor.com",
+          "bytes": 23964,
+          "duration": 71
+        },
+        {
+          "name": "/assets/fonts/ibm-plex-mono-latin-400-normal.woff2",
+          "origin": "https://santensor.com",
+          "bytes": 15008,
+          "duration": 63.100000001490116
+        },
+        {
+          "name": "/assets/optical/desktop-1.webp",
+          "origin": "https://santensor.com",
+          "bytes": 75078,
+          "duration": 153.10000000149012
+        },
+        {
+          "name": "/assets/optical/desktop-2.webp",
+          "origin": "https://santensor.com",
+          "bytes": 54848,
+          "duration": 140.09999999962747
+        },
+        {
+          "name": "/assets/optical/desktop-3.webp",
+          "origin": "https://santensor.com",
+          "bytes": 35162,
+          "duration": 41.5
+        },
+        {
+          "name": "/assets/optical/desktop-4.webp",
+          "origin": "https://santensor.com",
+          "bytes": 60464,
+          "duration": 46
+        }
+      ],
+      "measurements": {
+        "lcp": 1444,
+        "cls": 0.0017761728462041325,
+        "longTasks": []
+      },
+      "render": {
+        "mode": "css-fallback",
+        "instrumentation": "Production DOM observation"
+      },
+      "errors": []
+    },
+    {
+      "mode": "mobile-throttled",
+      "viewport": "390x844 / DPR 3",
+      "conditions": "CDP 4× CPU, 150ms RTT, 1.6Mbps download; emulation, not a physical phone",
+      "initialBytes": 112890,
+      "bytes": 174826,
+      "initialResourceBudget": 950000,
+      "tourResourceBudget": 1250000,
+      "frameIntervalsMs": {
+        "median": 16.699999999999818,
+        "p95": 16.799999999999727,
+        "max": 16.800000000000182
+      },
+      "idleRendererSleeps": null,
+      "timing": {
+        "name": "https://santensor.com/",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 1161.1000000014901,
+        "navigationId": 4644,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "h2",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "gzip",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0.10000000149011612,
+        "domainLookupStart": 1.400000000372529,
+        "domainLookupEnd": 3.200000001117587,
+        "connectStart": 3.200000001117587,
+        "secureConnectionStart": 29.600000001490116,
+        "connectEnd": 57.40000000037253,
+        "requestStart": 57.5,
+        "responseStart": 82.80000000074506,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 82.80000000074506,
+        "responseEnd": 227.2000000011176,
+        "transferSize": 3582,
+        "encodedBodySize": 3282,
+        "decodedBodySize": 11205,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 257.6000000014901,
+        "domContentLoadedEventStart": 839.3000000007451,
+        "domContentLoadedEventEnd": 839.5,
+        "domComplete": 1160.9000000003725,
+        "loadEventStart": 1161.1000000014901,
+        "loadEventEnd": 1161.1000000014901,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "low"
+        }
+      },
+      "resources": [
+        {
+          "name": "/assets/fonts/space-grotesk-latin-500-normal.woff2",
+          "origin": "https://santensor.com",
+          "bytes": 13612,
+          "duration": 379.59999999962747
+        },
+        {
+          "name": "/css/cinematic.css",
+          "origin": "https://santensor.com",
+          "bytes": 6676,
+          "duration": 283.30000000074506
+        },
+        {
+          "name": "/js/cinematic.mjs",
+          "origin": "https://santensor.com",
+          "bytes": 24400,
+          "duration": 503.40000000037253
+        },
+        {
+          "name": "/assets/optical/mobile-0.webp",
+          "origin": "https://santensor.com",
+          "bytes": 25648,
+          "duration": 518.0999999996275
+        },
+        {
+          "name": "/assets/fonts/inter-latin-400-normal.woff2",
+          "origin": "https://santensor.com",
+          "bytes": 23964,
+          "duration": 515.5
+        },
+        {
+          "name": "/assets/fonts/ibm-plex-mono-latin-400-normal.woff2",
+          "origin": "https://santensor.com",
+          "bytes": 15008,
+          "duration": 479.5
+        },
+        {
+          "name": "/assets/optical/mobile-1.webp",
+          "origin": "https://santensor.com",
+          "bytes": 25030,
+          "duration": 293.90000000037253
+        },
+        {
+          "name": "/assets/optical/mobile-2.webp",
+          "origin": "https://santensor.com",
+          "bytes": 21040,
+          "duration": 250.7000000011176
+        },
+        {
+          "name": "/assets/optical/mobile-3.webp",
+          "origin": "https://santensor.com",
+          "bytes": 15866,
+          "duration": 238.19999999925494
+        }
+      ],
+      "measurements": {
+        "lcp": 2356,
+        "cls": 0.011447285373508769,
+        "longTasks": []
+      },
+      "render": {
+        "mode": "css-fallback",
+        "instrumentation": "Production DOM observation"
+      },
+      "errors": []
+    },
+    {
+      "mode": "reduced-motion",
+      "viewport": "390x844 / DPR 3",
+      "conditions": "Chromium laboratory measurement against https://santensor.com",
+      "initialBytes": 112890,
+      "bytes": 194984,
+      "initialResourceBudget": 300000,
+      "tourResourceBudget": 300000,
+      "frameIntervalsMs": {
+        "median": 16.699999999999818,
+        "p95": 16.799999999999955,
+        "max": 16.799999999999955
+      },
+      "idleRendererSleeps": null,
+      "timing": {
+        "name": "https://santensor.com/",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 193.5,
+        "navigationId": 4328,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "h2",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "gzip",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0,
+        "domainLookupStart": 1.199999999254942,
+        "domainLookupEnd": 10.699999999254942,
+        "connectStart": 10.699999999254942,
+        "secureConnectionStart": 36.90000000037253,
+        "connectEnd": 63,
+        "requestStart": 63.09999999962747,
+        "responseStart": 86.19999999925494,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 86.19999999925494,
+        "responseEnd": 86.59999999962747,
+        "transferSize": 3582,
+        "encodedBodySize": 3282,
+        "decodedBodySize": 11205,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 94.5,
+        "domContentLoadedEventStart": 168.69999999925494,
+        "domContentLoadedEventEnd": 168.69999999925494,
+        "domComplete": 193.5,
+        "loadEventStart": 193.5,
+        "loadEventEnd": 193.5,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "low"
+        }
+      },
+      "resources": [
+        {
+          "name": "/assets/fonts/space-grotesk-latin-500-normal.woff2",
+          "origin": "https://santensor.com",
+          "bytes": 13612,
+          "duration": 37
+        },
+        {
+          "name": "/css/cinematic.css",
+          "origin": "https://santensor.com",
+          "bytes": 6676,
+          "duration": 33.69999999925494
+        },
+        {
+          "name": "/js/cinematic.mjs",
+          "origin": "https://santensor.com",
+          "bytes": 24400,
+          "duration": 49.5
+        },
+        {
+          "name": "/assets/optical/mobile-0.webp",
+          "origin": "https://santensor.com",
+          "bytes": 25648,
+          "duration": 54.600000001490116
+        },
+        {
+          "name": "/assets/fonts/inter-latin-400-normal.woff2",
+          "origin": "https://santensor.com",
+          "bytes": 23964,
+          "duration": 58.69999999925494
+        },
+        {
+          "name": "/assets/fonts/ibm-plex-mono-latin-400-normal.woff2",
+          "origin": "https://santensor.com",
+          "bytes": 15008,
+          "duration": 55.90000000037253
+        },
+        {
+          "name": "/assets/optical/mobile-1.webp",
+          "origin": "https://santensor.com",
+          "bytes": 25030,
+          "duration": 31.90000000037253
+        },
+        {
+          "name": "/assets/optical/mobile-2.webp",
+          "origin": "https://santensor.com",
+          "bytes": 21040,
+          "duration": 25.59999999962747
+        },
+        {
+          "name": "/assets/optical/mobile-3.webp",
+          "origin": "https://santensor.com",
+          "bytes": 15866,
+          "duration": 26.199999999254942
+        },
+        {
+          "name": "/assets/optical/mobile-4.webp",
+          "origin": "https://santensor.com",
+          "bytes": 20158,
+          "duration": 25.5
+        }
+      ],
+      "measurements": {
+        "lcp": 1324,
+        "cls": 0.007702873102163254,
+        "longTasks": []
+      },
+      "render": {
+        "mode": "css-fallback",
+        "instrumentation": "Production DOM observation"
+      },
+      "errors": []
+    }
+  ]
+}

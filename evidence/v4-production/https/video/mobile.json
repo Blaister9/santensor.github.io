@@ -1,0 +1,69 @@
+{
+  "name": "mobile",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "source": "https://santensor.com",
+  "query": "",
+  "renderMode": {
+    "mode": "css-fallback"
+  },
+  "timeline": [
+    {
+      "event": "archive",
+      "seconds": 1.658
+    },
+    {
+      "event": "scene-1",
+      "seconds": 3.369
+    },
+    {
+      "event": "scene-2",
+      "seconds": 6.56
+    },
+    {
+      "event": "scene-3",
+      "seconds": 10.719
+    },
+    {
+      "event": "human-review",
+      "seconds": 13.795
+    },
+    {
+      "event": "controlled-503",
+      "seconds": 16.8
+    },
+    {
+      "event": "recovered-and-approved",
+      "seconds": 19.117
+    },
+    {
+      "event": "scene-4",
+      "seconds": 22.122
+    },
+    {
+      "event": "scene-2",
+      "seconds": 27.34
+    },
+    {
+      "event": "reverse-to-intelligence",
+      "seconds": 27.902
+    },
+    {
+      "event": "scene-4",
+      "seconds": 29.495
+    },
+    {
+      "event": "return-with-result-preserved",
+      "seconds": 30.06
+    },
+    {
+      "event": "commercial-navigation",
+      "seconds": 31.913
+    }
+  ],
+  "errors": [],
+  "physicalDevice": false,
+  "recording": "Real Playwright Chromium capture; no fabricated video frames."
+}
