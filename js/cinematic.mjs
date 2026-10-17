@@ -1,8 +1,10 @@
 import {catalogs} from './i18n.mjs';
+import {cinematicCopy} from './cinematic-copy.mjs';
 const home = document.querySelector('[data-journey]');
 let language=document.documentElement.lang;
 const clamp=(v,a=0,b=1)=>Math.max(a,Math.min(b,v));
 let progress=home?0:4, world, raf=0;
+let contextScene=-1,contextSelection=-1;
 const reduced=matchMedia('(prefers-reduced-motion: reduce)');
 function requestRender(){if(!raf)raf=requestAnimationFrame(render);}
 function render(){
@@ -10,6 +12,7 @@ function render(){
  if(home){
   progress=clamp(scrollY/(innerHeight*1.6),0,4);
   const index=Math.round(progress),operating=progress>2.65;
+  if(index!==contextScene){contextScene=index;contextSelection=-1;renderContext();}
   home.dataset.progress=progress.toFixed(4);
   document.querySelector('.experience').dataset.scene=index;
   document.querySelectorAll('[data-copy]').forEach((el,i)=>{el.classList.toggle('active',i===index);el.inert=i!==index;el.setAttribute('aria-hidden',String(i!==index));});
@@ -40,6 +43,20 @@ function render(){
  }
  world?.render(reduced.matches?Math.round(progress):progress);
 }
+function renderContext(){
+ if(!home)return;
+ const copy=cinematicCopy[language],section=contextScene===1?'understanding':contextScene===2?'integration':null;
+ const actions=document.querySelector('[data-context-actions]');
+ actions.inert=!section;actions.setAttribute('aria-hidden',String(!section));
+ actions.innerHTML=section?copy[section].map((item,i)=>`<button data-context="${i}" aria-expanded="${i===contextSelection}"><span class="mono">0${i+1}</span> ${item[0]} <span aria-hidden="true">+</span></button>`).join(''):'';
+ const inspector=document.querySelector('.context-inspector');inspector.hidden=contextSelection<0||!section;
+ if(section&&contextSelection>=0){const item=copy[section][contextSelection];inspector.innerHTML=`<button data-context-close aria-label="${copy.close}">×</button><p class="eyebrow">${item[2]}</p><h3>${item[0]}</h3><p>${item[1]}</p>`;}
+}
+document.addEventListener('click',event=>{
+ const inspect=event.target.closest('[data-context]');if(inspect){contextSelection=contextSelection===Number(inspect.dataset.context)?-1:Number(inspect.dataset.context);renderContext();}
+ if(event.target.closest('[data-context-close]')){const old=contextSelection;contextSelection=-1;renderContext();document.querySelector(`[data-context="${old}"]`)?.focus();}
+});
+document.addEventListener('keydown',event=>{if(event.key==='Escape'&&contextSelection>=0){const old=contextSelection;contextSelection=-1;renderContext();document.querySelector(`[data-context="${old}"]`)?.focus();}});
 document.querySelectorAll('[data-go]').forEach(link=>link.addEventListener('click',event=>{event.preventDefault();const p=Number(link.dataset.go);history.replaceState(null,'',`#scene-${p}`);scrollTo({top:p*innerHeight*1.6,behavior:'instant'});requestRender();}));
 addEventListener('scroll',requestRender,{passive:true});
 addEventListener('resize',()=>{world?.resize();requestRender();});
