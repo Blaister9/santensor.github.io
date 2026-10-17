@@ -1,0 +1,69 @@
+{
+  "name": "mobile",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "source": "http://127.0.0.1:4182",
+  "query": "",
+  "renderMode": {
+    "mode": "css-fallback"
+  },
+  "timeline": [
+    {
+      "event": "archive",
+      "seconds": 1.535
+    },
+    {
+      "event": "scene-1",
+      "seconds": 3.311
+    },
+    {
+      "event": "scene-2",
+      "seconds": 6.616
+    },
+    {
+      "event": "scene-3",
+      "seconds": 10.864
+    },
+    {
+      "event": "human-review",
+      "seconds": 13.928
+    },
+    {
+      "event": "controlled-503",
+      "seconds": 16.897
+    },
+    {
+      "event": "recovered-and-approved",
+      "seconds": 19.236
+    },
+    {
+      "event": "scene-4",
+      "seconds": 22.423
+    },
+    {
+      "event": "scene-2",
+      "seconds": 27.928
+    },
+    {
+      "event": "reverse-to-intelligence",
+      "seconds": 28.488
+    },
+    {
+      "event": "scene-4",
+      "seconds": 30.208
+    },
+    {
+      "event": "return-with-result-preserved",
+      "seconds": 30.769
+    },
+    {
+      "event": "commercial-navigation",
+      "seconds": 32.396
+    }
+  ],
+  "errors": [],
+  "physicalDevice": false,
+  "recording": "Real Playwright Chromium capture; no fabricated video frames."
+}

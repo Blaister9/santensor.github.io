@@ -1,0 +1,13 @@
+{
+  "build": "23087eaee0e986252c2f0ab693bbb814815026e3",
+  "languages": [
+    "en",
+    "es"
+  ],
+  "viewport": [
+    1363,
+    936
+  ],
+  "physicalDevice": false,
+  "demonstrates": "Edited request → approval → historical input → Explore result → current SYN-001 decision, without leaving the lab or losing the request."
+}

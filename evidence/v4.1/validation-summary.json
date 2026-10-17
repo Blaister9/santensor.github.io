@@ -1,0 +1,46 @@
+{
+  "unit": 18,
+  "lint": "passed",
+  "production": {
+    "startTime": "2026-10-17T02:46:09.147Z",
+    "duration": 202769.52000000002,
+    "expected": 27,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "preview": {
+    "startTime": "2026-10-17T02:40:33.137Z",
+    "duration": 73180.478,
+    "expected": 12,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "viewports": [
+    [
+      1440,
+      900
+    ],
+    [
+      1363,
+      936
+    ],
+    [
+      768,
+      1024
+    ],
+    [
+      390,
+      844
+    ],
+    [
+      360,
+      740
+    ]
+  ],
+  "rendering": "WebGL and css-fallback measured independently; SwiftShader software renderer, no physical GPU claim",
+  "physicalDevice": false,
+  "virtualKeyboard": false,
+  "screenReader": false
+}

@@ -1,0 +1,41 @@
+{
+  "hashes": [
+    {
+      "scene": 0,
+      "sha256": "1a0d79d6e11d44dc044a640c500260fa662667795b04ae1eb9f5d589999f4adf"
+    },
+    {
+      "scene": 1,
+      "sha256": "05cddf2e4328488e695ff3a7f0adf943d4f3ff50f5ac75714444095239585639"
+    },
+    {
+      "scene": 2,
+      "sha256": "0fd86edf7f3aaa9164c9d21bc0edb867465a8a535d459aafd0c571efad021476"
+    },
+    {
+      "scene": 3,
+      "sha256": "2685a85039022eb375f67200991823ff02869b319ac32eb277de59436b69ff48"
+    },
+    {
+      "scene": 4,
+      "sha256": "53a9eef55869ee27a5fe6d73739fd9a9d984d602990d34f93f0ee863e2b0e4c7"
+    },
+    {
+      "scene": 2,
+      "sha256": "0fd86edf7f3aaa9164c9d21bc0edb867465a8a535d459aafd0c571efad021476"
+    },
+    {
+      "scene": 0,
+      "sha256": "1a0d79d6e11d44dc044a640c500260fa662667795b04ae1eb9f5d589999f4adf"
+    }
+  ],
+  "render": {
+    "mode": "webgl",
+    "frames": 16,
+    "drawCalls": 135,
+    "triangles": 4432,
+    "pixelRatio": 0.8333333333333334,
+    "geometries": 30,
+    "textures": 2
+  }
+}

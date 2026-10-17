@@ -1,0 +1,28 @@
+{
+  "baseline": "821c4d66abd04c59ed0f29cd3ac07c20a00c30f1",
+  "main": "821c4d66abd04c59ed0f29cd3ac07c20a00c30f1",
+  "mainPreserved": true,
+  "critical": [
+    {
+      "file": "CNAME",
+      "unchanged": true
+    },
+    {
+      "file": ".openai/hosting.json",
+      "unchanged": true
+    },
+    {
+      "file": "js/workflow.mjs",
+      "unchanged": true
+    }
+  ],
+  "secretScan": {
+    "suspect": [],
+    "scope": "Changed/new text files; pattern scan and manual content review"
+  },
+  "production": {
+    "status": 200,
+    "sha256": "f0f06b5a466e2bea6413d464569b70d8b535410940d6fbc50e980c861de23faf"
+  },
+  "operations": "No main merge/push, force push, Pages/DNS, Railway or trainer changes. Existing authorized preview only."
+}

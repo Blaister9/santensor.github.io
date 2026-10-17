@@ -1,0 +1,21 @@
+{
+  "id": 38996211663,
+  "sha": "23087eaee0e986252c2f0ab693bbb814815026e3",
+  "status": "completed",
+  "conclusion": "success",
+  "url": "https://github.com/Blaister9/santensor.github.io/actions/runs/38996211663",
+  "jobs": [
+    {
+      "name": "validate",
+      "status": "completed",
+      "conclusion": "success",
+      "steps": []
+    },
+    {
+      "name": "deploy",
+      "status": "completed",
+      "conclusion": "skipped",
+      "steps": []
+    }
+  ]
+}

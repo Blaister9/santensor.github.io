@@ -1,0 +1,118 @@
+TAP version 13
+# Subtest: production renders approved content without weakening preview/editorial gates en
+ok 1 - production renders approved content without weakening preview/editorial gates en
+  ---
+  duration_ms: 3.0524
+  type: 'test'
+  ...
+# Subtest: production renders approved content without weakening preview/editorial gates es
+ok 2 - production renders approved content without weakening preview/editorial gates es
+  ---
+  duration_ms: 1.8532
+  type: 'test'
+  ...
+# Subtest: both catalogs contain the same nonempty translation keys
+ok 3 - both catalogs contain the same nonempty translation keys
+  ---
+  duration_ms: 3.0075
+  type: 'test'
+  ...
+# Subtest: commercial routes render their language and reciprocal SEO metadata without JS
+ok 4 - commercial routes render their language and reciprocal SEO metadata without JS
+  ---
+  duration_ms: 1.9534
+  type: 'test'
+  ...
+# Subtest: six-stage success is immutable, inspected historically and requires a human
+ok 5 - six-stage success is immutable, inspected historically and requires a human
+  ---
+  duration_ms: 1.3033
+  type: 'test'
+  ...
+# Subtest: ambiguous requests cannot bypass policy and can be manually routed
+ok 6 - ambiguous requests cannot bypass policy and can be manually routed
+  ---
+  duration_ms: 2.6173
+  type: 'test'
+  ...
+# Subtest: service failure blocks progress and explicit retry recovers the same run
+ok 7 - service failure blocks progress and explicit retry recovers the same run
+  ---
+  duration_ms: 0.5996
+  type: 'test'
+  ...
+# Subtest: bilingual rules stay equivalent and text never overrides authority
+ok 8 - bilingual rules stay equivalent and text never overrides authority
+  ---
+  duration_ms: 0.5739
+  type: 'test'
+  ...
+# Subtest: contact prepares an encoded draft to the authorized address, never delivery
+ok 9 - contact prepares an encoded draft to the authorized address, never delivery
+  ---
+  duration_ms: 0.632
+  type: 'test'
+  ...
+# Subtest: CNAME remains unchanged
+ok 10 - CNAME remains unchanged
+  ---
+  duration_ms: 5.397
+  type: 'test'
+  ...
+# Subtest: both concept catalogs have identical translated fields
+ok 11 - both concept catalogs have identical translated fields
+  ---
+  duration_ms: 1.3769
+  type: 'test'
+  ...
+# Subtest: production gate rejects previews and hidden editorial placeholders in both languages
+ok 12 - production gate rejects previews and hidden editorial placeholders in both languages
+  ---
+  duration_ms: 2.2525
+  type: 'test'
+  ...
+# Subtest: both concepts are static bilingual documents without obsolete network diagrams
+ok 13 - both concepts are static bilingual documents without obsolete network diagrams
+  ---
+  duration_ms: 1.2423
+  type: 'test'
+  ...
+# Subtest: complete workflow requires a human and executes every state transition
+ok 14 - complete workflow requires a human and executes every state transition
+  ---
+  duration_ms: 1.5126
+  type: 'test'
+  ...
+# Subtest: incident classification follows the request and assigns mock owner
+ok 15 - incident classification follows the request and assigns mock owner
+  ---
+  duration_ms: 0.8499
+  type: 'test'
+  ...
+# Subtest: unknown accounts cannot bypass human safety policy
+ok 16 - unknown accounts cannot bypass human safety policy
+  ---
+  duration_ms: 0.2536
+  type: 'test'
+  ...
+# Subtest: invalid payloads and oversize requests are rejected
+ok 17 - invalid payloads and oversize requests are rejected
+  ---
+  duration_ms: 0.1373
+  type: 'test'
+  ...
+# Subtest: source text is data, never executable code or workflow authority
+ok 18 - source text is data, never executable code or workflow authority
+  ---
+  duration_ms: 0.2781
+  type: 'test'
+  ...
+1..18
+# tests 18
+# suites 0
+# pass 18
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 148.7083
