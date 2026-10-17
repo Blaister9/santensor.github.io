@@ -90,7 +90,7 @@ if (preview) {
     "dist/js/vendor/THREE-LICENSE.txt",
   );
   await build({
-    entryPoints: ["js/cinematic.mjs", "js/contact.mjs"],
+    entryPoints: ["js/cinematic.mjs", "js/contact.mjs", "js/notfound.mjs"],
     outdir: "dist/js",
     outExtension: { ".js": ".mjs" },
     bundle: true,

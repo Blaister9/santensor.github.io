@@ -328,7 +328,8 @@ for (const viewport of [
     await expect
       .poll(() => page.evaluate(() => globalThis.santensorExperience.progress))
       .toBeCloseTo(3, 2);
-    await page.locator("[data-request]").focus();
+    await page.keyboard.press("Tab");
+    await expect(page.locator("[data-request]")).toBeFocused();
     await page.keyboard.press("ControlOrMeta+A");
     await page.keyboard.type(
       "SYNTHETIC: Account NS-204 requests 10 accounts for a fictional test.",
@@ -337,7 +338,8 @@ for (const viewport of [
     await expect(page.locator("[data-run]")).toBeFocused();
     await page.keyboard.press("Enter");
     await expect(page.locator("[data-review]")).toBeVisible();
-    await page.locator("[data-approve]").focus();
+    for (let i = 0; i < 30 && !(await page.locator('[data-approve]').evaluate(el => el === document.activeElement)); i++) await page.keyboard.press('Tab');
+    await expect(page.locator('[data-approve]')).toBeFocused();
     await page.keyboard.press("Enter");
     expect(
       (await page.evaluate(() => globalThis.santensorExperience.operation.run))

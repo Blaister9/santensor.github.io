@@ -307,6 +307,13 @@ document.addEventListener("click", (event) => {
   history.replaceState(null, "", `#scene-${p}`);
   scrollTo({ top: p * innerHeight * 1.6, behavior: "instant" });
   requestRender();
+  if (link.classList.contains('skip')) {
+    operation.panel = 0;
+    requestAnimationFrame(() => {
+      render();
+      document.querySelector('[data-scenario]').focus({preventScroll:true});
+    });
+  }
 });
 addEventListener("scroll", requestRender, { passive: true });
 addEventListener("resize", () => {
