@@ -143,7 +143,7 @@ test("commercial routes, independent laboratory and direct email contact", async
   ).toBe("rejected");
   await page.locator('header [data-route="cases"]').click();
   await expect(page.locator(".study")).toHaveCount(3);
-  await expect(page.locator(".case-kind").first()).toContainText(
+  await expect(page.locator(".study .case-kind").first()).toContainText(
     "prototype",
   );
   await page.locator('header [data-route="contact"]').click();

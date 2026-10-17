@@ -350,7 +350,7 @@ test("production navigation, direct email contact and internal-path exclusion", 
   expect((await exportTrace(page)).run.result.outcome).toBe("rejected");
   await page.locator('header [data-route="cases"]').click();
   await expect(page.locator(".study")).toHaveCount(3);
-  await expect(page.locator(".case-kind").first()).toContainText(
+  await expect(page.locator(".study .case-kind").first()).toContainText(
     "prototype",
   );
   await page.locator('header [data-route="contact"]').click();
