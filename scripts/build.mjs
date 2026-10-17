@@ -2,10 +2,13 @@ import {mkdir,copyFile,cp,readFile} from 'node:fs/promises';
 import {renderPages} from './render-pages.mjs';
 import {renderPage} from './render-pages.mjs';
 import {assertPublishable} from './editorial-gate.mjs';
+import {build} from 'esbuild';
 const preview = process.argv.includes('--preview') && process.env.NODE_ENV !== 'production';
 if (!preview) assertPublishable(['en','es'].flatMap(language => ['', 'labs', 'cases', 'contact', 'privacy', 'concepts', 'concept-b'].map(page => ({path:`/${language}/${page}`,html:renderPage(language,page)}))));
 await mkdir('assets/fonts',{recursive:true});
 await mkdir('js/vendor', {recursive:true});
+await build({entryPoints:['js/cinematic-world.mjs'],outfile:'js/vendor/cinematic-world.bundle.mjs',bundle:true,minify:true,format:'esm',target:'es2022',legalComments:'eof'});
+await copyFile('node_modules/three/LICENSE','js/vendor/THREE-LICENSE.txt');
 for (const filename of ['gsap.min.js', 'ScrollTrigger.min.js']) await copyFile(`node_modules/gsap/dist/${filename}`, `js/vendor/${filename}`);
 await copyFile('node_modules/gsap/README.md', 'js/vendor/GSAP-NOTICE.md');
 for(const [family,weight] of [['space-grotesk',500],['inter',400],['ibm-plex-mono',400]]){

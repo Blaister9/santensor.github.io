@@ -1,0 +1,11 @@
+{
+  "errors": [],
+  "stats": {
+    "mode": "webgl",
+    "drawCalls": 369,
+    "triangles": 4432,
+    "pixelRatio": 1,
+    "geometries": 30,
+    "textures": 2
+  }
+}
