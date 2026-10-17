@@ -1,3 +1,4 @@
+import {commercialCopy} from './commercial-copy.mjs';
 import { catalogs, routeFor } from "./i18n.mjs";
 import { cinematicCopy } from "./cinematic-copy.mjs";
 import { mountOperation } from "./cinematic-operation.mjs";
@@ -14,6 +15,7 @@ let area = 0,
   resultKey = "";
 const reduced = matchMedia("(prefers-reduced-motion: reduce)");
 let lastWidth = innerWidth,
+  lastHeight = innerHeight,
   useStills = false,
   stills = null,
   lastRenderTime = 0,
@@ -72,7 +74,7 @@ function render() {
       if (i === index) el.setAttribute("aria-current", "step");
       else el.removeAttribute("aria-current");
     });
-    const mobile = innerWidth < 700;
+    const mobile = innerWidth < 1000;
     const poses = mobile
       ? [
           [
@@ -118,9 +120,9 @@ function render() {
             [0.84, 0.6, 0.62, 18],
           ],
           [
-            [0.205, 0.57, 1, 0],
-            [0.5, 0.57, 1, 0],
-            [0.795, 0.57, 1, 0],
+            [0.205, 0.61, 1, 0],
+            [0.5, 0.61, 1, 0],
+            [0.795, 0.61, 1, 0],
           ],
           [
             [0.12, 0.63, 0.5, -15],
@@ -319,9 +321,10 @@ addEventListener("scroll", requestRender, { passive: true });
 addEventListener("resize", () => {
   const p = progress;
   world?.resize();
-  if (home && Math.abs(lastWidth - innerWidth) > 40)
+  if (home && (Math.abs(lastWidth - innerWidth) > 40 || Math.abs(lastHeight - innerHeight) > 70))
     scrollTo({ top: p * innerHeight * 1.6, behavior: "instant" });
   lastWidth = innerWidth;
+  lastHeight = innerHeight;
   requestRender();
 });
 document.addEventListener("visibilitychange", () => {
@@ -334,15 +337,21 @@ function setLanguage(next, push = true) {
     nav = catalogs[language].nav,
     other = language === "es" ? "en" : "es";
   document.documentElement.lang = language;
-  document.title = `Santensor — ${c.titles[0]}`;
-  document.querySelector('meta[name="description"]').content = c.bodies[0];
+  document.title = commercialCopy[language].title;
+  document.querySelector('meta[name="description"]').content = commercialCopy[language].description;
+  for(const selector of ['meta[property="og:title"]','meta[name="twitter:title"]']) document.querySelector(selector).content = commercialCopy[language].title;
+  for(const selector of ['meta[property="og:description"]','meta[name="twitter:description"]']) document.querySelector(selector).content = commercialCopy[language].description;
+  document.querySelector('meta[property="og:url"]').content = 'https://santensor.com'+routeFor(language);
+  document.querySelector('meta[property="og:locale"]').content = language==='es'?'es_CO':'en_US';
+  document.querySelector('meta[property="og:locale:alternate"]').content = language==='es'?'en_US':'es_CO';
+  document.querySelector('.hero-commercial').setAttribute('aria-label',language==='es'?'Proyectos y contacto':'Projects and contact');
   document.querySelector('link[rel="canonical"]').href =
     `https://santensor.com${routeFor(language)}`;
   const brand = document.querySelector("header .wordmark");
   brand.href = routeFor(language);
   brand.setAttribute("aria-label", nav.home);
   document.querySelector(".edition").textContent =
-    `${language === "es" ? "INGENIERÍA" : "ENGINEERING"} / V.04`;
+    `${language === "es" ? "INGENIERÍA" : "ENGINEERING"} / V.04.1`;
   document.querySelector("header nav").setAttribute("aria-label", nav.label);
   for (const route of ["labs", "cases", "contact"]) {
     const a = document.querySelector(`header [data-route="${route}"]`);
@@ -370,8 +379,11 @@ function setLanguage(next, push = true) {
   document.querySelectorAll("[data-copy]").forEach((el, i) => {
     el.querySelector("h1,h2").textContent = c.titles[i];
     el.querySelector(".eyebrow").textContent = `${c.chapter} / 0${i + 1}`;
-    el.querySelector("p:not(.eyebrow)").textContent = c.bodies[i];
+    el.querySelector("p:not(.eyebrow)").textContent = i===0?commercialCopy[language].intro:c.bodies[i];
   });
+  const commercial = commercialCopy[language];
+  document.querySelectorAll('.capability-lines li').forEach((el,i)=>el.textContent=commercial.capabilities[i]);
+  document.querySelectorAll('.hero-commercial a').forEach((el,i)=>{el.textContent=(i?commercial.contact:commercial.projects)+' ↗';el.href=routeFor(language,i?'contact':'cases');});
   document.querySelector(".scene-copy .text-link").innerHTML =
     `${c.enter} <span aria-hidden="true">↓</span>`;
   document.querySelectorAll("[data-surface]").forEach((el, i) => {

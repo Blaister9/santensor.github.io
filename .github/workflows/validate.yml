@@ -34,6 +34,11 @@ jobs:
         with:
           path: dist
       - uses: actions/upload-artifact@v4
+        if: github.ref != 'refs/heads/main'
+        with:
+          name: santensor-v41-review-build
+          path: dist
+      - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: v4-production-verification

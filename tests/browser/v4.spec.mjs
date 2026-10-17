@@ -128,7 +128,7 @@ for (const viewport of [
     await context.close();
   });
 
-test("commercial routes, independent laboratory and contact draft", async ({
+test("commercial routes, independent laboratory and direct email contact", async ({
   page,
 }) => {
   await page.goto("/");
@@ -144,21 +144,12 @@ test("commercial routes, independent laboratory and contact draft", async ({
   await page.locator('header [data-route="cases"]').click();
   await expect(page.locator(".study")).toHaveCount(3);
   await expect(page.locator(".case-kind").first()).toContainText(
-    "Experimental",
+    "prototype",
   );
   await page.locator('header [data-route="contact"]').click();
-  await page.locator("#name").fill("Synthetic Visitor");
-  await page.locator("#email").fill("visitor@example.invalid");
-  await page
-    .locator("#message")
-    .fill("A fictional inquiry about an inspectable software system.");
-  await page.locator('[name="consent"]').check();
-  await page.locator('[type="submit"]').click();
-  await expect(page.locator("[data-draft-panel]")).toBeVisible();
-  await expect(page.locator("[data-open-draft]")).toHaveAttribute(
-    "href",
-    /^mailto:/,
-  );
+  await expect(page.locator('a.email-link')).toHaveAttribute('href','mailto:santiagopazbedoya@gmail.com');
+  await expect(page.locator('a.button.primary')).toHaveAttribute('href',/^mailto:/);
+  await expect(page.locator('form')).toHaveCount(0);
 });
 
 test("reversible continuous scroll, persistent surfaces and contextual architecture", async ({

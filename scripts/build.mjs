@@ -90,7 +90,7 @@ if (preview) {
     "dist/js/vendor/THREE-LICENSE.txt",
   );
   await build({
-    entryPoints: ["js/cinematic.mjs", "js/contact.mjs", "js/notfound.mjs"],
+    entryPoints: ["js/cinematic.mjs", "js/contact.mjs", "js/notfound.mjs", "js/direct-contact.mjs"],
     outdir: "dist/js",
     outExtension: { ".js": ".mjs" },
     bundle: true,
@@ -113,13 +113,15 @@ if (preview) {
     }
   await copyFile("es/404.html", "dist/es/404.html");
   await cp("assets/fonts", "dist/assets/fonts", { recursive: true });
+  await cp("assets/projects", "dist/assets/projects", {recursive:true});
+  await cp("assets/social", "dist/assets/social", {recursive:true});
   await cp("assets/optical", "dist/assets/optical", { recursive: true });
   const commit =
     process.env.GITHUB_SHA ??
     execFileSync("git", ["rev-parse", "HEAD"], { encoding: "utf8" }).trim();
   await writeFile(
     "dist/release.json",
-    JSON.stringify({ version: "4", commit, mode: "production" }, null, 2),
+    JSON.stringify({ version: "4", revision: "4.1", commit, mode: "production" }, null, 2),
   );
   await writeFile("dist/.nojekyll", "");
 }

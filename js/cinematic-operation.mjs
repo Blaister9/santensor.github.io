@@ -13,8 +13,8 @@ export function operationMarkup(language, index) {
   if (index === 0)
     return `<label class="field-label" for="scenario">${c.scenario}</label><select id="scenario" data-scenario>${["success", "ambiguous", "failure"].map((s, i) => `<option value="${s}">${lab.scenarios[i]}</option>`).join("")}</select><label class="field-label" for="request">${c.request}</label><textarea id="request" data-request minlength="20" maxlength="600" rows="4" aria-describedby="request-hint">${escape(lab.fixtures[0])}</textarea><p id="request-hint" class="hint">${c.editHint}</p><div class="operation-controls"><button class="primary" data-run>${c.run} <span aria-hidden="true">↗</span></button><button data-break>${c.break}</button><button data-reset>${c.reset}</button></div><p class="operation-note">${c.localNote}</p><p class="operation-error" data-error role="alert"></p>`;
   if (index === 1)
-    return `<div class="process-header mono"><span>NS-204</span><span data-execution-count>00 / 06</span></div><div class="process-timeline" role="group" aria-label="${c.timeline}">${lab.stages.map((label, i) => `<button data-inspect-stage="${i}" class="process-node" aria-pressed="false" disabled><span class="mono">0${i + 1}</span><span>${label}</span><i aria-hidden="true"></i></button>`).join("")}</div><div class="execution-progress" role="progressbar" aria-label="${c.progress}" aria-valuemin="0" aria-valuemax="5" aria-valuenow="0"><i></i></div><p class="execution-status" data-status role="status">${c.ready}</p><div class="operation-controls"><button data-step>${c.next}</button><button data-pause disabled>${c.pause}</button><button data-retry hidden>${c.retry}</button></div><div class="review-controls" data-review hidden><p>${lab.humanNote}</p><div class="actions"><button class="primary" data-approve>${c.approve}</button><button data-reject>${c.reject}</button><button data-correct hidden>${c.correct}</button></div><p class="hint" data-uncertain hidden>${c.safety}</p></div>`;
-  return `<div class="evidence-heading"><span class="mono" data-evidence-mode>${c.current}</span><span class="mono" data-evidence-stage>—</span></div><p class="evidence-description" data-evidence-description>${c.idleEvidence}</p><dl id="lab-result" tabindex="-1" class="evidence-values" data-evidence-values></dl><details class="event-trace" open><summary>${c.trace}</summary><ol data-event-log></ol></details><div class="evidence-actions"><button data-export disabled>${c.download} ↓</button><a href="#scene-4" data-go="4" data-view-result hidden>${c.reviewResult} ↗</a></div>`;
+    return `<div class="process-header mono"><span>NS-204</span><span data-execution-count>00 / 06</span></div><div class="execution-progress" role="progressbar" aria-label="${c.progress}" aria-valuemin="0" aria-valuemax="5" aria-valuenow="0"><i></i></div><p class="execution-status" data-status role="status">${c.ready}</p><div class="operation-controls"><button data-step>${c.next}</button><button data-pause disabled>${c.pause}</button><button data-retry hidden>${c.retry}</button></div><div class="review-controls" data-review hidden><p>${lab.humanNote}</p><div class="actions"><button class="primary" data-approve>${c.approve}</button><button data-reject>${c.reject}</button><button data-correct hidden>${c.correct}</button></div><p class="hint" data-uncertain hidden>${c.safety}</p></div><details class="process-history" data-process-history open><summary>${c.timeline}</summary><div class="process-timeline" role="group" aria-label="${c.timeline}">${lab.stages.map((label, i) => `<button data-inspect-stage="${i}" class="process-node" aria-pressed="false" disabled><span class="mono">0${i + 1}</span><span>${label}</span><i aria-hidden="true"></i></button>`).join("")}</div></details>`;
+  return `<div class="evidence-heading"><span class="mono" data-evidence-mode>${c.current}</span><span class="mono" data-evidence-stage>—</span></div><div class="evidence-actions"><button data-export disabled>${c.download} ↓</button><a href="#scene-4" data-go="4" data-view-result hidden>${c.reviewResult} ↗</a></div><p class="evidence-description" data-evidence-description>${c.idleEvidence}</p><dl id="lab-result" tabindex="-1" class="evidence-values" data-evidence-values></dl><details class="event-trace" open><summary>${c.trace}</summary><ol data-event-log></ol></details>`;
 }
 
 export function mountOperation({
@@ -30,7 +30,8 @@ export function mountOperation({
     invalid = false,
     panel = 0,
     eventSnapshots = [],
-    eventSnapshot = null;
+    eventSnapshot = null,
+    previousStatus = "";
   const get = (q) => document.querySelector(q),
     all = (q) => document.querySelectorAll(q);
   const targets = () => [
@@ -102,6 +103,11 @@ export function mountOperation({
                 ? c.running
                 : lab.paused;
     if (get("[data-status]")) get("[data-status]").textContent = status;
+    if (status !== previousStatus && (run?.stage === 4 || run?.failed)) {
+      const history = get('[data-process-history]'); if(history) history.open = false;
+      get('[data-review]')?.closest('.surface-app')?.scrollTo({top:0});
+    }
+    previousStatus = status;
     if (get("[data-error]"))
       get("[data-error]").textContent = invalid ? c.invalid : "";
     if (get("[data-request]"))

@@ -247,6 +247,7 @@ test("production WebGL enhancement renders the same optical system", async ({
 
 for (const viewport of [
   { width: 1440, height: 900 },
+  { width: 1363, height: 936 },
   { width: 768, height: 1024 },
   { width: 390, height: 844 },
   { width: 360, height: 740 },
@@ -337,7 +338,7 @@ for (const viewport of [
     await context.close();
   });
 
-test("production navigation, contact draft and internal-path exclusion", async ({
+test("production navigation, direct email contact and internal-path exclusion", async ({
   page,
   request,
 }) => {
@@ -350,21 +351,12 @@ test("production navigation, contact draft and internal-path exclusion", async (
   await page.locator('header [data-route="cases"]').click();
   await expect(page.locator(".study")).toHaveCount(3);
   await expect(page.locator(".case-kind").first()).toContainText(
-    "Experimental",
+    "prototype",
   );
   await page.locator('header [data-route="contact"]').click();
-  await page.locator("#name").fill("Synthetic Visitor");
-  await page.locator("#email").fill("visitor@example.invalid");
-  await page
-    .locator("#message")
-    .fill("A fictional inquiry about an inspectable engineering system.");
-  await page.locator('[name="consent"]').check();
-  await page.locator('[type="submit"]').click();
-  await expect(page.locator("[data-draft-panel]")).toBeVisible();
-  await expect(page.locator("[data-open-draft]")).toHaveAttribute(
-    "href",
-    /^mailto:/,
-  );
+  await expect(page.locator('a.email-link')).toHaveAttribute('href','mailto:santiagopazbedoya@gmail.com');
+  await expect(page.locator('a.button.primary')).toHaveAttribute('href',/^mailto:/);
+  await expect(page.locator('form')).toHaveCount(0);
   for (const path of [
     "/review/",
     "/evidence/v4/",
