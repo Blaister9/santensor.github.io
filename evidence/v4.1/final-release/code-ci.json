@@ -1,0 +1,103 @@
+{
+  "sha": "b48169d47a2e984f2bac6ef1952e42f57f6e7036",
+  "url": "https://github.com/Blaister9/santensor.github.io/actions/runs/39009382327",
+  "status": "completed",
+  "conclusion": "success",
+  "jobs": [
+    {
+      "name": "validate",
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npm ci",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npm audit",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npm run lint",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npm test",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npx playwright install --with-deps chromium",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npm run build:preview",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npm run test:e2e",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npm run build:production",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run node scripts/check-production.mjs",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npm run test:links",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run test \"$(cat CNAME)\" = santensor.com",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npm run test:e2e:production",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/upload-pages-artifact@v4",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "name": "deploy",
+      "conclusion": "skipped",
+      "steps": []
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "mainBefore": "821c4d66abd04c59ed0f29cd3ac07c20a00c30f1",
+  "rollbackTag": "rollback/pre-v4.1-production-20261017",
+  "tagTarget": "821c4d66abd04c59ed0f29cd3ac07c20a00c30f1",
+  "files": [
+    {
+      "path": "CNAME",
+      "canonicalSha256": "419b49b1db4a5124ba07906ed14aa938348018d5a3956c7b893e0663c3614f57",
+      "unchanged": true
+    },
+    {
+      "path": ".openai/hosting.json",
+      "canonicalSha256": "eea148098254bbd1813a9736aa8e749ed2aad129856ceb57b0b8ca2c183d6d3a",
+      "unchanged": true
+    },
+    {
+      "path": "js/workflow.mjs",
+      "canonicalSha256": "0d8dbde84991015fdeb52ad34ecbab09c830625b2717f7c20828c329a39be8b3",
+      "unchanged": true
+    }
+  ],
+  "trainer": {
+    "commit": "78deecb28e37be375f3abf2b04530d711e14dacc",
+    "clean": true
+  },
+  "infrastructureChanges": false
+}

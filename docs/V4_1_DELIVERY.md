@@ -1,52 +1,60 @@
-# Santensor V4.1 — entrega para revisión
-
-Actualización del 17 de octubre: [identidad profesional confirmada de E. Santiago Paz](V4_1_IDENTITY.md), con metadatos, capturas y validación propios. El informe siguiente conserva la referencia de aceptación inicial; la actualización identifica el código posterior.
+# Santensor V4.1 — entrega y verificación de producción
 
 ## HECHO
 
-- El laboratorio conserva la solicitud y la ejecución. «Explorar el resultado» selecciona la decisión real incluso después de inspeccionar un evento histórico, sin abandonar el laboratorio.
-- El skip link traslada el foco de forma síncrona. La regresión ejecuta Tab → Enter → Tab sin colocar el foco desde la prueba ni esperar entre Enter y Tab.
-- Un único 404 estático reproduce GitHub Pages: localización por ruta con JavaScript; recuperación bilingüe y enlaces a ambos inicios sin JavaScript. Los enlaces de regreso están probados.
-- La portada conserva las cinco escenas y explica aplicaciones con IA, software web, APIs y automatización. Presenta las tres disciplinas y accesos directos a proyectos/evidencia y contacto.
-- Los casos distinguen el laboratorio de automatización, el portafolio como desarrollo de software y el entrenador privado en desarrollo. Incluyen problema, solución, contribución, arquitectura, evidencia y límites. Hay capturas reales, demostraciones, código público y notas técnicas. La captura del entrenador muestra una práctica sintética existente, sin datos de usuarios.
-- Campos de 16 px, etiquetas/texto operativo de 14 px y botones de al menos 44 px en el laboratorio. Revisión humana y recuperación preceden a la cronología; exportar e inspeccionar resultados están al principio del panel.
-- Contacto mediante correo confirmado y copia de dirección, sin formulario ni paso intermedio. No se afirma envío ni se incorpora backend.
-- HTML generado con títulos/descripciones por ruta, canonical, hreflang EN/ES, Open Graph, Twitter Card, imagen social original de 1200 × 630 y WebSite y Person estructurados, con nombre y título autorizados. Sin datos de organización no confirmados.
+- Santensor conserva la dirección artística y las cinco escenas de V4. E. Santiago Paz, Ingeniero Mecatrónico, está autorizado e incorporado en EN/ES, metadatos y datos Person/WebSite. No quedan datos de identidad por autorizar ni placeholders públicos.
+- El laboratorio muestra el resultado de la ejecución real sin perder solicitud ni historial. El skip link funciona con Tab → Enter → Tab, sin foco artificial en la prueba. El 404 estático se localiza por ruta con JavaScript y ofrece recuperación bilingüe sin JavaScript.
+- La portada explica IA, software e integraciones y ofrece proyectos y contacto directamente. Los tres casos distinguen dos desarrollos públicos independientes y el entrenador privado en desarrollo. Las fichas comerciales resumen las limitaciones; las notas conservan el detalle técnico.
+- Los enlaces a fuentes usan el snapshot permanente **ae65c593f0d5b6a0bf291d25628791efb2a5e614**, que contiene las implementaciones y regresiones citadas. No dependen de la rama de desarrollo. Las notas se regeneran en cada build desde `scripts/v41-evidence-pages.mjs`; la revisión privada previa permanece como evidencia histórica y no se repite durante el build.
+- Proyectos EN abre `#en` y proyectos ES abre `#es` en las tres notas. Los anclajes nativos funcionan sin JavaScript, muestran el encabezado correspondiente y conservan el retroceso del navegador.
+- Contacto al final de los casos en ambos idiomas. Se mantiene el correo autorizado, con mailto y copia de dirección, sin simular entrega ni incorporar servicios externos.
+- Texto operativo legible, controles táctiles de al menos 44 px y revisión humana/recuperación visibles. No se reprodujo solapamiento de las acciones de portada a 360 × 740, 390 × 844 o 1440 × 900. Se conserva su composición.
+- CNAME, DNS, configuración de Pages, Railway y entrenador preservados. La única ampliación del pipeline comprueba enlaces públicos de evidencia. No se usa GitHub CLI ni force-push.
 
 ## EVIDENCIADO
 
-- Rama: [feat/santensor-v4-ux-hardening](https://github.com/Blaister9/santensor.github.io/tree/feat/santensor-v4-ux-hardening).
-- Implementación validada: **23087eaee0e986252c2f0ab693bbb814815026e3**. El commit posterior de entrega incorpora documentación, capturas, utilidades de revisión y HTML generado; conserva el comportamiento validado.
-- [CI de implementación: aprobado](https://github.com/Blaister9/santensor.github.io/actions/runs/38996211663). Despliegue omitido por la condición exclusiva de main. El workflow ofrece un artefacto de build para revisión.
-- [Preview EN](https://eos-luis-subsidiaries-equation.trycloudflare.com/) · [Preview ES](https://eos-luis-subsidiaries-equation.trycloudflare.com/es/) · [Antes/después y vídeos](https://eos-luis-subsidiaries-equation.trycloudflare.com/review/).
-- [Resultado del laboratorio independiente EN/ES](https://eos-luis-subsidiaries-equation.trycloudflare.com/review/tour/video/laboratory.webm). La galería también contiene recorridos de las cinco escenas en escritorio y móvil emulado.
-- **18 pruebas unitarias, 12 Playwright de preview y 27 de producción aprobadas.** El archivo nuevo contiene 14 pruebas de defectos, claridad comercial, tipografía computada, controles, enlaces, metadatos, evidencia y contacto.
-- Matriz EN/ES: 1440 × 900, 1363 × 936, 768 × 1024, 390 × 844 y 360 × 740. Axe sin violaciones detectadas en las comprobaciones ejecutadas. Sin desbordamiento horizontal ni errores atribuibles al sitio en esos recorridos. Revisión visual y capturas de las rutas modificadas.
-- HTTPS comprobado en escritorio y móvil emulado: teclado rápido, resultado con estado conservado, proyectos, contacto, reproducción nativa de los tres vídeos y 404 con/sin JavaScript. Rutas sensibles devuelven 404.
-- Recursos iniciales locales medidos por separado: aproximadamente **267 KB en 2.5D y 823 KB en WebGL forzado**. Este último utilizó SwiftShader, 135 draw calls y 4432 triángulos. No son mediciones de GPU física ni un benchmark de red de producción; los tiempos de navegación incluyen automatización.
-- main permanece en **821c4d66abd04c59ed0f29cd3ac07c20a00c30f1**. Producción responde 200 y su hash HTML coincide con el observado antes del push. CNAME, identidad de Sites y motor del workflow intactos. Sin cambios en DNS, Pages, Railway ni el entrenador. Historial conservado; publicación mediante Git, sin force-push ni GitHub CLI.
+- Código de las correcciones: **b48169d47a2e984f2bac6ef1952e42f57f6e7036**; [CI 39009382327: aprobado](https://github.com/Blaister9/santensor.github.io/actions/runs/39009382327). Pasaron 18 pruebas unitarias, 12 de preview, 33 de producción y la comprobación externa de evidencia. El despliegue se omitió por ser una rama de desarrollo. El commit posterior de informe/capturas se valida nuevamente antes de integrar; el SHA de producción y su CI definitivo se consultan en `release.json`.
 
-Resultados: [evidence/v4.1](../evidence/v4.1/). Las rutas personales del equipo se sustituyen por `<workspace>` en los informes JSON. No se distribuyen credenciales, conversaciones reales ni material institucional.
+- Rama de integración: `feat/santensor-v4-ux-hardening`. Punto inicial: `ae65c593f0d5b6a0bf291d25628791efb2a5e614`.
+- Restauración: [rollback/pre-v4.1-production-20261017](https://github.com/Blaister9/santensor.github.io/tree/rollback/pre-v4.1-production-20261017), tag anotado cuyo destino es **821c4d66abd04c59ed0f29cd3ac07c20a00c30f1**, el `main` previo a V4.1.
+- Se ejecutan 18 pruebas unitarias, 12 de preview y 33 de producción. Seis regresiones nuevas cubren destinos técnicos localizados con/sin JavaScript, desplazamiento, retroceso, contacto, referencias permanentes y separación de controles. La comprobación externa verifica siete destinos GitHub y el contenido real de seis archivos fijados al SHA.
+- Matriz EN/ES: 1440 × 900, 1363 × 936, 768 × 1024, 390 × 844 y 360 × 740. Incluye axe, teclado real, cinco escenas, laboratorio, revisión humana, clasificación manual, fallo 503 y recuperación, enlaces internos, recursos, metadatos y contacto. Se comprueban errores atribuibles al sitio y desbordamiento horizontal.
+- Capturas antes/después y recorridos en [evidence/v4.1/final-release](../evidence/v4.1/final-release/). El workflow publica también el artefacto `v4-production-verification` con resultados y capturas del candidato exacto. No se atribuyen resultados CSS/SwiftShader a una GPU física.
+- Producción: [EN](https://santensor.com/) · [ES](https://santensor.com/es/) · [proyectos ES](https://santensor.com/es/cases/) · [laboratorio ES](https://santensor.com/es/labs/) · [contacto](https://santensor.com/es/contact/).
+- Identificación verificable del despliegue: [release.json](https://santensor.com/release.json) publica el SHA servido y la URL de su ejecución de GitHub Actions. El éxito de una ejecución anterior no sustituye el CI del candidato definitivo.
+- La integración solo se publica después de CI satisfactorio para el SHA exacto de la rama. Después se comprueban de nuevo el CI y despliegue del SHA de `main`, el `release.json` servido y las rutas HTTPS. `scripts/verify-v41-release.mjs` falla si discrepan SHA remoto, SHA servido, workflow, validación o despliegue.
+
+Reproducción:
 
 ```sh
 npm ci
-npm test
+npm audit
 npm run lint
+npm test
 npm run build:preview
 npm run test:e2e
 npm run build:production
 npm run check:production
+npm run test:links
 npm run test:e2e:production
 ```
 
-Preview local del build: `npm run preview` → http://127.0.0.1:4173. La copia aislada existente se sirve en http://127.0.0.1:4181 y mediante el túnel autorizado. Es temporal y depende del equipo; no se modificó alojamiento para obtener un enlace. `/version.json` distingue el commit del build del commit de evidencia/revisión.
+Smoke contra producción, después del despliegue (sustituir `<SHA_MAIN>` por el commit integrado):
+
+```sh
+node scripts/verify-v41-release.mjs <SHA_MAIN>
+# PowerShell: $env:SITE_TEST_URL='https://santensor.com'
+# POSIX: export SITE_TEST_URL=https://santensor.com
+npm run test:e2e:production
+```
+
+El build es estático y reproducible. Producción utiliza GitHub Pages, sin depender de previews o túneles temporales. No se ha reconfigurado infraestructura para esta entrega.
 
 ## PENDIENTE
 
-- Identidad pública confirmada e incorporada: E. Santiago Paz, Ingeniero Mecatrónico, con posicionamiento AI & Software Engineering, experiencia técnica y colaboración remota autorizadas. No quedan datos de identidad pendientes. Véase la [lista editorial](V4_1_EDITORIAL_REVIEW.md).
-- Revisión del nuevo contenido comercial y composición por el propietario antes de sustituir producción. **No se declara production-ready ni se fusiona con main.**
-- Pruebas físicas de tacto, teclado virtual, lector de pantalla y GPU. La evidencia del entrenador no valida físicamente voz ni utilidad de evaluación.
+- Comprobación en dispositivos físicos de tacto, teclado virtual, lectores de pantalla y rendimiento de GPU. La emulación de navegador no sustituye estas validaciones.
+- En el entrenador: audio físico y utilidad de la evaluación. Se mantiene como producto privado en desarrollo; no se realizaron modificaciones ni nuevas llamadas a proveedores.
 
 ## BLOQUEADO
 
-Ninguna dependencia externa impide revisar los entregables. La identidad profesional requiere información autorizada antes de cerrar su presentación definitiva. Un eventual formulario con entrega real exigiría autorización y revisión independiente de infraestructura, privacidad y spam; queda fuera de esta implementación.
+Ninguna dependencia externa identificada impide las correcciones. El correo directo no necesita infraestructura nueva. Un formulario con entrega mediante backend queda fuera del alcance autorizado.
