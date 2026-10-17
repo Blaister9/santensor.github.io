@@ -1,17 +1,34 @@
 {
- "name": "santensor-commercial",
- "private": true,
- "type": "module",
- "scripts": {
-  "build": "node scripts/build.mjs",
-  "test": "node --test tests/*.test.mjs",
-  "preview": "node scripts/serve.mjs",
-  "test:e2e": "playwright test",
-  "lint": "node --check js/workflow.mjs && node --check js/labs.mjs && node --check scripts/build.mjs"
- },
- "devDependencies": {
-  "@axe-core/playwright": "^4.11.1",
-  "@playwright/test": "^1.61.1",
-  "lighthouse": "^13.5.0"
- }
+  "name": "santensor-commercial",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "build:production": "node scripts/build.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "preview": "node scripts/serve.mjs",
+    "test:e2e": "playwright test",
+    "test:e2e:legacy": "playwright test --config playwright.legacy.config.mjs",
+    "capture:v3": "node scripts/capture-v3.mjs v3",
+    "lint": "node scripts/check.mjs",
+    "preview:v4": "node scripts/serve-v4.mjs",
+    "capture:v4": "node scripts/record-v4-tour.mjs",
+    "measure:v4": "node scripts/measure-v4.mjs",
+    "build:preview": "node scripts/build.mjs --preview",
+    "test:e2e:production": "playwright test --config playwright.production.config.mjs",
+    "check:production": "node scripts/check-production.mjs"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.11.1",
+    "@fontsource/ibm-plex-mono": "^5.3.0",
+    "@fontsource/inter": "^5.3.0",
+    "@fontsource/space-grotesk": "^5.3.0",
+    "@playwright/test": "^1.61.1",
+    "esbuild": "0.25.12",
+    "gsap": "^3.14.2",
+    "lighthouse": "^13.5.0"
+  },
+  "dependencies": {
+    "three": "0.186.1"
+  }
 }

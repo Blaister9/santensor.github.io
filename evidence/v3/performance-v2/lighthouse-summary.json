@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-10-16T17:13:52.952Z",
+  "url": "http://127.0.0.1:4174/",
+  "mode": "Lighthouse simulated mobile lab test; not field measurements",
+  "scores": {
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  "metrics": {
+    "first-contentful-paint": "1.2 s",
+    "largest-contentful-paint": "1.4 s",
+    "total-blocking-time": "0 ms",
+    "cumulative-layout-shift": "0.002",
+    "speed-index": "1.2 s"
+  },
+  "runtimeError": null
+}

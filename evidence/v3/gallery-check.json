@@ -1,0 +1,29 @@
+{
+  "failures": [],
+  "videos": [
+    {
+      "src": "v3/tour-1440.webm",
+      "duration": 32.2,
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "v3/tour-390.webm",
+      "duration": 30.4,
+      "width": 390,
+      "height": 844
+    },
+    {
+      "src": "v2.1/tour-1440.webm",
+      "duration": 17.76,
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "v2.1/tour-390.webm",
+      "duration": 16.92,
+      "width": 390,
+      "height": 844
+    }
+  ]
+}

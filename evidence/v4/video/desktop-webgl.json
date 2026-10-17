@@ -1,0 +1,75 @@
+{
+  "name": "desktop-webgl",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "source": "http://127.0.0.1:4180",
+  "query": "?quality=webgl",
+  "renderMode": {
+    "mode": "webgl",
+    "frames": 145,
+    "drawCalls": 135,
+    "triangles": 4432,
+    "pixelRatio": 0.8333333333333334,
+    "geometries": 30,
+    "textures": 2
+  },
+  "timeline": [
+    {
+      "event": "archive",
+      "seconds": 2.3
+    },
+    {
+      "event": "scene-1",
+      "seconds": 11.09
+    },
+    {
+      "event": "scene-2",
+      "seconds": 18.798
+    },
+    {
+      "event": "scene-3",
+      "seconds": 25.088
+    },
+    {
+      "event": "human-review",
+      "seconds": 28.44
+    },
+    {
+      "event": "controlled-503",
+      "seconds": 31.659
+    },
+    {
+      "event": "recovered-and-approved",
+      "seconds": 34.352
+    },
+    {
+      "event": "scene-4",
+      "seconds": 39.379
+    },
+    {
+      "event": "scene-2",
+      "seconds": 47.059
+    },
+    {
+      "event": "reverse-to-intelligence",
+      "seconds": 47.623
+    },
+    {
+      "event": "scene-4",
+      "seconds": 51.207
+    },
+    {
+      "event": "return-with-result-preserved",
+      "seconds": 51.757
+    },
+    {
+      "event": "commercial-navigation",
+      "seconds": 53.554
+    }
+  ],
+  "errors": [],
+  "physicalDevice": false,
+  "recording": "Real Playwright Chromium capture; no fabricated video frames."
+}

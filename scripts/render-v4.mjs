@@ -1,0 +1,53 @@
+import { catalogs, routeFor } from "../js/i18n.mjs";
+import { operationMarkup } from "../js/cinematic-operation.mjs";
+import { cinematicCopy } from "../js/cinematic-copy.mjs";
+const e = (v) =>
+  String(v)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;");
+export function renderCinematicPage(
+  language,
+  page,
+  { contactPage, privacyPage, production = false },
+) {
+  const es = language === "es",
+    c = catalogs[language],
+    other = es ? "en" : "es";
+  const { names, titles, bodies, panels: labels } = cinematicCopy[language];
+  const isHome = !page;
+  const route = routeFor(language, page === "notfound" ? "" : page);
+  const title = isHome
+    ? `Santensor — ${titles[0]}`
+    : (c.meta[page]?.[0] ?? c.meta.notfound[0]);
+  const languageLink = `<a class="language-switch nav-language" data-language="${other}" href="${routeFor(other, page === "notfound" ? "" : page)}" aria-label="${c.nav.language}" lang="${other}"><span${!es ? ' class="selected"' : ""}>EN</span><span aria-hidden="true"> / </span><span${es ? ' class="selected"' : ""}>ES</span></a>`;
+  const poster = isHome
+    ? '<picture class="optical-poster" aria-hidden="true"><source media="(max-width:699px)" srcset="/assets/optical/mobile-0.webp"><img src="/assets/optical/desktop-0.webp" alt="" fetchpriority="high" decoding="async" width="1440" height="900"></picture>'
+    : "";
+  const content = isHome
+    ? `<div class="journey" data-journey><div class="experience" data-scene="0"><div class="scene-counter mono"><span data-scene-count>01</span> / 05 <span class="scene-line"></span><span data-scene-name>${names[0]}</span></div><div class="editorial">${names.map((name, i) => `<article class="scene-copy${i === 0 ? " active" : ""}" data-copy="${i}" ${i ? 'inert aria-hidden="true"' : ""}><p class="eyebrow">${es ? "ANATOMÍA DE UNA DECISIÓN" : "ANATOMY OF A DECISION"} / 0${i + 1}</p><${i ? "h2" : "h1"}>${titles[i]}</${i ? "h2" : "h1"}><p>${bodies[i]}</p>${i === 0 ? `<a class="text-link" href="#scene-1" data-go="1">${es ? "Entrar al archivo" : "Enter the archive"} <span aria-hidden="true">↓</span></a>` : ""}</article>`).join("")}</div><div class="persistent-surfaces" data-surfaces>${labels.map((label, i) => `<section class="glass-surface surface-${i}" data-surface="${i}" aria-label="${label}"><div class="surface-top mono"><span>0${i + 1} / ${label}</span><span aria-hidden="true">⌁</span></div><div class="surface-preview"><span class="sheet-id mono">S / NS-204</span><div class="sheet-engraving" aria-hidden="true">${["≡", "⌘", "↗"][i]}</div><p>${[es ? "Solicitud de acceso" : "Access request", es ? "Extracción · clasificación" : "Extraction · classification", es ? "Validación · trazabilidad" : "Validation · traceability"][i]}</p><div class="etch-lines" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><p class="mono">${["NS-204 / 08", "{ reference: NS-204 }", "01 · 02 · 03"][i]}</p></div><div class="surface-app" inert>${operationMarkup(language, i)}</div></section>`).join("")}</div><div class="context-inspector" hidden></div><div class="context-actions" data-context-actions inert aria-hidden="true"></div><div class="operation-tabs" data-operation-tabs hidden>${labels.map((label, i) => `<button data-panel-tab="${i}" aria-pressed="${i === 0}">${label}</button>`).join("")}</div><div class="exploration" data-exploration hidden></div><div class="journey-bottom"><span class="mono" data-disclosure>${es ? "VISUALIZACIÓN CONCEPTUAL" : "CONCEPTUAL VISUALIZATION"}</span><a href="#scene-3" class="skip-operation" data-go="3">${es ? "Ir a la operación" : "Go to operation"} ↗</a><span class="scroll-cue">${es ? "DESPLAZA PARA EXPLORAR" : "SCROLL TO EXPLORE"} <span aria-hidden="true">↓</span></span></div></div><div class="scene-anchors" aria-hidden="true">${names.map((_, i) => `<span id="scene-${i}"></span>`).join("")}</div></div>`
+    : page === "contact"
+      ? contactPage(
+          production
+            ? {
+                ...c,
+                contact: {
+                  ...c.contact,
+                  unavailable: es
+                    ? "El sitio prepara un borrador. Tú lo revisas y envías desde tu aplicación de correo."
+                    : "The site prepares a draft. You review and send it from your email application.",
+                },
+              }
+            : c,
+          language,
+        )
+      : page === "privacy"
+        ? privacyPage(c)
+        : page === "labs"
+          ? `<section class="route-content lab-route"><p class="eyebrow">${c.lab.eyebrow}</p><h1>${es ? "Laboratorio de operaciones." : "Operations laboratory."}</h1><p>${c.lab.simulationNote}</p><a class="text-link" href="${routeFor(language)}#scene-3">${es ? "Operar el sistema" : "Operate the system"} ↗</a><div class="standalone-lab" data-standalone-lab>${[0, 1, 2].map((i) => `<section class="standalone-surface"><h2>${labels[i]}</h2>${operationMarkup(language, i)}</section>`).join("")}</div></section>`
+          : page === "cases"
+            ? `<section class="route-content"><p class="eyebrow">${c.cases.eyebrow}</p><h1>${es ? "Registro de ingeniería." : "Engineering record."}</h1><p>${e(c.cases.intro)}</p><div class="case-register">${c.cases.items.map((item, i) => `<article id="study-${i + 1}" class="study"><div class="study-heading"><span class="eyebrow">0${i + 1} / ${e(item.discipline)}</span><h2>${e(i === 2 ? (es ? "Revisión humana en un proceso empresarial." : "Human review in an enterprise workflow.") : item.title)}</h2><span class="case-kind">${e(item.kind)}</span></div><dl>${item.detail.map((text, j) => `<div><dt>${e(c.cases.labels[j])}</dt><dd>${e(text)}</dd></div>`).join("")}</dl></article>`).join("")}</div></section>`
+            : `<section class="route-content"><p class="eyebrow">404</p><h1>${c.notfound.title}</h1><a href="${routeFor(language)}">${c.notfound.back} ↗</a></section>`;
+  return `<!doctype html>\n<html lang="${language}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${e(title)}</title><meta name="description" content="${e(isHome ? bodies[0] : (c.meta[page]?.[1] ?? c.meta.notfound[1]))}"><meta name="theme-color" content="#090b0d">${production ? '<meta name="robots" content="index,follow">' : '<meta name="robots" content="noindex,nofollow">'}<link rel="canonical" href="https://santensor.com${route}">${["en", "es"].map((l) => `<link rel="alternate" hreflang="${l}" href="https://santensor.com${routeFor(l, page === "notfound" ? "" : page)}">`).join("")}<link rel="icon" href="/favicon.svg"><link rel="preload" href="/assets/fonts/space-grotesk-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="/css/cinematic.css"><script type="module" src="/js/cinematic.mjs"></script>${page === "contact" ? '<script type="module" src="/js/contact.mjs"></script>' : ""}</head><body data-build-mode="${production ? "production" : "preview"}" class="cinematic-body${isHome ? "" : " interior"}"><a class="skip" href="${isHome ? "#scene-3" : "#main"}" ${isHome ? 'data-go="3"' : ""}>${c.nav.skip}</a><div class="world-backdrop" aria-hidden="true">${poster}<canvas id="optical-world"></canvas><div class="world-shade"></div><div class="fallback-world"><i></i><i></i><i></i><i></i><i></i><i></i><b></b></div></div><header class="site-header"><a href="${routeFor(language)}" class="wordmark" aria-label="${c.nav.home}"><span class="brand-mark" aria-hidden="true">S/</span>SANTENSOR<span class="brand-dot">®</span></a><span class="edition mono">${es ? "INGENIERÍA" : "ENGINEERING"} / V.04</span><nav aria-label="${c.nav.label}"><a href="${routeFor(language, "labs")}" data-route="labs">${es ? "Laboratorio" : "Lab"}</a><a href="${routeFor(language, "cases")}" data-route="cases">${es ? "Proyectos" : "Work"}</a>${languageLink}<a class="contact-link" href="${routeFor(language, "contact")}" data-route="contact">${es ? "Contacto" : "Contact"} <span aria-hidden="true">↗</span></a></nav></header><main id="main">${content}<noscript><style>.journey,.scene-nav{display:none}.nojs{margin-top:125px}</style><div class="nojs"><h2>${titles[0]}</h2>${names.map((name, i) => `<h3>${name}</h3><p>${bodies[i]}</p>`).join("")}<p>${c.nojs}</p><a href="${routeFor(language, "contact")}">${c.nav.contact}</a></div></noscript></main>${isHome ? `<nav class="scene-nav" aria-label="${es ? "Escenas" : "Scenes"}">${names.map((name, i) => `<a href="#scene-${i}" data-go="${i}" aria-label="0${i + 1} ${name}" ${i === 0 ? 'aria-current="step"' : ""}><span>0${i + 1}</span><i></i><span class="scene-nav-name">${name}</span></a>`).join("")}</nav>` : `<footer class="site-footer"><a href="${routeFor(language)}">${es ? "Volver al archivo" : "Return to the archive"} ↗</a><a href="${routeFor(language, "privacy")}">${c.nav.privacy}</a></footer>`}${production ? "" : `<div class="preview-label mono">V4 / ${es ? "PREVIEW PARA REVISIÓN" : "DESIGN PREVIEW"}</div>`}</body></html>\n`;
+}

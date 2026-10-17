@@ -1,0 +1,61 @@
+[
+  {
+    "path": "/es/",
+    "violations": [],
+    "passes": 25,
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "impact": "serious"
+      }
+    ]
+  },
+  {
+    "path": "/es/labs/",
+    "violations": [],
+    "passes": 29,
+    "incomplete": [
+      {
+        "id": "aria-prohibited-attr",
+        "impact": "serious"
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious"
+      }
+    ]
+  },
+  {
+    "path": "/es/cases/",
+    "violations": [],
+    "passes": 22,
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "impact": "serious"
+      }
+    ]
+  },
+  {
+    "path": "/es/contact/",
+    "violations": [],
+    "passes": 27,
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "impact": "serious"
+      }
+    ]
+  },
+  {
+    "path": "/es/privacy/",
+    "violations": [],
+    "passes": 18,
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "impact": "serious"
+      }
+    ]
+  }
+]

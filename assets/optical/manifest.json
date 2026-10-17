@@ -1,0 +1,102 @@
+[
+  {
+    "path": "assets/optical/desktop-0.webp",
+    "bytes": 71452,
+    "scene": 0,
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "origin": "Original procedural scene in js/cinematic-world.mjs; canvas WebP export."
+  },
+  {
+    "path": "assets/optical/desktop-1.webp",
+    "bytes": 74778,
+    "scene": 1,
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "origin": "Original procedural scene in js/cinematic-world.mjs; canvas WebP export."
+  },
+  {
+    "path": "assets/optical/desktop-2.webp",
+    "bytes": 54548,
+    "scene": 2,
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "origin": "Original procedural scene in js/cinematic-world.mjs; canvas WebP export."
+  },
+  {
+    "path": "assets/optical/desktop-3.webp",
+    "bytes": 34862,
+    "scene": 3,
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "origin": "Original procedural scene in js/cinematic-world.mjs; canvas WebP export."
+  },
+  {
+    "path": "assets/optical/desktop-4.webp",
+    "bytes": 60164,
+    "scene": 4,
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "origin": "Original procedural scene in js/cinematic-world.mjs; canvas WebP export."
+  },
+  {
+    "path": "assets/optical/mobile-0.webp",
+    "bytes": 25348,
+    "scene": 0,
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "origin": "Original procedural scene in js/cinematic-world.mjs; canvas WebP export."
+  },
+  {
+    "path": "assets/optical/mobile-1.webp",
+    "bytes": 24730,
+    "scene": 1,
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "origin": "Original procedural scene in js/cinematic-world.mjs; canvas WebP export."
+  },
+  {
+    "path": "assets/optical/mobile-2.webp",
+    "bytes": 20740,
+    "scene": 2,
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "origin": "Original procedural scene in js/cinematic-world.mjs; canvas WebP export."
+  },
+  {
+    "path": "assets/optical/mobile-3.webp",
+    "bytes": 15566,
+    "scene": 3,
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "origin": "Original procedural scene in js/cinematic-world.mjs; canvas WebP export."
+  },
+  {
+    "path": "assets/optical/mobile-4.webp",
+    "bytes": 19858,
+    "scene": 4,
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "origin": "Original procedural scene in js/cinematic-world.mjs; canvas WebP export."
+  }
+]

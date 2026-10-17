@@ -1,0 +1,153 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\santi\\Documents\\Santensor-Agent-Workspace\\site\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--grep",
+      "procedural WebGL"
+    ],
+    "configFile": "C:\\Users\\santi\\Documents\\Santensor-Agent-Workspace\\site\\playwright.config.mjs",
+    "rootDir": "C:/Users/santi/Documents/Santensor-Agent-Workspace/site/tests/browser",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/santi/Documents/Santensor-Agent-Workspace/site/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/santi/Documents/Santensor-Agent-Workspace/site/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "v4.spec.mjs"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\santi\\Documents\\Santensor-Agent-Workspace\\site\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\santi\\Documents\\Santensor-Agent-Workspace\\site\\tests\\browser",
+        "snapshotDir": "C:\\Users\\santi\\Documents\\Santensor-Agent-Workspace\\site\\tests\\browser",
+        "testIgnore": [],
+        "testMatch": "v4.spec.mjs",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4180",
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "evidence/v4-production/preview-recheck/browser-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "node scripts/serve-v4.mjs",
+      "url": "http://127.0.0.1:4180",
+      "reuseExistingServer": true
+    }
+  },
+  "suites": [
+    {
+      "title": "v4.spec.mjs",
+      "file": "v4.spec.mjs",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "procedural WebGL camera is reversible independently of the lightweight alternative",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4808,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-17T01:38:09.944Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ea3077be348787e694d6-5833f11271b68ff605c2",
+          "file": "v4.spec.mjs",
+          "line": 14,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-17T01:38:09.104Z",
+    "duration": 5996.186,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

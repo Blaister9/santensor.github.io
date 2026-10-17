@@ -6,6 +6,6 @@ Buildless static HTML, CSS and native JavaScript modules. No runtime backend is 
 
 `/cases/` documents the lab and private trainer honestly as experiments. No invented clients, metrics, certifications or business outcomes appear.
 
-The public contact route is the existing enabled GitHub Issues channel for this repository. It requires GitHub login and is explicitly public; no email address was invented. No inquiry was sent by automation.
+V2 replaces the GitHub Issues contact CTA with `/contact/` and `/es/contact/`. The owner-confirmed email receives a prepared mailto draft only if the visitor sends it from their email application. Automatic server delivery remains unconfigured and unverified. See `PRODUCT_V2_DECISIONS.md` for the current architecture, language routing and simulation boundaries.
 
 Local browser checks cover all routes, internal links, no overflow and axe WCAG A/AA at 390, 768 and 1440 pixels. This is automated accessibility coverage, not a complete human accessibility audit. Lighthouse results are simulated lab measurements, not production field data.

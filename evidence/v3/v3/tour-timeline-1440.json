@@ -1,0 +1,58 @@
+[
+  {
+    "seconds": 0.12,
+    "name": "Portada"
+  },
+  {
+    "seconds": 2.97,
+    "name": "Capítulo 2"
+  },
+  {
+    "seconds": 4.78,
+    "name": "Capítulo 3"
+  },
+  {
+    "seconds": 6.82,
+    "name": "Simulación ejecutándose"
+  },
+  {
+    "seconds": 11.25,
+    "name": "Revisión humana"
+  },
+  {
+    "seconds": 15.8,
+    "name": "Secciones y contacto de Home"
+  },
+  {
+    "seconds": 16.6,
+    "name": "Navegación: labs"
+  },
+  {
+    "seconds": 18.23,
+    "name": "Fallo 503"
+  },
+  {
+    "seconds": 19.32,
+    "name": "Recuperación y revisión"
+  },
+  {
+    "seconds": 22.43,
+    "name": "Navegación: cases"
+  },
+  {
+    "seconds": 24.29,
+    "name": "Navegación: contact"
+  },
+  {
+    "seconds": 25.66,
+    "name": "Borrador local; no enviado"
+  },
+  {
+    "seconds": 27.75,
+    "name": "Concepto B"
+  },
+  {
+    "seconds": 30.56,
+    "name": "B: revisión humana requerida"
+  }
+]

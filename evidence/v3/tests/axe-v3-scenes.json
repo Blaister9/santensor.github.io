@@ -1,0 +1,70 @@
+[
+  {
+    "language": "en",
+    "act": 0,
+    "violations": [],
+    "incomplete": [
+      "color-contrast"
+    ]
+  },
+  {
+    "language": "en",
+    "act": 1,
+    "violations": [],
+    "incomplete": [
+      "color-contrast"
+    ]
+  },
+  {
+    "language": "en",
+    "act": 2,
+    "violations": [],
+    "incomplete": [
+      "color-contrast"
+    ]
+  },
+  {
+    "language": "en",
+    "path": "concepts/",
+    "violations": []
+  },
+  {
+    "language": "en",
+    "path": "concept-b/",
+    "violations": []
+  },
+  {
+    "language": "es",
+    "act": 0,
+    "violations": [],
+    "incomplete": [
+      "color-contrast"
+    ]
+  },
+  {
+    "language": "es",
+    "act": 1,
+    "violations": [],
+    "incomplete": [
+      "color-contrast"
+    ]
+  },
+  {
+    "language": "es",
+    "act": 2,
+    "violations": [],
+    "incomplete": [
+      "color-contrast"
+    ]
+  },
+  {
+    "language": "es",
+    "path": "concepts/",
+    "violations": []
+  },
+  {
+    "language": "es",
+    "path": "concept-b/",
+    "violations": []
+  }
+]

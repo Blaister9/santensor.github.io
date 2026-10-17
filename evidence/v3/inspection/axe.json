@@ -1,0 +1,62 @@
+[
+  {
+    "route": "/es/",
+    "width": 1440,
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "route": "/es/concept-b/",
+    "width": 1440,
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "route": "/es/labs/",
+    "width": 1440,
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "route": "/es/cases/",
+    "width": 1440,
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "route": "/es/contact/",
+    "width": 1440,
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "route": "/es/",
+    "width": 390,
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "route": "/es/concept-b/",
+    "width": 390,
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "route": "/es/labs/",
+    "width": 390,
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "route": "/es/cases/",
+    "width": 390,
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "route": "/es/contact/",
+    "width": 390,
+    "overflow": false,
+    "violations": []
+  }
+]

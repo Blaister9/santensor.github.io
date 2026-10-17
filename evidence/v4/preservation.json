@@ -1,0 +1,35 @@
+{
+  "verifiedAt": "2026-10-17T00:24:57.858Z",
+  "baseline": "5b463cb350e3d4c16fd956e053a66533f91d589a",
+  "remoteMain": "84e3c855af9cf112cdfdf4938e6197acdd40fea4",
+  "mainPreserved": true,
+  "critical": [
+    {
+      "path": "CNAME",
+      "unchanged": true
+    },
+    {
+      "path": "js/workflow.mjs",
+      "unchanged": true
+    },
+    {
+      "path": "js/contact.mjs",
+      "unchanged": true
+    },
+    {
+      "path": ".openai/hosting.json",
+      "unchanged": true
+    }
+  ],
+  "productionObservation": {
+    "url": "https://santensor.com/",
+    "status": 200,
+    "sha256": "e004c60d7bb84461a757b5b349ad5781f754838fc3e23503cb3aa6b7b2e03bb5",
+    "note": "Read-only availability observation; no before/after HTML-hash claim."
+  },
+  "secretScan": {
+    "scope": "Changed and newly added text files; pattern check plus manual review of file names.",
+    "suspectFiles": []
+  },
+  "operations": "No main merge/push, force-push, CNAME, DNS, trainer, Railway or paid-service writes performed."
+}

@@ -6,3 +6,8 @@ test-results/
 !.env.example
 *.log
 .local/
+evidence/v4-production/preview-local/
+evidence/v2.1/**/story-*.zip
+evidence/v3/**/story-*.zip
+evidence/v3/**/video/
+evidence/v3/**/recordings/
