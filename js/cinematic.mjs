@@ -1,4 +1,4 @@
-import {catalogs} from './i18n.mjs';
+import {catalogs,routeFor} from './i18n.mjs';
 import {cinematicCopy} from './cinematic-copy.mjs';
 import {mountOperation} from './cinematic-operation.mjs';
 const home = document.querySelector('[data-journey]');
@@ -7,6 +7,7 @@ const clamp=(v,a=0,b=1)=>Math.max(a,Math.min(b,v));
 let progress=home?0:4, world, raf=0;
 let operation;
 let contextScene=-1,contextSelection=-1;
+let area=0,resultKey='';
 const reduced=matchMedia('(prefers-reduced-motion: reduce)');
 function requestRender(){if(!raf)raf=requestAnimationFrame(render);}
 function render(){
@@ -39,25 +40,35 @@ function render(){
    [[.5,.58,.72,-18],[.68,.5,.7,-8],[.85,.59,.65,10]],
    [[.48,.59,.64,-18],[.67,.48,.72,0],[.84,.6,.62,18]],
    [[.205,.57,1,0],[.5,.57,1,0],[.795,.57,1,0]],
-   [[.17,.6,.75,-8],[.48,.65,.7,5],[.8,.61,.65,8]]
+   [[.12,.63,.5,-15],[.4,.7,.5,12],[.275,.6,1,0]]
   ];
   const idx=Math.min(3,Math.floor(progress));let t=progress-idx;t=t*t*(3-2*t);
   document.querySelectorAll('[data-surface]').forEach((el,i)=>{
    const a=poses[idx][i],b=poses[idx+1][i],p=a.map((n,k)=>n+(b[k]-n)*t);
    if(mobile&&isOperation){p[0]+=(0-(operation?.panel??0))*1.1;}
-   const interactive=isOperation&&operating&&(!mobile||i===(operation?.panel??0));
+   const interactive=isOperation&&operating&&(!mobile||i===(operation?.panel??0))||index===4&&i===2&&!mobile;
    el.querySelector('.surface-app').inert=!interactive;
    el.style.pointerEvents=interactive?'auto':'none';
    el.setAttribute('aria-hidden',String(!interactive));
    el.style.transform=`translate(-50%,-50%) translate(${p[0]*innerWidth}px,${p[1]*innerHeight}px) rotateY(${p[3]}deg) rotateX(${operating?0:3}deg) scale(${p[2]})`;
    el.dataset.pose=p.map(x=>x.toFixed(4)).join(',');
+   el.style.opacity=String(index===4?(mobile?.13:i===2?1:.18):1);
   });
   const tabs=document.querySelector('[data-operation-tabs]');tabs.hidden=!isOperation;
   tabs.querySelectorAll('button').forEach((button,i)=>button.setAttribute('aria-pressed',String(i===(operation?.panel??0))));
   document.querySelector('[data-disclosure]').textContent=cinematicCopy[language][isOperation?'executable':'conceptual'];
+  document.querySelector('[data-exploration]').hidden=index!==4;
+  if(index===4)renderExploration();
  }
  const state=operation?.run;
- world?.render(reduced.matches?Math.round(progress):progress,state?.stage??0,state?.failed??false);
+ world?.render(reduced.matches?Math.round(progress):progress,state?.stage??0,state?.failed??false,area);
+}
+function renderExploration(){
+ const c=cinematicCopy[language],lab=catalogs[language].lab,run=operation?.run,key=`${language}:${area}:${run?.events.length??0}:${run?.result?.outcome??''}`;
+ if(resultKey===key)return;resultKey=key;
+ const result=run?.result;
+ const summary=result?`<span class="result-code mono">${result.id} / ${lab.values[result.outcome]}</span><p>${c.owner}: ${lab.values[result.owner]} <span aria-hidden="true">·</span> ${c.writes}: ${result.externalWrites}</p>`:`<p>${c.noResult}</p>`;
+ document.querySelector('[data-exploration]').innerHTML=`<div class="result-summary" role="status">${summary}<a href="#scene-3" data-result-inspect>${c.returnOperation} ↗</a></div><p class="eyebrow">${c.expertiseTitle}</p><div class="expertise-selector" role="group" aria-label="${c.expertiseTitle}">${c.areas.map((item,i)=>`<button data-area="${i}" aria-pressed="${i===area}"><span class="mono">0${i+1}</span><span>${item[0]}</span><span aria-hidden="true">${i===area?'−':'+'}</span></button>`).join('')}</div><div class="expertise-detail"><h3>${c.areas[area][1]}</h3><p>${c.areas[area][2]}</p><a href="${c.areas[area][4]==='scene'?'#scene-2':routeFor(language,c.areas[area][4])}" ${c.areas[area][4]==='scene'?'data-go="2"':''}>${c.areas[area][3]} ↗</a></div><nav class="commercial-links" aria-label="${catalogs[language].nav.label}"><a href="${routeFor(language,'labs')}">${c.allLab} ↗</a><a href="${routeFor(language,'cases')}">${c.work} ↗</a><a href="${routeFor(language,'contact')}">${c.contact} ↗</a><a href="${routeFor(language,'privacy')}">${catalogs[language].nav.privacy}</a></nav>`;
 }
 function renderContext(){
  if(!home)return;
@@ -71,6 +82,8 @@ function renderContext(){
 document.addEventListener('click',event=>{
  const inspect=event.target.closest('[data-context]');if(inspect){contextSelection=contextSelection===Number(inspect.dataset.context)?-1:Number(inspect.dataset.context);renderContext();}
  if(event.target.closest('[data-context-close]')){const old=contextSelection;contextSelection=-1;renderContext();document.querySelector(`[data-context="${old}"]`)?.focus();}
+ const selectArea=event.target.closest('[data-area]');if(selectArea){area=Number(selectArea.dataset.area);renderExploration();document.querySelector(`[data-area="${area}"]`)?.focus();requestRender();}
+ if(event.target.closest('[data-result-inspect]')){event.preventDefault();if(operation)operation.panel=2;history.replaceState(null,'','#scene-3');scrollTo({top:3*innerHeight*1.6,behavior:'instant'});requestRender();}
 });
 document.addEventListener('keydown',event=>{if(event.key==='Escape'&&contextSelection>=0){const old=contextSelection;contextSelection=-1;renderContext();document.querySelector(`[data-context="${old}"]`)?.focus();}});
 document.addEventListener('click',event=>{const link=event.target.closest('[data-go]');if(!home||!link)return;event.preventDefault();const p=Number(link.dataset.go);history.replaceState(null,'',`#scene-${p}`);scrollTo({top:p*innerHeight*1.6,behavior:'instant'});requestRender();});
