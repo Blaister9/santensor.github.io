@@ -783,7 +783,7 @@ pre {
     margin-top: 11px;
   }
   .site-header nav {
-    gap: 14px;
+    gap: 10px;
     font-size: 10px;
   }
   .contact-link {
@@ -794,7 +794,14 @@ pre {
     padding-left: 3px;
   }
   .site-header nav > a[data-route="labs"] {
-    display: none;
+    display: block;
+    font-size: 0;
+    min-width: 20px;
+  }
+  .site-header nav > a[data-route="labs"]:after {
+    content: "Lab";
+    font-size: 10px;
+    line-height: 1.6;
   }
   .scene-counter {
     left: 25px;
@@ -833,11 +840,12 @@ pre {
   }
   .world-shade {
     background: linear-gradient(
-      0deg,
-      #090b0d 0,
-      transparent 20%,
-      transparent 65%,
-      #090b0d 95%
+      180deg,
+      #090b0df2 0,
+      #090b0de0 34%,
+      #090b0d44 52%,
+      transparent 70%,
+      #090b0d44
     );
   }
   .journey-bottom {

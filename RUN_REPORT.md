@@ -1,3 +1,11 @@
+# Informe vigente: Santensor V4
+
+La entrega actual está en [docs/V4_HANDOFF.md](docs/V4_HANDOFF.md). Progreso de los siete hitos: [docs/V4_PROGRESS.md](docs/V4_PROGRESS.md).
+
+El informe que sigue es histórico y corresponde a versiones anteriores.
+
+---
+
 # SANTENSOR V2.1 — informe de ejecución
 
 ## Entrega V2.1 · 2026-10-16

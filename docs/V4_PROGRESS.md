@@ -14,7 +14,22 @@ Base `origin/feat/santensor-v3-independent` at `5b463cb350e3d4c16fd956e053a66533
 4. **Implemented and tested end to end.** The same three glass DOM surfaces align and expose editable request, execution timeline and evidence. Uses the unmodified `createRun`/`stepRun` engine. Tests at 1440×900 and emulated 390×844 exercise edited inputs, approval, a controlled 503, recovery in the same run, validation errors and unknown-account manual triage. Historical event snapshots retain the failed response after retry. Mobile tabs expose each persistent surface without hijacking page scroll. Evidence: `operation-*`, `failure-*`, `recovered-*` and operation traces in `evidence/v4`.
 5. **Implemented.** The evidence surface remains usable in the last scene; an actual result, owner and external-write count come from the completed run. Three selectable engineering lenses alter the architecture orientation and offer related routes. No three-card services grid. Laboratory, work and contact remain directly accessible in the fixed navigation. The complete lab executes the same engine independently. Existing case classifications and contact-draft behavior are preserved.
 6. **Implemented and validated.** EN/ES switches in place without losing progress, input or execution. Four responsive sizes and both languages pass axe and keyboard paths. Reduced-motion and unaccelerated devices receive original progressively loaded WebP poses with persistent HTML controls. Renderer sleeps when idle; instancing reduces 369 draw calls to 135. Measured lightweight mobile tour: 269 KB, LCP ~3.02 s under CDP CPU ×4 / 1.6 Mbps / 150 ms. Forced WebGL verifies distinct poses and exact reverse-render hashes. Details and limitations: `docs/V4_RESOURCES_AND_VALIDATION.md`.
-7. Isolated HTTPS preview and acceptance evidence — pending.
+7. **Implemented and verified.** Isolated HTTPS preview: https://eos-luis-subsidiaries-equation.trycloudflare.com/ ; evidence gallery: `/review/`. Real desktop, mobile-emulation and forced-WebGL recordings cover all five scenes, EN/ES, editable input, human review, controlled failure, recovery, results, reverse motion and commercial navigation. HTTPS verification passes at desktop/mobile sizes, including native playback of all three videos, 41 gallery resources per size, functional execution and 404 checks for sensitive/local paths. Final local regression: 16 unit tests and 12 Playwright tests pass. Production remains gated for owner visual review. Preview availability depends on the running computer/tunnel; source and evidence are versioned. Handoff: `docs/V4_HANDOFF.md`.
+
+## Verified remote publications
+
+Each milestone was pushed normally and its SHA checked with `git ls-remote`, without force-push:
+
+| Milestone | Verified remote commit |
+| --- | --- |
+| 1 — branch creation | `5b463cb350e3d4c16fd956e053a66533f91d589a` |
+| 2 — archive | `415a4d12831717f68c66663faca15f49c69bc443` |
+| 3 — interpretation/integration | `011fc882f5e61f63074f2d7259aa62100cf61050` |
+| 4 — executable transition | `d4d7025125a506cd615c5024cc4807e22df72ec9` |
+| 5 — results/commercial routes | `973078bd1dd5e5fc552f34b90868766d59d68046` |
+| 6 — bilingual/device/accessibility | `a9a4085913e7430af350f04ef620c7cfdde61b7a` |
+
+The final delivery SHA is the tip of `origin/feat/santensor-v4-cinematic-continuous`, also reported by the served `/version.json` after packaging the final commit. Milestone 6 CI passed: https://github.com/Blaister9/santensor.github.io/actions/runs/38985816863 . Final publication and its remote SHA are checked at handoff.
 
 ## Art direction and references
 

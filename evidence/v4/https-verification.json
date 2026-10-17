@@ -1,0 +1,151 @@
+{
+  "base": "https://eos-luis-subsidiaries-equation.trycloudflare.com",
+  "verifiedAt": "2026-10-17T00:28:06.567Z",
+  "version": {
+    "branch": "feat/santensor-v4-cinematic-continuous",
+    "commit": "a9a4085913e7430af350f04ef620c7cfdde61b7a",
+    "purpose": "V4 isolated visual review",
+    "production": false
+  },
+  "results": [
+    {
+      "viewport": 1440,
+      "path": "/",
+      "status": 200,
+      "title": "Santensor — Anatomy of a decision."
+    },
+    {
+      "viewport": 1440,
+      "path": "/es/",
+      "status": 200,
+      "title": "Santensor — Anatomía de una decisión."
+    },
+    {
+      "viewport": 1440,
+      "path": "/labs/",
+      "status": 200,
+      "title": "Interactive lab — Santensor"
+    },
+    {
+      "viewport": 1440,
+      "path": "/es/labs/",
+      "status": 200,
+      "title": "Laboratorio interactivo — Santensor"
+    },
+    {
+      "viewport": 1440,
+      "path": "/cases/",
+      "status": 200,
+      "title": "Selected engineering work — Santensor"
+    },
+    {
+      "viewport": 1440,
+      "path": "/contact/",
+      "status": 200,
+      "title": "Discuss a project — Santensor"
+    },
+    {
+      "viewport": 1440,
+      "path": "/review/",
+      "status": 200,
+      "title": "Santensor V4 — revisión visual y evidencia"
+    },
+    {
+      "viewport": 1440,
+      "video": 0,
+      "played": true
+    },
+    {
+      "viewport": 1440,
+      "video": 1,
+      "played": true
+    },
+    {
+      "viewport": 1440,
+      "video": 2,
+      "played": true
+    },
+    {
+      "viewport": 1440,
+      "errors": []
+    },
+    {
+      "viewport": 390,
+      "path": "/",
+      "status": 200,
+      "title": "Santensor — Anatomy of a decision."
+    },
+    {
+      "viewport": 390,
+      "path": "/es/",
+      "status": 200,
+      "title": "Santensor — Anatomía de una decisión."
+    },
+    {
+      "viewport": 390,
+      "path": "/labs/",
+      "status": 200,
+      "title": "Interactive lab — Santensor"
+    },
+    {
+      "viewport": 390,
+      "path": "/es/labs/",
+      "status": 200,
+      "title": "Laboratorio interactivo — Santensor"
+    },
+    {
+      "viewport": 390,
+      "path": "/cases/",
+      "status": 200,
+      "title": "Selected engineering work — Santensor"
+    },
+    {
+      "viewport": 390,
+      "path": "/contact/",
+      "status": 200,
+      "title": "Discuss a project — Santensor"
+    },
+    {
+      "viewport": 390,
+      "path": "/review/",
+      "status": 200,
+      "title": "Santensor V4 — revisión visual y evidencia"
+    },
+    {
+      "viewport": 390,
+      "video": 0,
+      "played": true
+    },
+    {
+      "viewport": 390,
+      "video": 1,
+      "played": true
+    },
+    {
+      "viewport": 390,
+      "video": 2,
+      "played": true
+    },
+    {
+      "viewport": 390,
+      "errors": []
+    },
+    {
+      "path": "/CNAME",
+      "status": 404
+    },
+    {
+      "path": "/.git/config",
+      "status": 404
+    },
+    {
+      "path": "/.env",
+      "status": 404
+    },
+    {
+      "path": "/.local/v4-tunnel.log",
+      "status": 404
+    }
+  ],
+  "scope": "Chromium and HTTP from this computer; not an independent network or physical phone."
+}

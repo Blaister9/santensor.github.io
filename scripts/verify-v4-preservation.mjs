@@ -1,0 +1,14 @@
+import {execFileSync,spawnSync} from 'node:child_process';
+import {existsSync,readFileSync,writeFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+const baseline='5b463cb350e3d4c16fd956e053a66533f91d589a';
+const critical=['CNAME','js/workflow.mjs','js/contact.mjs','.openai/hosting.json'].map(path=>({path,unchanged:spawnSync('git',['diff','--quiet',baseline,'--',path]).status===0}));
+const remoteMain=execFileSync('git',['ls-remote','origin','refs/heads/main'],{encoding:'utf8'}).split(/\s/)[0];
+const names=[...new Set([...execFileSync('git',['diff','--name-only',baseline],{encoding:'utf8'}).trim().split(/\r?\n/),...execFileSync('git',['ls-files','--others','--exclude-standard'],{encoding:'utf8'}).trim().split(/\r?\n/)])];
+const patterns=[/ghp_[A-Za-z0-9]{30,}/,/github_pat_[A-Za-z0-9_]{30,}/,/sk-[A-Za-z0-9_-]{24,}/,/AKIA[A-Z0-9]{16}/,/-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----/];
+const suspectFiles=names.filter(p=>p&&existsSync(p)&&!(/\.(png|jpe?g|webp|webm|woff2)$/.test(p))).filter(p=>patterns.some(re=>re.test(readFileSync(p,'utf8'))));
+const response=await fetch('https://santensor.com/');
+const productionObservation={url:response.url,status:response.status,sha256:createHash('sha256').update(await response.text()).digest('hex'),note:'Read-only availability observation; no before/after HTML-hash claim.'};
+const result={verifiedAt:new Date().toISOString(),baseline,remoteMain,mainPreserved:remoteMain==='84e3c855af9cf112cdfdf4938e6197acdd40fea4',critical,productionObservation,secretScan:{scope:'Changed and newly added text files; pattern check plus manual review of file names.',suspectFiles},operations:'No main merge/push, force-push, CNAME, DNS, trainer, Railway or paid-service writes performed.'};
+writeFileSync('evidence/v4/preservation.json',JSON.stringify(result,null,2));console.log(JSON.stringify(result));
+if(suspectFiles.length||!critical.every(x=>x.unchanged)||!result.mainPreserved)process.exit(1);
