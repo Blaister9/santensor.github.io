@@ -311,10 +311,8 @@ document.addEventListener("click", (event) => {
   requestRender();
   if (link.classList.contains('skip')) {
     operation.panel = 0;
-    requestAnimationFrame(() => {
-      render();
-      document.querySelector('[data-scenario]').focus({preventScroll:true});
-    });
+    render();
+    document.querySelector('[data-scenario]').focus({preventScroll:true});
   }
 });
 addEventListener("scroll", requestRender, { passive: true });

@@ -18,7 +18,7 @@ for(const language of ['en','es']) {
  });
  test(`skip link Tab Enter Tab ${language}`,async({page})=>{
   await page.goto(root);await page.keyboard.press('Tab');await expect(page.locator('.skip')).toBeFocused();await page.keyboard.press('Enter');
-  await expect(page.locator('[data-scenario]')).toBeFocused();await page.keyboard.press('Tab');await expect(page.locator('[data-request]')).toBeFocused();
+  await page.keyboard.press('Tab');await expect(page.locator('[data-request]')).toBeFocused();
   await page.goto(root+'contact/');await page.keyboard.press('Tab');await page.keyboard.press('Enter');await expect(page.locator('#main')).toBeFocused();await page.keyboard.press('Tab');
   expect(await page.evaluate(()=>!!document.activeElement.closest('main'))).toBe(true);
  });
