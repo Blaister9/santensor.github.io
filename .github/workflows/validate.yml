@@ -25,6 +25,9 @@ jobs:
           SITE_EVIDENCE_DIR: evidence/v4-production/preview
       - run: npm run build:production
       - run: node scripts/check-production.mjs
+      - run: npm run test:links
+        env:
+          SITE_EVIDENCE_DIR: evidence/v4-production/candidate
       - run: test "$(cat CNAME)" = santensor.com
       - run: npm run test:e2e:production
         env:

@@ -1,6 +1,7 @@
 import { mkdir, copyFile, cp, readFile, rm, writeFile } from "node:fs/promises";
 import { renderPages } from "./render-pages.mjs";
 import { renderPage } from "./render-pages.mjs";
+import { renderEvidencePages } from "./v41-evidence-pages.mjs";
 import { assertPublishable } from "./editorial-gate.mjs";
 import { build } from "esbuild";
 import { execFileSync } from "node:child_process";
@@ -52,6 +53,7 @@ for (const [family, weight] of [
     `assets/fonts/${family}-LICENSE.txt`,
   );
 }
+await renderEvidencePages();
 await renderPages({ production });
 await mkdir("dist", { recursive: true });
 for (const f of [
@@ -121,7 +123,9 @@ if (preview) {
     execFileSync("git", ["rev-parse", "HEAD"], { encoding: "utf8" }).trim();
   await writeFile(
     "dist/release.json",
-    JSON.stringify({ version: "4", revision: "4.1", commit, mode: "production" }, null, 2),
+    JSON.stringify({ version: "4", revision: "4.1", commit, mode: "production",
+      ...(process.env.GITHUB_RUN_ID ? {workflow: `https://github.com/Blaister9/santensor.github.io/actions/runs/${process.env.GITHUB_RUN_ID}`} : {})
+    }, null, 2),
   );
   await writeFile("dist/.nojekyll", "");
 }

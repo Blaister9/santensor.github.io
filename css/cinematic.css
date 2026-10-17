@@ -1636,6 +1636,9 @@ pre {
 .professional-profile {max-width:790px;padding:25px 0;margin-top:35px;border-top:1px solid var(--line)}
 .professional-profile h2 {font-size:30px;letter-spacing:-.03em}
 .professional-profile p {font-size:15px}
+.cases-contact {border-top:1px solid var(--line);margin-top:45px;padding:25px 0;max-width:790px}
+.cases-contact p {font-size:16px;line-height:1.7}
+.technical-note {scroll-margin-top:24px;margin-bottom:60px;min-block-size:calc(100svh - 140px)}
 .project-capture {display:block;width:100%;height:auto;border:1px solid var(--line);margin:24px 0}
 .project-evidence {display:flex;flex-direction:column;gap:10px}
 .project-evidence a,.text-link {color:var(--gold);font-size:14px;min-height:44px;display:inline-flex;align-items:center}

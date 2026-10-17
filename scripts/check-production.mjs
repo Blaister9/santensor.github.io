@@ -33,6 +33,7 @@ for (const file of files) {
   }
   if (/\.(mjs|css|html|json|txt|xml)$/.test(file)) {
     const text = await readFile(file, "utf8");
+    assert.ok(!/github\.com[^\s"'<>]*\/(?:blob|tree)\/(?:feat|fix)\//.test(text), `Temporary source branch in ${file}`);
     assert.ok(
       !/trycloudflare\.com|ghp_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{30,}|-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----/.test(
         text,
